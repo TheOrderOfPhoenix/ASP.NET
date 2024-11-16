@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\C01_CommentAPI.props" />
+</Project>

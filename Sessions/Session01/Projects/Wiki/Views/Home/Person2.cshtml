@@ -1,0 +1,50 @@
+﻿@model Character
+<link rel="stylesheet" href="~/css/Sample1.css" />
+
+<aside class="profile-card">
+    <header>
+        <a target="_blank" href="#">
+            <img src="~/img/@Model.ImageName" class="hoverZoomLink">
+        </a>
+
+        <h1>
+            @Model.Name
+        </h1>
+
+        <h2>
+            @Model.Birthdate
+        </h2>
+
+    </header>
+
+    <div class="profile-bio">
+
+        <p>
+            @Model.Quote
+        </p>
+
+    </div>
+
+    <ul class="profile-social-links">
+        <li>
+            <a target="_blank" href="https://www.facebook.com/creativedonut">
+                <i class="fa fa-facebook"></i>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://twitter.com/dropyourbass">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://github.com/vipulsaxena">
+                <i class="fa fa-github"></i>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://www.behance.net/vipulsaxena">
+                <i class="fa fa-behance"></i>
+            </a>
+        </li>
+    </ul>
+</aside>
