@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PJ6EfvJ9NKlSFykOvE6RIi1tFLIcE5A9hW02dLCu0TC/8npfCCpTFbA4bA1qldPxj/xCXI1t1n6C81imG/YjBg==",
+  "dgSpecHash": "yJbRhM92p7chC/ssZXLS4dQkrtONSmBvzMqWTiPB1q4lzxPt9BwvbX1iHyUZObq4BKrrRzoCWzsSQ6536nnGQA==",
   "success": true,
-  "projectFilePath": "E:\\TheCircle\\TheCircleDocs\\TheCircleProjects\\ASP\\02\\Wiki\\Wiki.csproj",
+  "projectFilePath": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session02\\Projects\\Wiki\\Wiki.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.aspnetcore.authentication.negotiate\\6.0.22\\microsoft.aspnetcore.authentication.negotiate.6.0.22.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\6.0.22\\microsoft.aspnetcore.connections.abstractions.6.0.22.nupkg.sha512",

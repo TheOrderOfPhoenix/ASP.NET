@@ -6,12 +6,14 @@
 	https://www.w3schools.com/html/default.asp
 - **CSS:** Understand how to style your webpage with CSS to make it visually appealing.
 	https://www.w3schools.com/css/default.asp
+- JavaScript
+	https://www.w3schools.com/js/default.asp
 
 ![[Pasted image 20241022115013.png]]
 
 ---
 
-# Part 2: Introduction to .NET and C#
+# Part 2: Introduction to .NET and `C#`
 https://www.w3schools.com/cs/cs_properties.php
 
 **Topics Covered:**

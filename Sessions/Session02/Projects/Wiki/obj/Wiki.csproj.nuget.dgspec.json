@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\TheCircle\\TheCircleDocs\\TheCircleProjects\\ASP\\02\\Wiki\\Wiki.csproj": {}
+    "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session02\\Projects\\Wiki\\Wiki.csproj": {}
   },
   "projects": {
-    "E:\\TheCircle\\TheCircleDocs\\TheCircleProjects\\ASP\\02\\Wiki\\Wiki.csproj": {
+    "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session02\\Projects\\Wiki\\Wiki.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\TheCircle\\TheCircleDocs\\TheCircleProjects\\ASP\\02\\Wiki\\Wiki.csproj",
+        "projectUniqueName": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session02\\Projects\\Wiki\\Wiki.csproj",
         "projectName": "Wiki",
-        "projectPath": "E:\\TheCircle\\TheCircleDocs\\TheCircleProjects\\ASP\\02\\Wiki\\Wiki.csproj",
+        "projectPath": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session02\\Projects\\Wiki\\Wiki.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "E:\\TheCircle\\TheCircleDocs\\TheCircleProjects\\ASP\\02\\Wiki\\obj\\",
+        "outputPath": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session02\\Projects\\Wiki\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

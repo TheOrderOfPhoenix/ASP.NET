@@ -1,164 +1,239 @@
-## **7. Model Validation**
 
-ASP.NET Core MVC provides model validation, which helps ensure that data received from the user is valid.
+## **0. Middleware and Request Pipeline**
+![[Pasted image 20241105101014.png]]
+![[Pasted image 20241105111037.png]]
 
-### Example: Data Annotations
+![[Pasted image 20241105111022.png]]
 
+## **1. Routing in ASP.NET Core MVC**
 
+Routing is a mechanism to map incoming HTTP requests to specific controller actions. Understanding routing is crucial for managing URL patterns and making your app user-friendly and SEO-optimized.
 
+### **Basic Routing Structure**
+
+Routes in ASP.NET Core are configured in `Program.cs` (or `Startup.cs` in earlier versions) using the `app.MapControllerRoute` method, which defines how URLs map to controllers and actions.
+
+### **Steps and Key Concepts in Routing**
+
+1. **Define a Default Route** The default route defines the basic URL pattern that ASP.NET Core will follow.
+    
 ```c#
-public class Product {
-	public int Id { get; set; }
-	[Required]
-	[StringLength(50)]
-	public string Name { get; set; }
-	[Range(0, 10000)]
-	public decimal Price { get; set; } 
-	}
+app.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
+```
+- **Pattern**: 
+	- `{controller=Home}/{action=Index}/{id?}`:
+	- `{controller=Home}`: Specifies the controller, defaulting to `Home`.
+	- `{action=Index}`: Specifies the action method, defaulting to `Index`.
+	- `{id?}`: Optional parameter for passing an `id`.
+1. **Attribute Routing** Define routes directly within the controller using attributes. This is useful when each action needs a unique route.
+    
+ ```c#
+[Route("products")] 
+public class ProductsController : Controller 
+{     
+	[HttpGet("all")]
+	public IActionResult GetAllProducts() { /*...*/ }      
+
+	[HttpGet("{id}")]     
+	public IActionResult GetProductById(int id) { /*...*/ } 
+}
+```
+1. **Custom Route Parameters and Constraints** You can add custom parameters and enforce constraints directly in the route to manage data types and URL patterns.
+        
+```c#
+app.MapControllerRoute(name: "custom", pattern: "{controller=Products}/{action=List}/{id:int:min(1)}");
 ```
 
-- **Required**: Ensures the property has a value.
-- **StringLength**: Restricts the maximum length.
-- **Range**: Limits the value to a specified range.
+- **Constraints**: `{id:int:min(1)}` ensures `id` is an integer greater than or equal to 1.
+- Other constraints include `bool`, `datetime`, `guid`, `minlength(x)`, `maxlength(x)`, and custom regular expressions.
 
-Validation errors are automatically displayed in views if you include `@Html.ValidationMessageFor` for each property or `@Html.ValidationSummary()` to show all errors.
+1. **Setting Default Actions Based on Controller** To give specific controllers a unique default action, create additional routes before the default route.
+    
+```c#
+app.MapControllerRoute(name: "gallery", pattern: "Gallery/{action=Main}/{id?}",defaults: new { controller = "Gallery" });  
 
-### **Summary**
+app.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
+```
+    
+1. **SEO-Friendly and Readable URLs** For user-friendly URLs, use meaningful route names instead of parameters. This is particularly useful for e-commerce or content-heavy sites.    
+```c#
+app.MapControllerRoute(name: "productDetail", pattern: "products/details/{id:int}/{name}");
+```
 
-- **Models** represent data and business logic.
-- **Properties** in models define data structure and encapsulate fields.
-- **Controller-View Interaction**: Pass models to views using `View(model);`.
-
-
-
-# Side Notes
-
-
-catchall in routing
-
-appsettings.json
-
-query parameters 
-
-apply the teaching techniques 
-
-Razor View Engine 
-
-
-how to optimize the projects code
-
-Talk about lists C# 
-
-how to return custom view 
-
-
-assign C# variable and use it 
-
-
-ViewBag.... is a dynamic
-ViewBag.myName...
-
-
-hot reload...
-
-	what actually is viweBag, viewData
-
-Layouts..
-
-_ViewStart 
-_Shared 
-
-
-
-_MyLayout cshtml
-
-
-
-RenderBody
-RenderSection (required... )
-
-_ViewImports
-
-
-
-HtmlHelper / TagHelper 
-
-partial view 
-
-How to pass data to partial views
-
-Models and Model Types 
-1. Binding Models
-2. Application Models
-3. View Models
-https://learn.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-8.0
+This structure allows URLs like `/products/details/10/laptop`, which is clear and keyword-rich.
 
 ---
 
-## **5. View Models vs. Domain Models**
+## **2. Controllers in ASP.NET Core MVC**
 
-In some cases, the data needed by a view might be a combination of several models or require custom formatting. A **View Model** is a class specifically created to supply the view with only the necessary data.
+Controllers are central in ASP.NET Core MVC and handle requests, retrieve data, and determine how it’s returned to the client.
 
-### Creating a View Model
+### **Controller Basics**
 
+- **Controller Naming**: Controllers usually end with "Controller" (e.g., `HomeController`, `ProductController`).
+- **Actions**: Methods within controllers are called action methods, typically returning a response to the user.
 
+### **Steps and Key Concepts in Controllers**
+
+1. **Creating a Basic Controller** A controller inherits from the `Controller` base class and contains action methods.
+    
 ```c#
-public class ProductViewModel 
-{ 
-	public int Id { get; set; }
-	public string Name { get; set; }
-	public decimal Price { get; set; }
-	public string FormattedPrice => $"${Price:N2}"; 
+public class HomeController : Controller 
+{     
+	public IActionResult Index()     
+	{         
+		return View();     
+	} 
 }
 ```
 
-Using a view model keeps the domain model (`Product`) separate, especially useful when the view requires additional fields or formatting.
-
-### Using the View Model in the Controller and View
-
-In the controller:
-
-
+1. **Handling HTTP Methods with Attributes** Controllers use HTTP attributes like `[HttpGet]`, `[HttpPost]`, `[HttpPut]`, and `[HttpDelete]` to specify which HTTP methods they handle.
+    
+```c# 
+[HttpPost] 
+public IActionResult CreateProduct(Product product) 
+{     
+    //Handle POST request     
+	return RedirectToAction("Index"); 
+}
+```
+    
+3. **Using Dependency Injection in Controllers** Dependency injection is commonly used in ASP.NET Core to inject services (like a repository) into controllers, supporting clean code and testability.
+    
 ```c#
-public IActionResult Details() 
-{
-	var product = new Product { Id = 1, Name = "Laptop", Price = 1500.00m };
-	var productViewModel = new ProductViewModel 
-	{ 
-		Id = product.Id,
-		Name = product.Name,
-		Price = product.Price
-	};      
-	return View(productViewModel); }
+public class ProductsController : Controller 
+{     
+	private readonly IProductRepository _repository;
+    public ProductsController(IProductRepository repository)     
+    {         
+	    _repository = repository;     
+	    } 
+	}
+}
 ```
 
-In the view:
-
+1. **Defining Action Parameters** Parameters passed to action methods are automatically bound from the URL or query string. Use model binding to parse complex objects from the request body.
+    
+    
 ```c#
-@model ProductViewModel  <h2>Product Details</h2> <p>Product Name: @Model.Name</p> <p>Price: @Model.FormattedPrice</p>
+public IActionResult EditProduct(int id, string name) {     
+// Parameters are bound from the URL }
 ```
 
-View models allow you to tailor data specifically for the view, improving separation of concerns and maintainability.
 
 ---
 
-## **6. Model Binding in ASP.NET Core MVC**
+## **3. Return Types in Controllers**
 
-Model binding is a feature in ASP.NET Core that automatically maps HTTP request data to action parameters, making it easier to pass user inputs to models.
+Return types in ASP.NET Core MVC actions define how data is sent back to the client. Different return types offer flexibility for returning views, JSON, status codes, and redirects.
 
-- **From URL or Query String**: If the action expects a model parameter and the URL includes a query string, model binding will automatically populate the model’s properties.
+### **Common Return Types**
+
+1. **ViewResult** (`View()`)
     
+    - Renders a Razor View.
+    - Typically used in MVC applications where HTML is returned.
+    
+
+`public IActionResult Index() {     return View(); }`
+
+1. **PartialViewResult** (`PartialView()`)
+    
+    - Renders a partial view, commonly used in AJAX requests.
+    
+
+```c#
+public IActionResult ProductListPartial() {     return PartialView("_ProductListPartial"); }
+```
+    
+2. **JsonResult** (`Json()`)
+    
+    - Returns JSON data, used often in API responses or AJAX calls.
     
 ```c#
-public IActionResult UpdatePrice(int id, decimal price) {     // id and price are bound from the query string or route data }
+public JsonResult GetProductJson(int id) {     return Json(new { id, name = "Sample Product" }); }
+```
+    
+3. **ContentResult** (`Content()`)
+    
+    - Returns raw content like plain text or HTML.
+    
+```c#
+public ContentResult GetPlainText() 
+{     
+	return Content("Plain Text Content"); 
+}
+```
+    
+4. **FileResult** (`File()`)
+    
+    - Used to send files as a response, such as for downloading PDFs or images.
+     
+```c#
+public FileResult DownloadFile() {     byte[] fileBytes = System.IO.File.ReadAllBytes("sample.pdf");     return File(fileBytes, "application/pdf", "sample.pdf"); }
 ```
 
-- **From Form Data**: For form submissions, model binding maps form inputs to model properties by matching the names.
+5. **RedirectToActionResult** (`RedirectToAction()`)
     
+- Redirects to a different action.
+
+```c#
+public IActionResult RedirectToHome() 
+{     
+	return RedirectToAction("Index", "Home"); 
+}
+```    
+6. **StatusCodeResult** and **ObjectResult**
+    
+    - `StatusCodeResult`: Sends HTTP status codes like `404`, `500`.
+    - `ObjectResult`: Often used in APIs to return a model or object with a status code.
+
+```c#
+public IActionResult NotFoundResult() 
+{     
+	return StatusCode(404); 
+}
+```
+
+7. **ChallengeResult** and **SignOutResult**
+    
+    - `ChallengeResult`: Used to trigger authentication challenges.
+    - `SignOutResult`: Logs out the user.
+    
+
+```c#
+public IActionResult SignOutUser() { return SignOut(); }
+```
 
 ---
 
+## **Putting It All Together: A Complete Flow**
+
+Here’s how you can use routing, controllers, and return types together to create an application with clear structure and varied responses.
+
+1. **Configure Routing** in `Program.cs` with both default and custom routes.
+2. **Define Controllers** for different areas of the application, organizing actions based on functionality and HTTP methods.
+3. **Handle Different Requests and Return Types**:
+    - For UI, use `ViewResult` or `PartialViewResult`.
+    - For API endpoints, use `JsonResult` and `ObjectResult`.
+    - Redirect or return status codes based on user actions.
+
+By mastering routing, controllers, and return types in this way, you’ll be able to create well-structured ASP.NET Core MVC applications that respond appropriately to a wide variety of requests. This roadmap provides a full foundation, allowing you to expand into more complex scenarios as you gain experience.
 
 
 
-What is Business Logic
+
+
+| Return Type      | Description                                       |
+| ---------------- | ------------------------------------------------- |
+| `Ok()`           | Returns 200 OK with optional content.             |
+| `NotFound()`     | Returns 404 Not Found.                            |
+| `BadRequest()`   | Returns 400 Bad Request.                          |
+| `Unauthorized()` | Returns 401 Unauthorized.                         |
+| `Forbid()`       | Returns 403 Forbidden.                            |
+| `Created()`      | Returns 201 Created with a URI for the new item.  |
+| `NoContent()`    | Returns 204 No Content, typically for DELETE/PUT. |
+| `Redirect()`     | Redirects to another URL.                         |
+| `Content()`      | Returns plain text or other content.              |
+| `Json()`         | Returns JSON data.                                |
+| `File()`         | Returns a file.                                   |
