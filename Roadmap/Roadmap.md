@@ -38,19 +38,19 @@ To teach the roadmap for **Controllers, Routing, and Return Types** in ASP.NET C
 
 **Goal**: Teach students how routing works in ASP.NET Core, starting with the default route and moving to attribute-based routing.
 
-1. [ ] **Explain Default Route Configuration**:
-    - [ ] Walk through the default route in `Program.cs`.
-    - [ ] Show how `{controller=Home}/{action=Index}/{id?}` pattern works and introduce the optional parameter `id?`.
-2. [ ] **Customizing Routes**:
-    - [ ] Demonstrate how to customize the default route by setting different controller and action names as defaults.
-3. [ ] **Attribute-Based Routing**:
-    - [ ] Introduce attribute routing, explaining the flexibility it offers.
-    - [ ] Show how `[Route]` and HTTP-specific attributes like `[HttpGet]`, `[HttpPost]` control the behavior of action methods.
+1. [x] **Explain Default Route Configuration**:
+    - [x] Walk through the default route in `Program.cs`.
+    - [x] Show how `{controller=Home}/{action=Index}/{id?}` pattern works and introduce the optional parameter `id?`.
+2. [x] **Customizing Routes**:
+    - [x] Demonstrate how to customize the default route by setting different controller and action names as defaults.
+3. [x] **Attribute-Based Routing**:
+    - [x] Introduce attribute routing, explaining the flexibility it offers.
+    - [x] Show how `[Route]` and HTTP-specific attributes like `[HttpGet]`, `[HttpPost]` control the behavior of action methods.
 4. [ ] **Examples**:
     
 `[Route("product")] public class ProductController : Controller {     [HttpGet("list")]     public IActionResult List() { /*...*/ }      [HttpGet("{id:int}")]     public IActionResult Details(int id) { /*...*/ } }`
 
-5. **Activity**: Ask students to add custom routes to their `CustomerController`, like `[HttpGet("all")]` for a list of customers and `[HttpGet("{id}")]` for customer details.
+5. [ ] **Activity**: Ask students to add custom routes to their `CustomerController`, like `[HttpGet("all")]` for a list of customers and `[HttpGet("{id}")]` for customer details.
     
 
 ---
@@ -82,16 +82,13 @@ To teach the roadmap for **Controllers, Routing, and Return Types** in ASP.NET C
     - **JsonResult** (`Json()`)
     - **ContentResult** (`Content()`)
 2. **Explain When to Use Each**:
-    
     - **ViewResult**: When rendering a view.
     - **JsonResult**: For returning JSON data in APIs.
     - **ContentResult**: For plain text or HTML responses.
 3. **Examples**:
-    
     `public class ProductController : Controller {     public IActionResult Index() => View();     public JsonResult GetProductJson(int id) => Json(new { id, name = "Product" });     public ContentResult GetMessage() => Content("This is a simple text message."); }`
     
 4. **Advanced Return Types**:
-    
     - Introduce `RedirectToActionResult` for redirection and `StatusCodeResult` for custom status codes.
     - Explain file return types like `FileResult` for handling downloads.
 5. **Activity**: Challenge students to create an API-style action in their controller that returns JSON and another action that returns plain text.

@@ -44,6 +44,7 @@ public class Product {
 public int Id { get; set; }
 // Auto-implemented property     
 public decimal Price { get; set; }
+}
 ```
 
 - **Auto-implemented properties** (`Price`): Define a property without explicit backing fields, useful when no custom logic is needed.
