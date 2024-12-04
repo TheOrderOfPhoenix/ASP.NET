@@ -9,45 +9,45 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Views
 build_property.RootNamespace = Views
-build_property.ProjectDir = E:\TheOrder\ASP.NET\ASP.NET\Repo\Sessions\Session04\Views\
+build_property.ProjectDir = E:\TheOrder\ASP.NET\ASP.NET\Repo\Sessions\Session03\Projects\Views\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\TheOrder\ASP.NET\ASP.NET\Repo\Sessions\Session04\Views
+build_property.MSBuildProjectDirectory = E:\TheOrder\ASP.NET\ASP.NET\Repo\Sessions\Session03\Projects\Views
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/TheOrder/ASP.NET/ASP.NET/Repo/Sessions/Session04/Views/Views/Home/Index.cshtml]
+[E:/TheOrder/ASP.NET/ASP.NET/Repo/Sessions/Session03/Projects/Views/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/TheOrder/ASP.NET/ASP.NET/Repo/Sessions/Session04/Views/Views/Home/Privacy.cshtml]
+[E:/TheOrder/ASP.NET/ASP.NET/Repo/Sessions/Session03/Projects/Views/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/TheOrder/ASP.NET/ASP.NET/Repo/Sessions/Session04/Views/Views/Micro/Index.cshtml]
+[E:/TheOrder/ASP.NET/ASP.NET/Repo/Sessions/Session03/Projects/Views/Views/Micro/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWljcm9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/TheOrder/ASP.NET/ASP.NET/Repo/Sessions/Session04/Views/Views/Shared/Error.cshtml]
+[E:/TheOrder/ASP.NET/ASP.NET/Repo/Sessions/Session03/Projects/Views/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/TheOrder/ASP.NET/ASP.NET/Repo/Sessions/Session04/Views/Views/Shared/Index2.cshtml]
+[E:/TheOrder/ASP.NET/ASP.NET/Repo/Sessions/Session03/Projects/Views/Views/Shared/Index2.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEluZGV4Mi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/TheOrder/ASP.NET/ASP.NET/Repo/Sessions/Session04/Views/Views/Shared/_ValidationScriptsPartial.cshtml]
+[E:/TheOrder/ASP.NET/ASP.NET/Repo/Sessions/Session03/Projects/Views/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/TheOrder/ASP.NET/ASP.NET/Repo/Sessions/Session04/Views/Views/_ViewImports.cshtml]
+[E:/TheOrder/ASP.NET/ASP.NET/Repo/Sessions/Session03/Projects/Views/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/TheOrder/ASP.NET/ASP.NET/Repo/Sessions/Session04/Views/Views/_ViewStart.cshtml]
+[E:/TheOrder/ASP.NET/ASP.NET/Repo/Sessions/Session03/Projects/Views/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/TheOrder/ASP.NET/ASP.NET/Repo/Sessions/Session04/Views/Views/Shared/_Layout.cshtml]
+[E:/TheOrder/ASP.NET/ASP.NET/Repo/Sessions/Session03/Projects/Views/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-2ogqb6xjov

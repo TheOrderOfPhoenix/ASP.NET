@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "A8hS+yIJk2xlHyDJlqsyxzV+x13iA4+HP+nPAR0EbAg=",
+  "Hash": "BA0SedRviNZGEoOaT8u35XiMt5XY8hVz3YlOK14XaXU=",
   "Source": "Views",
   "BasePath": "_content/Views",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Views\\wwwroot",
       "Source": "Views",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Views.styles.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Views.styles.css",
       "SourceId": "Views",
       "SourceType": "Computed",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/Views",
       "RelativePath": "Views.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Views.styles.css"
+      "OriginalItemSpec": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Views.styles.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Views.bundle.scp.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Views.bundle.scp.css",
       "SourceId": "Views",
       "SourceType": "Computed",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/Views",
       "RelativePath": "Views.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Views.bundle.scp.css"
+      "OriginalItemSpec": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Views.bundle.scp.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\.DS_Store",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\.DS_Store",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "css/CSS/.DS_Store",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\CSS\\.DS_Store"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\bootstrap.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\bootstrap.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "css/CSS/bootstrap.css",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\CSS\\bootstrap.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\bootstrap.css.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\bootstrap.css.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "css/CSS/bootstrap.css.map",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\CSS\\bootstrap.css.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\bootstrap.min.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\bootstrap.min.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "css/CSS/bootstrap.min.css",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\CSS\\bootstrap.min.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\bootstrap.min.css.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\bootstrap.min.css.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "css/CSS/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\css\\CSS\\bootstrap.min.css.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\bootstrap-grid.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\bootstrap-grid.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "css/CSS/bootstrap-grid.css",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\CSS\\bootstrap-grid.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\bootstrap-grid.css.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\bootstrap-grid.css.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "css/CSS/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css\\CSS\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\bootstrap-grid.min.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\bootstrap-grid.min.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "css/CSS/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css\\CSS\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\bootstrap-grid.min.css.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\bootstrap-grid.min.css.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "css/CSS/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\css\\CSS\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\bootstrap-reboot.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\bootstrap-reboot.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "css/CSS/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\css\\CSS\\bootstrap-reboot.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\bootstrap-reboot.css.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\bootstrap-reboot.css.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "css/CSS/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\css\\CSS\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\bootstrap-reboot.min.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\bootstrap-reboot.min.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "css/CSS/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\css\\CSS\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\bootstrap-reboot.min.css.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\bootstrap-reboot.min.css.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "css/CSS/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\css\\CSS\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\font-awesome.min.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\font-awesome.min.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "css/CSS/font-awesome.min.css",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\css\\CSS\\font-awesome.min.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\jquery.mCustomScrollbar.min.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\jquery.mCustomScrollbar.min.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "css/CSS/jquery.mCustomScrollbar.min.css",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\css\\CSS\\jquery.mCustomScrollbar.min.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\meanmenu.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\meanmenu.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "css/CSS/meanmenu.css",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\css\\CSS\\meanmenu.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\owl.carousel.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\owl.carousel.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "css/CSS/owl.carousel.css",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\css\\CSS\\owl.carousel.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\owl.carousel.min.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\owl.carousel.min.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "css/CSS/owl.carousel.min.css",
       "AssetKind": "All",
@@ -357,10 +357,10 @@
       "OriginalItemSpec": "wwwroot\\css\\CSS\\owl.carousel.min.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\owl.theme.default.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\owl.theme.default.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "css/CSS/owl.theme.default.css",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\css\\CSS\\owl.theme.default.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\owl.theme.default.min.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\owl.theme.default.min.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "css/CSS/owl.theme.default.min.css",
       "AssetKind": "All",
@@ -391,10 +391,10 @@
       "OriginalItemSpec": "wwwroot\\css\\CSS\\owl.theme.default.min.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\owl.theme.green.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\owl.theme.green.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "css/CSS/owl.theme.green.css",
       "AssetKind": "All",
@@ -408,10 +408,10 @@
       "OriginalItemSpec": "wwwroot\\css\\CSS\\owl.theme.green.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\owl.theme.green.min.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\owl.theme.green.min.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "css/CSS/owl.theme.green.min.css",
       "AssetKind": "All",
@@ -425,10 +425,10 @@
       "OriginalItemSpec": "wwwroot\\css\\CSS\\owl.theme.green.min.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\responsive.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\responsive.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "css/CSS/responsive.css",
       "AssetKind": "All",
@@ -442,10 +442,10 @@
       "OriginalItemSpec": "wwwroot\\css\\CSS\\responsive.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\style.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\style.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "css/CSS/style.css",
       "AssetKind": "All",
@@ -459,10 +459,10 @@
       "OriginalItemSpec": "wwwroot\\css\\CSS\\style.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\site.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\site.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -476,10 +476,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\favicon.ico",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\favicon.ico",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -493,10 +493,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\.DS_Store",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\.DS_Store",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "images/.DS_Store",
       "AssetKind": "All",
@@ -510,10 +510,10 @@
       "OriginalItemSpec": "wwwroot\\images\\.DS_Store"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\about_img.jpg",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\about_img.jpg",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "images/about_img.jpg",
       "AssetKind": "All",
@@ -527,10 +527,10 @@
       "OriginalItemSpec": "wwwroot\\images\\about_img.jpg"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\banner.jpg",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\banner.jpg",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "images/banner.jpg",
       "AssetKind": "All",
@@ -544,10 +544,10 @@
       "OriginalItemSpec": "wwwroot\\images\\banner.jpg"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\banner2.jpg",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\banner2.jpg",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "images/banner2.jpg",
       "AssetKind": "All",
@@ -561,10 +561,10 @@
       "OriginalItemSpec": "wwwroot\\images\\banner2.jpg"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\bbnner.png",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\bbnner.png",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "images/bbnner.png",
       "AssetKind": "All",
@@ -578,10 +578,10 @@
       "OriginalItemSpec": "wwwroot\\images\\bbnner.png"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\footer.jpg",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\footer.jpg",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "images/footer.jpg",
       "AssetKind": "All",
@@ -595,10 +595,10 @@
       "OriginalItemSpec": "wwwroot\\images\\footer.jpg"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\icon.png",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\icon.png",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "images/icon.png",
       "AssetKind": "All",
@@ -612,10 +612,10 @@
       "OriginalItemSpec": "wwwroot\\images\\icon.png"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\icon_right.png",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\icon_right.png",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "images/icon_right.png",
       "AssetKind": "All",
@@ -629,10 +629,10 @@
       "OriginalItemSpec": "wwwroot\\images\\icon_right.png"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\loading.gif",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\loading.gif",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "images/loading.gif",
       "AssetKind": "All",
@@ -646,10 +646,10 @@
       "OriginalItemSpec": "wwwroot\\images\\loading.gif"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\logo.png",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\logo.png",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "images/logo.png",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\images\\logo.png"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\menu_btn.png",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\menu_btn.png",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "images/menu_btn.png",
       "AssetKind": "All",
@@ -680,10 +680,10 @@
       "OriginalItemSpec": "wwwroot\\images\\menu_btn.png"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\mics_img1.jpg",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\mics_img1.jpg",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "images/mics_img1.jpg",
       "AssetKind": "All",
@@ -697,10 +697,10 @@
       "OriginalItemSpec": "wwwroot\\images\\mics_img1.jpg"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\mics_img2.jpg",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\mics_img2.jpg",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "images/mics_img2.jpg",
       "AssetKind": "All",
@@ -714,10 +714,10 @@
       "OriginalItemSpec": "wwwroot\\images\\mics_img2.jpg"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\mics_img3.jpg",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\mics_img3.jpg",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "images/mics_img3.jpg",
       "AssetKind": "All",
@@ -731,10 +731,10 @@
       "OriginalItemSpec": "wwwroot\\images\\mics_img3.jpg"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\mics_img4.jpg",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\mics_img4.jpg",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "images/mics_img4.jpg",
       "AssetKind": "All",
@@ -748,10 +748,10 @@
       "OriginalItemSpec": "wwwroot\\images\\mics_img4.jpg"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\mics_img5.jpg",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\mics_img5.jpg",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "images/mics_img5.jpg",
       "AssetKind": "All",
@@ -765,10 +765,10 @@
       "OriginalItemSpec": "wwwroot\\images\\mics_img5.jpg"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\mics_img6.jpg",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\mics_img6.jpg",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "images/mics_img6.jpg",
       "AssetKind": "All",
@@ -782,10 +782,10 @@
       "OriginalItemSpec": "wwwroot\\images\\mics_img6.jpg"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\right_side.png",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\right_side.png",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "images/right_side.png",
       "AssetKind": "All",
@@ -799,10 +799,10 @@
       "OriginalItemSpec": "wwwroot\\images\\right_side.png"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\service1.png",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\service1.png",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "images/service1.png",
       "AssetKind": "All",
@@ -816,10 +816,10 @@
       "OriginalItemSpec": "wwwroot\\images\\service1.png"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\service2.png",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\service2.png",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "images/service2.png",
       "AssetKind": "All",
@@ -833,10 +833,10 @@
       "OriginalItemSpec": "wwwroot\\images\\service2.png"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\service3.png",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\service3.png",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "images/service3.png",
       "AssetKind": "All",
@@ -850,10 +850,10 @@
       "OriginalItemSpec": "wwwroot\\images\\service3.png"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\test.png",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\test.png",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "images/test.png",
       "AssetKind": "All",
@@ -867,10 +867,10 @@
       "OriginalItemSpec": "wwwroot\\images\\test.png"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\.DS_Store",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\.DS_Store",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "js/JS/.DS_Store",
       "AssetKind": "All",
@@ -884,10 +884,10 @@
       "OriginalItemSpec": "wwwroot\\js\\JS\\.DS_Store"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\bootstrap.bundle.js",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\bootstrap.bundle.js",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "js/JS/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -901,10 +901,10 @@
       "OriginalItemSpec": "wwwroot\\js\\JS\\bootstrap.bundle.js"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\bootstrap.bundle.js.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\bootstrap.bundle.js.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "js/JS/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -918,10 +918,10 @@
       "OriginalItemSpec": "wwwroot\\js\\JS\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\bootstrap.bundle.min.js",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\bootstrap.bundle.min.js",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "js/JS/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -935,10 +935,10 @@
       "OriginalItemSpec": "wwwroot\\js\\JS\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\bootstrap.bundle.min.js.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\bootstrap.bundle.min.js.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "js/JS/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -952,10 +952,10 @@
       "OriginalItemSpec": "wwwroot\\js\\JS\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\bootstrap.js",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\bootstrap.js",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "js/JS/bootstrap.js",
       "AssetKind": "All",
@@ -969,10 +969,10 @@
       "OriginalItemSpec": "wwwroot\\js\\JS\\bootstrap.js"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\bootstrap.js.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\bootstrap.js.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "js/JS/bootstrap.js.map",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\js\\JS\\bootstrap.js.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\bootstrap.min.js",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\bootstrap.min.js",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "js/JS/bootstrap.min.js",
       "AssetKind": "All",
@@ -1003,10 +1003,10 @@
       "OriginalItemSpec": "wwwroot\\js\\JS\\bootstrap.min.js"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\bootstrap.min.js.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\bootstrap.min.js.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "js/JS/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -1020,10 +1020,10 @@
       "OriginalItemSpec": "wwwroot\\js\\JS\\bootstrap.min.js.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\custom.js",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\custom.js",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "js/JS/custom.js",
       "AssetKind": "All",
@@ -1037,10 +1037,10 @@
       "OriginalItemSpec": "wwwroot\\js\\JS\\custom.js"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\jquery.mCustomScrollbar.concat.min.js",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\jquery.mCustomScrollbar.concat.min.js",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "js/JS/jquery.mCustomScrollbar.concat.min.js",
       "AssetKind": "All",
@@ -1054,10 +1054,10 @@
       "OriginalItemSpec": "wwwroot\\js\\JS\\jquery.mCustomScrollbar.concat.min.js"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\jquery.min.js",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\jquery.min.js",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "js/JS/jquery.min.js",
       "AssetKind": "All",
@@ -1071,10 +1071,10 @@
       "OriginalItemSpec": "wwwroot\\js\\JS\\jquery.min.js"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\jquery-3.0.0.min.js",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\jquery-3.0.0.min.js",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "js/JS/jquery-3.0.0.min.js",
       "AssetKind": "All",
@@ -1088,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\js\\JS\\jquery-3.0.0.min.js"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\owl.carousel.js",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\owl.carousel.js",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "js/JS/owl.carousel.js",
       "AssetKind": "All",
@@ -1105,10 +1105,10 @@
       "OriginalItemSpec": "wwwroot\\js\\JS\\owl.carousel.js"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\owl.carousel.min.js",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\owl.carousel.min.js",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "js/JS/owl.carousel.min.js",
       "AssetKind": "All",
@@ -1122,10 +1122,10 @@
       "OriginalItemSpec": "wwwroot\\js\\JS\\owl.carousel.min.js"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\popper.min.js",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\popper.min.js",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "js/JS/popper.min.js",
       "AssetKind": "All",
@@ -1139,10 +1139,10 @@
       "OriginalItemSpec": "wwwroot\\js\\JS\\popper.min.js"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\site.js",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\site.js",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -1156,10 +1156,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -1173,10 +1173,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -1190,10 +1190,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -1207,10 +1207,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -1224,10 +1224,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -1241,10 +1241,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -1258,10 +1258,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -1275,10 +1275,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -1292,10 +1292,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -1326,10 +1326,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -1343,10 +1343,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -1360,10 +1360,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -1377,10 +1377,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -1394,10 +1394,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -1411,10 +1411,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -1428,10 +1428,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -1445,10 +1445,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -1462,10 +1462,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -1479,10 +1479,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -1496,10 +1496,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -1513,10 +1513,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -1530,10 +1530,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -1547,10 +1547,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -1564,10 +1564,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -1581,10 +1581,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -1598,10 +1598,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -1615,10 +1615,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -1632,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -1649,10 +1649,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -1666,10 +1666,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -1683,10 +1683,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -1700,10 +1700,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -1717,10 +1717,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -1734,10 +1734,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -1751,10 +1751,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -1768,10 +1768,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -1785,10 +1785,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -1802,10 +1802,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -1819,10 +1819,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -1836,10 +1836,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -1853,10 +1853,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -1870,10 +1870,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -1887,10 +1887,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -1904,10 +1904,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -1921,10 +1921,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -1938,10 +1938,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -1955,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -1972,10 +1972,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -1989,10 +1989,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -2006,10 +2006,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -2023,10 +2023,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -2040,10 +2040,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -2057,10 +2057,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -2074,10 +2074,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -2091,10 +2091,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -2108,10 +2108,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "Views",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\",
+      "ContentRoot": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\",
       "BasePath": "_content/Views",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",

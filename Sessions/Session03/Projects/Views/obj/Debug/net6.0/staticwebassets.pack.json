@@ -1,495 +1,495 @@
 {
   "Files": [
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Views.bundle.scp.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Views.bundle.scp.css",
       "PackagePath": "staticwebassets\\Views.bundle.scp.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\.DS_Store",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\.DS_Store",
       "PackagePath": "staticwebassets\\css\\CSS\\.DS_Store"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\bootstrap-grid.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\css\\CSS\\bootstrap-grid.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\bootstrap-grid.css.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\css\\CSS\\bootstrap-grid.css.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\bootstrap-grid.min.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\css\\CSS\\bootstrap-grid.min.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\bootstrap-grid.min.css.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\css\\CSS\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\bootstrap-reboot.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\css\\CSS\\bootstrap-reboot.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\bootstrap-reboot.css.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\css\\CSS\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\bootstrap-reboot.min.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\css\\CSS\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\bootstrap-reboot.min.css.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\css\\CSS\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\bootstrap.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\bootstrap.css",
       "PackagePath": "staticwebassets\\css\\CSS\\bootstrap.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\bootstrap.css.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\css\\CSS\\bootstrap.css.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\bootstrap.min.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\CSS\\bootstrap.min.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\bootstrap.min.css.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\CSS\\bootstrap.min.css.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\font-awesome.min.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\font-awesome.min.css",
       "PackagePath": "staticwebassets\\css\\CSS\\font-awesome.min.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\jquery.mCustomScrollbar.min.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\jquery.mCustomScrollbar.min.css",
       "PackagePath": "staticwebassets\\css\\CSS\\jquery.mCustomScrollbar.min.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\meanmenu.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\meanmenu.css",
       "PackagePath": "staticwebassets\\css\\CSS\\meanmenu.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\owl.carousel.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\owl.carousel.css",
       "PackagePath": "staticwebassets\\css\\CSS\\owl.carousel.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\owl.carousel.min.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\owl.carousel.min.css",
       "PackagePath": "staticwebassets\\css\\CSS\\owl.carousel.min.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\owl.theme.default.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\owl.theme.default.css",
       "PackagePath": "staticwebassets\\css\\CSS\\owl.theme.default.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\owl.theme.default.min.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\owl.theme.default.min.css",
       "PackagePath": "staticwebassets\\css\\CSS\\owl.theme.default.min.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\owl.theme.green.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\owl.theme.green.css",
       "PackagePath": "staticwebassets\\css\\CSS\\owl.theme.green.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\owl.theme.green.min.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\owl.theme.green.min.css",
       "PackagePath": "staticwebassets\\css\\CSS\\owl.theme.green.min.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\responsive.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\responsive.css",
       "PackagePath": "staticwebassets\\css\\CSS\\responsive.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\CSS\\style.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\CSS\\style.css",
       "PackagePath": "staticwebassets\\css\\CSS\\style.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\css\\site.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\favicon.ico",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\.DS_Store",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\.DS_Store",
       "PackagePath": "staticwebassets\\images\\.DS_Store"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\about_img.jpg",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\about_img.jpg",
       "PackagePath": "staticwebassets\\images\\about_img.jpg"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\banner.jpg",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\banner.jpg",
       "PackagePath": "staticwebassets\\images\\banner.jpg"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\banner2.jpg",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\banner2.jpg",
       "PackagePath": "staticwebassets\\images\\banner2.jpg"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\bbnner.png",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\bbnner.png",
       "PackagePath": "staticwebassets\\images\\bbnner.png"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\footer.jpg",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\footer.jpg",
       "PackagePath": "staticwebassets\\images\\footer.jpg"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\icon.png",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\icon.png",
       "PackagePath": "staticwebassets\\images\\icon.png"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\icon_right.png",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\icon_right.png",
       "PackagePath": "staticwebassets\\images\\icon_right.png"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\loading.gif",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\loading.gif",
       "PackagePath": "staticwebassets\\images\\loading.gif"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\logo.png",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\logo.png",
       "PackagePath": "staticwebassets\\images\\logo.png"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\menu_btn.png",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\menu_btn.png",
       "PackagePath": "staticwebassets\\images\\menu_btn.png"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\mics_img1.jpg",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\mics_img1.jpg",
       "PackagePath": "staticwebassets\\images\\mics_img1.jpg"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\mics_img2.jpg",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\mics_img2.jpg",
       "PackagePath": "staticwebassets\\images\\mics_img2.jpg"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\mics_img3.jpg",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\mics_img3.jpg",
       "PackagePath": "staticwebassets\\images\\mics_img3.jpg"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\mics_img4.jpg",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\mics_img4.jpg",
       "PackagePath": "staticwebassets\\images\\mics_img4.jpg"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\mics_img5.jpg",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\mics_img5.jpg",
       "PackagePath": "staticwebassets\\images\\mics_img5.jpg"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\mics_img6.jpg",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\mics_img6.jpg",
       "PackagePath": "staticwebassets\\images\\mics_img6.jpg"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\right_side.png",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\right_side.png",
       "PackagePath": "staticwebassets\\images\\right_side.png"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\service1.png",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\service1.png",
       "PackagePath": "staticwebassets\\images\\service1.png"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\service2.png",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\service2.png",
       "PackagePath": "staticwebassets\\images\\service2.png"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\service3.png",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\service3.png",
       "PackagePath": "staticwebassets\\images\\service3.png"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\images\\test.png",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\images\\test.png",
       "PackagePath": "staticwebassets\\images\\test.png"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\.DS_Store",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\.DS_Store",
       "PackagePath": "staticwebassets\\js\\JS\\.DS_Store"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\bootstrap.bundle.js",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\js\\JS\\bootstrap.bundle.js"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\bootstrap.bundle.js.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\js\\JS\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\bootstrap.bundle.min.js",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\js\\JS\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\bootstrap.bundle.min.js.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\js\\JS\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\bootstrap.js",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\bootstrap.js",
       "PackagePath": "staticwebassets\\js\\JS\\bootstrap.js"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\bootstrap.js.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\js\\JS\\bootstrap.js.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\bootstrap.min.js",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\js\\JS\\bootstrap.min.js"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\bootstrap.min.js.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\js\\JS\\bootstrap.min.js.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\custom.js",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\custom.js",
       "PackagePath": "staticwebassets\\js\\JS\\custom.js"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\jquery-3.0.0.min.js",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\jquery-3.0.0.min.js",
       "PackagePath": "staticwebassets\\js\\JS\\jquery-3.0.0.min.js"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\jquery.mCustomScrollbar.concat.min.js",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\jquery.mCustomScrollbar.concat.min.js",
       "PackagePath": "staticwebassets\\js\\JS\\jquery.mCustomScrollbar.concat.min.js"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\jquery.min.js",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\jquery.min.js",
       "PackagePath": "staticwebassets\\js\\JS\\jquery.min.js"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\owl.carousel.js",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\owl.carousel.js",
       "PackagePath": "staticwebassets\\js\\JS\\owl.carousel.js"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\owl.carousel.min.js",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\owl.carousel.min.js",
       "PackagePath": "staticwebassets\\js\\JS\\owl.carousel.min.js"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\JS\\popper.min.js",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\JS\\popper.min.js",
       "PackagePath": "staticwebassets\\js\\JS\\popper.min.js"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\js\\site.js",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session04\\Views\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\Session03\\Projects\\Views\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

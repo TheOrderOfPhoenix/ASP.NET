@@ -1,0 +1,14 @@
+E:\TheOrder\ASP.NET\ASP.NET\Repo\Sessions\Session05\Projects\OOP\bin\Debug\net6.0\OOP.exe
+E:\TheOrder\ASP.NET\ASP.NET\Repo\Sessions\Session05\Projects\OOP\bin\Debug\net6.0\OOP.deps.json
+E:\TheOrder\ASP.NET\ASP.NET\Repo\Sessions\Session05\Projects\OOP\bin\Debug\net6.0\OOP.runtimeconfig.json
+E:\TheOrder\ASP.NET\ASP.NET\Repo\Sessions\Session05\Projects\OOP\bin\Debug\net6.0\OOP.dll
+E:\TheOrder\ASP.NET\ASP.NET\Repo\Sessions\Session05\Projects\OOP\bin\Debug\net6.0\OOP.pdb
+E:\TheOrder\ASP.NET\ASP.NET\Repo\Sessions\Session05\Projects\OOP\obj\Debug\net6.0\OOP.GeneratedMSBuildEditorConfig.editorconfig
+E:\TheOrder\ASP.NET\ASP.NET\Repo\Sessions\Session05\Projects\OOP\obj\Debug\net6.0\OOP.AssemblyInfoInputs.cache
+E:\TheOrder\ASP.NET\ASP.NET\Repo\Sessions\Session05\Projects\OOP\obj\Debug\net6.0\OOP.AssemblyInfo.cs
+E:\TheOrder\ASP.NET\ASP.NET\Repo\Sessions\Session05\Projects\OOP\obj\Debug\net6.0\OOP.csproj.CoreCompileInputs.cache
+E:\TheOrder\ASP.NET\ASP.NET\Repo\Sessions\Session05\Projects\OOP\obj\Debug\net6.0\OOP.dll
+E:\TheOrder\ASP.NET\ASP.NET\Repo\Sessions\Session05\Projects\OOP\obj\Debug\net6.0\refint\OOP.dll
+E:\TheOrder\ASP.NET\ASP.NET\Repo\Sessions\Session05\Projects\OOP\obj\Debug\net6.0\OOP.pdb
+E:\TheOrder\ASP.NET\ASP.NET\Repo\Sessions\Session05\Projects\OOP\obj\Debug\net6.0\OOP.genruntimeconfig.cache
+E:\TheOrder\ASP.NET\ASP.NET\Repo\Sessions\Session05\Projects\OOP\obj\Debug\net6.0\ref\OOP.dll

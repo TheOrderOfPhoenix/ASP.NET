@@ -28,11 +28,9 @@ Use [layouts](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/layout?vi
 Partial views are an effective way to:
 
 - Break up large markup files into smaller components.
-    
     In a large, complex markup file composed of several logical pieces, there's an advantage to working with each piece isolated into a partial view. The code in the markup file is manageable because the markup only contains the overall page structure and references to partial views.
     
 - Reduce the duplication of common markup content across markup files.
-    
     When the same markup elements are used across markup files, a partial view removes the duplication of markup content into one partial view file. When the markup is changed in the partial view, it updates the rendered output of the markup files that use the partial view.
 Partial views shouldn't be used to maintain common layout elements. Common layout elements should be specified in [_Layout.cshtml](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/layout?view=aspnetcore-9.0)  files.
 

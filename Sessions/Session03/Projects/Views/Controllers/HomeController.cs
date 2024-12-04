@@ -15,6 +15,8 @@ namespace Views.Controllers
 
         public IActionResult Index()
         {
+            List<string> list = new List<string>();
+            list.Add("harry_potter");
             return View();
         }
 
