@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Ali\\Programming\\ASP.net\\MFT\\Projects\\H\\Session07\\Session07\\Session07\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8DDB2F59-34EA-4008-A736-612FCF6F5EDD}|DIP_Solution04\\DIP_Solution04.csproj|e:\\ali\\programming\\asp.net\\mft\\projects\\h\\session07\\session07\\session07\\dip_solution04\\framework\\interface\\iservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DDB2F59-34EA-4008-A736-612FCF6F5EDD}|DIP_Solution04\\DIP_Solution04.csproj|solutionrelative:dip_solution04\\framework\\interface\\iservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DDB2F59-34EA-4008-A736-612FCF6F5EDD}|DIP_Solution04\\DIP_Solution04.csproj|e:\\ali\\programming\\asp.net\\mft\\projects\\h\\session07\\session07\\session07\\dip_solution04\\framework\\base\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DDB2F59-34EA-4008-A736-612FCF6F5EDD}|DIP_Solution04\\DIP_Solution04.csproj|solutionrelative:dip_solution04\\framework\\base\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DDB2F59-34EA-4008-A736-612FCF6F5EDD}|DIP_Solution04\\DIP_Solution04.csproj|e:\\ali\\programming\\asp.net\\mft\\projects\\h\\session07\\session07\\session07\\dip_solution04\\lifecycle\\a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DDB2F59-34EA-4008-A736-612FCF6F5EDD}|DIP_Solution04\\DIP_Solution04.csproj|solutionrelative:dip_solution04\\lifecycle\\a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DDB2F59-34EA-4008-A736-612FCF6F5EDD}|DIP_Solution04\\DIP_Solution04.csproj|e:\\ali\\programming\\asp.net\\mft\\projects\\h\\session07\\session07\\session07\\dip_solution04\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DDB2F59-34EA-4008-A736-612FCF6F5EDD}|DIP_Solution04\\DIP_Solution04.csproj|solutionrelative:dip_solution04\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Ali\\Programming\\ASP.net\\MFT\\Projects\\H\\Session07\\Session07\\Session07\\DIP_Solution04\\Program.cs",
+              "RelativeDocumentMoniker": "DIP_Solution04\\Program.cs",
+              "ToolTip": "E:\\Ali\\Programming\\ASP.net\\MFT\\Projects\\H\\Session07\\Session07\\Session07\\DIP_Solution04\\Program.cs",
+              "RelativeToolTip": "DIP_Solution04\\Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T11:21:29.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "A.cs",
+              "DocumentMoniker": "E:\\Ali\\Programming\\ASP.net\\MFT\\Projects\\H\\Session07\\Session07\\Session07\\DIP_Solution04\\LifeCycle\\A.cs",
+              "RelativeDocumentMoniker": "DIP_Solution04\\LifeCycle\\A.cs",
+              "ToolTip": "E:\\Ali\\Programming\\ASP.net\\MFT\\Projects\\H\\Session07\\Session07\\Session07\\DIP_Solution04\\LifeCycle\\A.cs",
+              "RelativeToolTip": "DIP_Solution04\\LifeCycle\\A.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T11:20:14.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BaseService.cs",
+              "DocumentMoniker": "E:\\Ali\\Programming\\ASP.net\\MFT\\Projects\\H\\Session07\\Session07\\Session07\\DIP_Solution04\\Framework\\Base\\BaseService.cs",
+              "RelativeDocumentMoniker": "DIP_Solution04\\Framework\\Base\\BaseService.cs",
+              "ToolTip": "E:\\Ali\\Programming\\ASP.net\\MFT\\Projects\\H\\Session07\\Session07\\Session07\\DIP_Solution04\\Framework\\Base\\BaseService.cs",
+              "RelativeToolTip": "DIP_Solution04\\Framework\\Base\\BaseService.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T11:18:54.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IService.cs",
+              "DocumentMoniker": "E:\\Ali\\Programming\\ASP.net\\MFT\\Projects\\H\\Session07\\Session07\\Session07\\DIP_Solution04\\Framework\\Interface\\IService.cs",
+              "RelativeDocumentMoniker": "DIP_Solution04\\Framework\\Interface\\IService.cs",
+              "ToolTip": "E:\\Ali\\Programming\\ASP.net\\MFT\\Projects\\H\\Session07\\Session07\\Session07\\DIP_Solution04\\Framework\\Interface\\IService.cs",
+              "RelativeToolTip": "DIP_Solution04\\Framework\\Interface\\IService.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAAAsAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T11:17:34.805Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

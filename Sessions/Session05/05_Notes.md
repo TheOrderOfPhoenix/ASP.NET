@@ -65,7 +65,7 @@ interface IDisplayer
 } 
 
 // A class that implements interface. 
-class testClass : IDisplayer 
+class testClass : IDisplayer , 
 { 
 	
 	// providing the body part of function 
@@ -344,18 +344,27 @@ namespace Entity2
         public Car() { }
         public string Color { get; set; }
         public string Max_Speed { get; set; }
+        public Engine Engine {get; set;}
     }
     class Suzuki : Car
     {
-        public Suzuki() { }
+        public Suzuki() 
+        {
+	        Engine = new Engine(); // Eager Composition 
+        }
+        
+	    public Suzuki(Engine engine) // Eager Aggregation
+        {
+	        Engine = engine;
+        }
+        
         public int Total_Seats { get; set; }
         public string Model_No { get; set; }
         public void CarInfo()
         {
             string Info = $"Color of car is {this.Color} \nMaximum speed is {this.Max_Speed}\nNumber of seats is {this.Total_Seats}\nModel No is {this.Model_No}\n";
             WriteLine(Info);
-            Engine Obj = new Engine();
-            Obj.Engine_Info();
+            Engine.Engine_Info();
         }
     }
     class Engine
@@ -626,7 +635,7 @@ namespace LibraryManagementSystem
             // Create Bookshelf and Books
             Bookshelf shelf1 = new Bookshelf { ShelfNumber = 1 };
             shelf1.AddBook(new Book { Title = "C# Programming", Author = "John Doe" });
-            shelf1.AddBook(new Book { Title = "Data Structures", Author = "Jane Smith" });
+            shelf1.AddBook(new Book { Title = "Data Structures", Author = "Jane Smith"});
 
             // Add Bookshelf to Library (Composition)
             library.AddBookshelf(shelf1);

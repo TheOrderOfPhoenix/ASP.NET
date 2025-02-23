@@ -1,0 +1,121 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\DILastSession\\DILastSession\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CB5CEF4E-1FED-4E80-9F2B-4AEDC4484AAC}|DILastSession.csproj|e:\\theorder\\asp.net\\asp.net\\repo\\sessions\\dilastsession\\dilastsession\\externalservice\\service01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB5CEF4E-1FED-4E80-9F2B-4AEDC4484AAC}|DILastSession.csproj|solutionrelative:externalservice\\service01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB5CEF4E-1FED-4E80-9F2B-4AEDC4484AAC}|DILastSession.csproj|e:\\theorder\\asp.net\\asp.net\\repo\\sessions\\dilastsession\\dilastsession\\lifecycle\\a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB5CEF4E-1FED-4E80-9F2B-4AEDC4484AAC}|DILastSession.csproj|solutionrelative:lifecycle\\a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB5CEF4E-1FED-4E80-9F2B-4AEDC4484AAC}|DILastSession.csproj|e:\\theorder\\asp.net\\asp.net\\repo\\sessions\\dilastsession\\dilastsession\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB5CEF4E-1FED-4E80-9F2B-4AEDC4484AAC}|DILastSession.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB5CEF4E-1FED-4E80-9F2B-4AEDC4484AAC}|DILastSession.csproj|e:\\theorder\\asp.net\\asp.net\\repo\\sessions\\dilastsession\\dilastsession\\framework\\interface\\iservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB5CEF4E-1FED-4E80-9F2B-4AEDC4484AAC}|DILastSession.csproj|solutionrelative:framework\\interface\\iservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB5CEF4E-1FED-4E80-9F2B-4AEDC4484AAC}|DILastSession.csproj|e:\\theorder\\asp.net\\asp.net\\repo\\sessions\\dilastsession\\dilastsession\\externalservice\\service02.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB5CEF4E-1FED-4E80-9F2B-4AEDC4484AAC}|DILastSession.csproj|solutionrelative:externalservice\\service02.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 79,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IService.cs",
+              "DocumentMoniker": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\DILastSession\\DILastSession\\Framework\\Interface\\IService.cs",
+              "RelativeDocumentMoniker": "Framework\\Interface\\IService.cs",
+              "ToolTip": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\DILastSession\\DILastSession\\Framework\\Interface\\IService.cs",
+              "RelativeToolTip": "Framework\\Interface\\IService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T18:55:09.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Service02.cs",
+              "DocumentMoniker": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\DILastSession\\DILastSession\\ExternalService\\Service02.cs",
+              "RelativeDocumentMoniker": "ExternalService\\Service02.cs",
+              "ToolTip": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\DILastSession\\DILastSession\\ExternalService\\Service02.cs",
+              "RelativeToolTip": "ExternalService\\Service02.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBIAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T18:52:36.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Service01.cs",
+              "DocumentMoniker": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\DILastSession\\DILastSession\\ExternalService\\Service01.cs",
+              "RelativeDocumentMoniker": "ExternalService\\Service01.cs",
+              "ToolTip": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\DILastSession\\DILastSession\\ExternalService\\Service01.cs",
+              "RelativeToolTip": "ExternalService\\Service01.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBkAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T18:47:48.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\DILastSession\\DILastSession\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\DILastSession\\DILastSession\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T18:47:14.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "A.cs",
+              "DocumentMoniker": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\DILastSession\\DILastSession\\LifeCycle\\A.cs",
+              "RelativeDocumentMoniker": "LifeCycle\\A.cs",
+              "ToolTip": "E:\\TheOrder\\ASP.NET\\ASP.NET\\Repo\\Sessions\\DILastSession\\DILastSession\\LifeCycle\\A.cs",
+              "RelativeToolTip": "LifeCycle\\A.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAuwBQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T14:42:51.021Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

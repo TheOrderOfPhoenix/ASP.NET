@@ -1,0 +1,11 @@
+E:\Ali\Programming\ASP.net\Projects\H\Session07\Session07\Session07\DIP_Solution04\bin\Debug\DIP_Solution04.exe.config
+E:\Ali\Programming\ASP.net\Projects\H\Session07\Session07\Session07\DIP_Solution04\bin\Debug\DIP_Solution04.exe
+E:\Ali\Programming\ASP.net\Projects\H\Session07\Session07\Session07\DIP_Solution04\bin\Debug\DIP_Solution04.pdb
+E:\Ali\Programming\ASP.net\Projects\H\Session07\Session07\Session07\DIP_Solution04\obj\Debug\DIP_Solution04.csproj.AssemblyReference.cache
+E:\Ali\Programming\ASP.net\Projects\H\Session07\Session07\Session07\DIP_Solution04\obj\Debug\DIP_Solution04.csproj.CoreCompileInputs.cache
+E:\Ali\Programming\ASP.net\Projects\H\Session07\Session07\Session07\DIP_Solution04\obj\Debug\DIP_Solution04.exe
+E:\Ali\Programming\ASP.net\Projects\H\Session07\Session07\Session07\DIP_Solution04\obj\Debug\DIP_Solution04.pdb
+E:\Ali\Programming\ASP.net\MFT\Projects\H\Session07\Session07\Session07\DIP_Solution04\obj\Debug\DIP_Solution04.csproj.AssemblyReference.cache
+E:\Ali\Programming\ASP.net\MFT\Projects\H\Session07\Session07\Session07\DIP_Solution04\obj\Debug\DIP_Solution04.csproj.CoreCompileInputs.cache
+E:\Ali\Programming\ASP.net\MFT\Projects\H\Session07\Session07\Session07\DIP_Solution04\obj\Debug\DIP_Solution04.exe
+E:\Ali\Programming\ASP.net\MFT\Projects\H\Session07\Session07\Session07\DIP_Solution04\obj\Debug\DIP_Solution04.pdb
