@@ -40,7 +40,7 @@ companyId
 id
 title
 
-### Base
+### Location
 id
 location
 type
@@ -50,8 +50,10 @@ cityId
 id
 typeId
 
-### Company
-### Type
+
+### LocationType
+id
+typeId
 
 ### Ticket
 tranportationId
@@ -90,3 +92,24 @@ Not Mapped
 ### DB Management of person sub classes
 ### Should we complete the whole db 
 ### How to handle tickets 
+
+## Tasks
+
+- [x] Review ERD
+- [ ] Create a Project 
+- [ ] Name + Structure
+- [x] Talk about the privacy
+- [x] Should we all fork the structure?
+- [x] We should keep the site and keep it running
+- [x] Picking the react course
+- [ ] A quick talk about the plans and timing. 
+
+
+[https://www.youtube.com/watch?v=SqcY0GlETPk](https://www.youtube.com/watch?v=SqcY0GlETPk)
+
+[https://www.youtube.com/watch?v=g3is3wQK70Q](https://www.youtube.com/watch?v=g3is3wQK70Q)
+
+
+
+
+
