@@ -81,7 +81,6 @@ Not Mapped
 ### 
 ### 
 
-
 ## Phases
 
 
@@ -96,18 +95,20 @@ Not Mapped
 ## Tasks
 
 - [x] Review ERD
-- [ ] Create a Project 
-- [ ] Name + Structure
+- [x] Create a Project 
+- [x] Name + Structure
 - [x] Talk about the privacy
 - [x] Should we all fork the structure?
 - [x] We should keep the site and keep it running
 - [x] Picking the react course
-- [ ] A quick talk about the plans and timing. 
+- [x] A quick talk about the plans and timing. 
+
 
 
 [https://www.youtube.com/watch?v=SqcY0GlETPk](https://www.youtube.com/watch?v=SqcY0GlETPk)
 
 [https://www.youtube.com/watch?v=g3is3wQK70Q](https://www.youtube.com/watch?v=g3is3wQK70Q)
+
 
 
 

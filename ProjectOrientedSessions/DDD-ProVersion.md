@@ -27,15 +27,17 @@ Domain Objects -> 1. Entity Objects 2. Value Objects
 
 📂 **MyApp.sln** (Solution file)
 
-### **1. Presentation Layer** (📂 `MyApp.API`)
+### **1. Presentation Layer** (📂 `MyApp.WebAPI`)
 
 - **Purpose:** Exposes the application via a web API.
 
-📂 `MyApp.API`
+📂 `MyApp.WebAPI`
 - 📂 **Controllers** – Defines API endpoints.
 - 📂 **Middlewares** – Implements custom middleware (logging, exception handling).
 
-
+### Dependencies:
+> Projects: ApplicationProject, DomainProject 
+> Packages: AutoMapper, Microsoft.EntityFrameworkCore.Design, Microsoft.EntityFrameworkCore.SqlServer, Microsoft.EntityFrameworkCore.Tools, Newtonsoft.Json
 ---
 
 ### **2. Application Layer** (📂 `MyApp.Application`)
@@ -52,6 +54,10 @@ Domain Objects -> 1. Entity Objects 2. Value Objects
 >- 📂 **Commands** – Handles write operations (CQRS pattern).
 >- 📂 **Exceptions** – Defines application-layer exceptions.
 >- 📂 **UseCases** – Implements application logic (e.g., `CreateOrderHandler`).
+
+### Dependencies: 
+>Projects: DomainProjec
+>Packages: AutoMapper, Microsoft.Extensions.DependencyInjection
 ---
 
 ### **3. Core Domain Layer** (📂 `MyApp.Domain`)
@@ -70,6 +76,8 @@ Domain Objects -> 1. Entity Objects 2. Value Objects
 >- 📂 **Exceptions** – Custom exceptions related to domain logic.
 >- 📂 **Specifications** – Encapsulates domain rules and query logic.
 
+### Dependencies:
+>Packages: Microsoft.Extensions.DependencyInjection
 ---
 
 ### **4. Infrastructure Layer** (📂 `MyApp.Infrastructure`)
@@ -89,9 +97,17 @@ Domain Objects -> 1. Entity Objects 2. Value Objects
 >- 📂 **Caching** – Implements caching strategies (Redis, MemoryCache).
 >- 📂 **Email** – Handles email services (SMTP, SendGrid).
 >- 📂 **ExternalServices** – Integrations with third-party APIs.
+
+
+### Dependencies: 
+>Projects: DomainProjec
+>Packages: Microsoft.EntityFrameworkCore.SqlServer
 ---
 
 ### **Additional Projects (Optional)**
 
 - 📂 `MyApp.Tests` – Unit and integration tests.
 - 📂 `MyApp.Shared` – Shared utilities (cross-cutting concerns like constants, helpers).
+
+
+Check the structure and git and stuff
