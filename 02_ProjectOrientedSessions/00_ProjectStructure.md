@@ -1,4 +1,4 @@
-# Overview of Clean Architecture in an ASP.NET Core Project
+# Overview of Clean Architecture in an ASP.NET Core Project (by Chat GPT)
 
 Clean Architecture is a software design pattern that promotes separation of concerns, testability, and maintainability. It structures an application into layers, ensuring dependencies flow inwards (towards business logic) and that the core logic is independent of frameworks and external dependencies.
 
@@ -194,19 +194,13 @@ This ensures the **business logic is central** and **not coupled** to frameworks
 - **Infrastructure Layer**: External dependencies (Repositories, External APIs, Logging).
 - **Presentation Layer**: UI & API (Controllers, Views, Frontend).
 
-Would you like a more detailed breakdown for a specific area? 🚀
-![[Pasted image 20250306182113.png]]
-![[Pasted image 20250306182209.png]]
-![[Pasted image 20250306182246.png]]
-![[Pasted image 20250306182324.png]]
-
-
 # Backend Project Structure
 ## **Solution Name: MyApp (or your project name)**
 
 📂 **MyApp.sln** (Solution file)
 
 ### **1. Presentation Layer** (📂 `MyApp.WebAPI`)
+- **Project Type:** ASP .NET Core Web API - with default settings
 - **Purpose:** Exposes the application via a web API.
 
 📂 `MyApp.WebAPI`
@@ -214,12 +208,19 @@ Would you like a more detailed breakdown for a specific area? 🚀
 - 📂 **Middlewares** – Implements custom middleware (logging, exception handling).
 
 ### Dependencies:
-> Projects: ApplicationProject, DomainProject 
-> Packages: AutoMapper, Microsoft.EntityFrameworkCore.Design, Microsoft.EntityFrameworkCore.SqlServer, Microsoft.EntityFrameworkCore.Tools, Newtonsoft.Json
+- Projects: 
+	- Application Project
+	- Domain Project 
+- Packages:
+	- AutoMapper
+	- Microsoft.EntityFrameworkCore.Design
+	- Microsoft.EntityFrameworkCore.SqlServer
+	- Microsoft.EntityFrameworkCore.Tools
+	- Newtonsoft.Json
 ---
 
 ### **2. Application Layer** (📂 `MyApp.Application`)
-
+- **Project Type:** C# Class Library - with default settings
 - **Purpose:** Contains the application logic, use cases, and service abstractions.
 
 📂 `MyApp.Application`
@@ -230,12 +231,15 @@ Would you like a more detailed breakdown for a specific area? 🚀
 - 📂 **Validators** – Contains validation rules using FluentValidation.
 
 ### Dependencies: 
->Projects: DomainProjec
->Packages: AutoMapper, Microsoft.Extensions.DependencyInjection
+- Projects
+	- Domain Project
+- Packages: 
+	- AutoMapper
+	- Microsoft.Extensions.DependencyInjection
 ---
 
 ### **3. Core Domain Layer** (📂 `MyApp.Domain`)
-
+- **Project Type:** C# Class Library - with default settings
 - **Purpose:** Represents the core business logic and entities without dependencies on infrastructure or frameworks.
 
 📂 `MyApp.Domain`
@@ -248,11 +252,12 @@ Would you like a more detailed breakdown for a specific area? 🚀
 - 📂 **Factories** 
 
 ### Dependencies:
->Packages: Microsoft.Extensions.DependencyInjection
+- Packages: 
+	- Microsoft.Extensions.DependencyInjection
 ---
 
 ### **4. Infrastructure Layer** (📂 `MyApp.Infrastructure`)
-
+- **Project Type:** C# Class Library - with default settings
 - **Purpose:** Implements external dependencies such as databases, logging, APIs, and caching.
 
 📂 `MyApp.Infrastructure`
@@ -264,8 +269,10 @@ Would you like a more detailed breakdown for a specific area? 🚀
 -  **DB-Context**
 
 ### Dependencies: 
->Projects: DomainProjec
->Packages: Microsoft.EntityFrameworkCore.SqlServer
+- Projects: 
+	- Domain Project
+- Packages:
+	- Microsoft.EntityFrameworkCore.SqlServer
 ---
 
 ### **Additional Projects (Optional)**
@@ -274,10 +281,8 @@ Would you like a more detailed breakdown for a specific area? 🚀
 - 📂 `MyApp.Shared` – Shared utilities (cross-cutting concerns like constants, helpers).
 
 
-Check the structure and git and stuff
+# Frontend Project Structure (Will most likely change in future)
 
-
-# Frontend Project Structure
 ```shell
 npx create-react-app alibabaclone-frontend --use-npm --template typescript cd alibabaclone-frontend npm start
 ```
