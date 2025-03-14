@@ -1,7 +1,6 @@
 
 # EF Core Code First
-https://www.youtube.com/watch?v=pYpqymkByoc&ab_channel=TheAmazingCodeverse
-
+https://www.youtube.com/watch?v=b8fFRX0T38M&ab_channel=PatrickGod
 # Repository Pattern
 
 ## Brief Introduction (without DB Context)
