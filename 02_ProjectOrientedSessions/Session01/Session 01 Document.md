@@ -32,6 +32,9 @@ public class Entity<TKey> : IEntity<TKey>
 ### Use the latest version of ERD to specify the properties
 ### You can use this project as a reference:
 https://github.com/MehrdadShirvani/AlibabaClone-Backend/tree/develop/AlibabaClone.Domain/Aggregates
+### Link to the ERD:
+https://github.com/TheOrderOfPhoenix/ASP.NET/tree/main/02_ProjectOrientedSessions/docs
+
 ### One Example:
 
 ```C#
