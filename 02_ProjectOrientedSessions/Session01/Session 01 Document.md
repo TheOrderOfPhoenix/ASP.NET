@@ -48,7 +48,7 @@ public class Account : Entity<long>
 ```
 
 ## Add Navigation Properties 
-### What is a navigation property?
+### What is a navigation property? (the following pieces of code are just there for educational purposes)
 #### **🔹 Navigation Properties in Entity Framework Core: Everything You Need to Know**
 
 ---
