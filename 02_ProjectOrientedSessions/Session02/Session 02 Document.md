@@ -405,7 +405,7 @@ namespace AlibabaClone.Infrastructure
 ```json
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=YOUR_SERVER;Database=YourDb;User Id=USERNAME;Password=PASSWORD;Trusted_Connection=True;"
+    "DefaultConnection": "Server=YOUR_SERVER;Database=YourDb;User Id=USERNAME;Password=PASSWORD;Trusted_Connection=True;TrustServerCertificate=True"
   }
 }
 ```
@@ -413,7 +413,7 @@ namespace AlibabaClone.Infrastructure
 ```json
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=YOUR_SERVER;Database=YourDb;IntegratedSecurity=TRUE;Trusted_Connection=True;"
+    "DefaultConnection": "Server=YOUR_SERVER;Database=YourDb;Integrated Security=TRUE;Trusted_Connection=True;TrustServerCertificate=True"
   }
 }
 ```
