@@ -204,7 +204,7 @@ public class BaseRepository<K_DbContext, T_Entity, U_PrimaryKey> : IRepository<T
 }
 ```
 
-## Create one interface for each entity, and name it `I[Entity]Repository` 
+## Create one interface for each entity(except the join tables for now), and name it `I[Entity]Repository` 
 - [ ] For each entity, create an interface that inherits `IRepository`
 - [ ] (Optional): Add method definitions as you deem needed for that entity (not recommended right now. We will come back to this part later)
 
