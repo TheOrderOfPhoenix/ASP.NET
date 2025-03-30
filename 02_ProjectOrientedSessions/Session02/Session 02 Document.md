@@ -450,7 +450,7 @@ app.Run();
 - [ ] Make sure you have installed Microsoft.EntityFrameworkCore.Tools
 - [ ] Run the following command
 ```
-Add-Migrations InitialCreate
+Add-Migration InitialCreate
 ```
 - [ ] In case of scuccues:
 ```
