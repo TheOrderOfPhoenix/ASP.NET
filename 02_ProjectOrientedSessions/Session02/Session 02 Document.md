@@ -16,7 +16,7 @@ https://learn.microsoft.com/en-us/ef/core/modeling/
 - The **Domain layer** should be **clean** (only entities, no database-related logic).
 - The **Infrastructure layer** handles **database interactions**, so configurations belong here.
 
-
+ 
 ## Create configuration classes
 - [ ] Create the classes with this format: `[Entity]Configutaion.cs`
 - [ ] The class should implement the `IEntityTypeConfiguration<[Entity]>`
