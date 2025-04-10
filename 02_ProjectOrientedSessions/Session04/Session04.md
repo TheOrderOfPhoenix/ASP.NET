@@ -227,9 +227,111 @@ public enum ResultStatus
 
 You can read more about enums: [W3Schools](https://www.w3schools.com/cs/cs_enums.php)
 
-# IService & Service (Amin)
 
-# Controller (Amin)
+📂 Suggested Folder: Application/Result
+
+# IService & Service
+
+- [ ] Use repositories and UnitOfWork in services to implement business logic
+
+
+- existance of an interface for each service class is optional
+- services can have multiple repositories in them -> logic-based structure
+
+here's an example:
+
+```cs
+public class TransportationService : ITransportationService
+{
+	private readonly ITransportationRepository _transportationRepository;
+	private readonly IMapper _mapper;
+	private readonly IUnitOfWork _unitOfWork;
+
+	public TransportationService(ITransportationRepository transportationRepository, IMapper mapper, IUnitOfWork unitOfWork)
+	{
+		_transportationRepository = transportationRepository;
+		_mapper = mapper;
+		_unitOfWork = unitOfWork;
+	}
+
+	public async Task<Result<IEnumerable<TransportationSearchResultDto>>> SearchTransportationsAsync(TransportationSearchRequestDto requestDto)
+	{
+		var result = await _transportationRepository.SearchTransportationsAsync(
+			vehicleTypeId: requestDto.VehicleTypeId,
+			fromCityId: requestDto.FromCityId,
+			toCityId: requestDto.ToCityId,
+			startDateTime: requestDto.StartDate,
+			endDateTime: requestDto.EndDate);
+
+		if (result.Any())
+		{
+			var dto = _mapper.Map<IEnumerable<TransportationSearchResultDto>>(result);
+			return Result<IEnumerable<TransportationSearchResultDto>>.Success(dto);
+		}
+
+		return Result<IEnumerable<TransportationSearchResultDto>>.NotFound(null);
+	}
+}
+```
+
+📂 Suggested Folder: Application/Services
+
+- [ ] To handle dependency injection in Program.cs:
+```cs
+#region Register Services
+builder.Services.AddScoped<ITransportationService, TransportationService>();
+builder.Services.AddScoped<ICityService, CityService>();
+#endregion
+```
+
+# Controller
+
+- [ ] Now we're getting to endpoints, you should communicate with client side through web-api. So every controller uses Services in Application layer to recieve requests and send responses with DTOs.
+
+You should use ```[ApiController]``` attribute on top of them, route them and handle different status codes. TransportationController:
+
+```cs
+[ApiController]
+[Route("api/[controller]")]
+public class TransportationController : ControllerBase
+{
+	private readonly ITransportationService _transportationService;
+
+	public TransportationController(ITransportationService transportationService)
+	{
+		_transportationService = transportationService;
+	}
+
+	[HttpGet("search")]
+	public async Task<IActionResult> SearchTransportations([FromQuery] TransportationSearchRequestDto searchRequest)
+	{
+		if (searchRequest == null)
+		{
+			return BadRequest("Invalid search request");
+		}
+
+		var result = await _transportationService.SearchTransportationsAsync(searchRequest);
+		if (result.IsSuccess)
+		{
+			return Ok(result);
+		}
+
+		// any unsuccessful status
+		return result.Status switch
+		{
+			ResultStatus.NotFound => NotFound(result.ErrorMessage),
+			ResultStatus.ValidationError => BadRequest(result.ErrorMessage),
+			_ => StatusCode(500, result.ErrorMessage),
+		};
+	}
+}
+```
+
+- HttpGet: handles a GET request from client -> important for routing
+- Ok, BadRequest, NotFound and StatusCode are Json results to send through api
+- Use TransportationService to communicate with Application
+
+To test your project, run it and use Swagger or Postman
 
 # Inserting Sample Data 
 
