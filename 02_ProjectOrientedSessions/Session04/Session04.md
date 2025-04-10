@@ -32,11 +32,11 @@ public class CityDto
 ```cs
 public class TransportationSearchRequestDto
 {
-	public short? VehicleTypeId { get; init; }
-    public int? FromCityId { get; init; }
-    public int? ToCityId { get; init; }
-    public DateTime? StartDate { get; init; }
-    public DateTime? EndDate { get; init; }
+     public short? VehicleTypeId { get; init; }
+     public int? FromCityId { get; init; }
+     public int? ToCityId { get; init; }
+     public DateTime? StartDate { get; init; }
+     public DateTime? EndDate { get; init; }
 }
 ```
 <br>
@@ -169,7 +169,63 @@ public class MappingProfile : Profile
  .
 ```
 
-# Result & Result Status (Amin)
+# Result & Result Status
+
+Result is a template to transfer data between services and controllers (in backend), so will use a generic type
+
+```cs
+public class Result<T>
+{
+	public ResultStatus Status { get; set; }
+	public string? ErrorMessage { get; set; }
+	public T? Data { get; set; }
+	public bool IsSuccess => Status == ResultStatus.Success;
+
+	public static Result<T> Success(T data)
+	{
+		return new Result<T>
+		{
+			Status = ResultStatus.Success,
+			Data = data
+		};
+	}
+
+	public static Result<T> Error(T data)
+	{
+		return new Result<T>
+		{
+			Status = ResultStatus.Error,
+			Data = data
+		};
+	}
+
+	public static Result<T> NotFound(T data)
+	{
+		return new Result<T>
+		{
+			Status = ResultStatus.NotFound,
+			Data = data
+		};
+	}
+}
+```
+
+As you can see, there's a property of type ResultStatus, which is a enum for status of request
+
+```cs
+public enum ResultStatus
+{
+	Success,
+	NotFound,
+	ValidationError,
+	Conflict,
+	Unauthorized,
+	Forbidden,
+	Error
+}
+```
+
+You can read more about enums: [W3Schools](https://www.w3schools.com/cs/cs_enums.php)
 
 # IService & Service (Amin)
 
