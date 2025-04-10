@@ -1,21 +1,18 @@
-# 00 The unedited conversation with Chat GPT, concerning almost all of the aspects of this session:
+# Preparation: 
+The unedited conversation with Chat GPT, concerning almost all of the aspects of this session:
 (optional): read this to get a better understanding of the topic:
 https://chatgpt.com/share/67f18460-1c1c-8010-bc57-9f3b683ec87a
 
 # Branching
-
 - [ ]  Create the feature/transportation-search branch based on develop
-
-
 
 # DTO
 In order to develop transportation search flow, three DTOs need to be created in the application layer.
-<br>
+
 - [ ]  Create DTOs related to transportation search flow
-<br>
 
 📂 Suggested Folder: Application/DTOs/City`
-<br>
+
 
 ```cs
 public class CityDto
@@ -24,10 +21,8 @@ public class CityDto
     public required string Title { get; init; }
 }
 ```
-<br>
-📂 Suggested Folder: Application/DTOs/Transportation
 
-<br>
+📂 Suggested Folder: Application/DTOs/Transportation
 
 ```cs
 public class TransportationSearchRequestDto
@@ -39,7 +34,6 @@ public class TransportationSearchRequestDto
      public DateTime? EndDate { get; init; }
 }
 ```
-<br>
 
 ```cs
 public class TransportationSearchResultDto
@@ -55,15 +49,11 @@ public class TransportationSearchResultDto
     public decimal Price { get; init; } 
 }
 ```
-<br><br>
 
 # Repository
 There are a few things to be add to some repositories for transportation search flow.
-<br>
 
 - [ ] Create DTOs related to transportation search flow
-
-<br>
 
 📂 Suggested Folder: Domain/Framework/Interfaces/Repositories/
 TransportationRepositories
@@ -79,9 +69,10 @@ public interface ITransportationRepository : IRepository<Transportation, long>
         DateTime? endDate);
 }
 ```
-<br>
+
 
 📂 Suggested Folder: Infrastructure/Services/Services/TransportationRepositories
+
 ```cs
 public async Task<IEnumerable<Transportation>> SearchTransportationsAsync(
 			short? vehicleTypeId,
@@ -112,15 +103,12 @@ public async Task<IEnumerable<Transportation>> SearchTransportationsAsync(
     return await query.ToListAsync();
 }
 ```
-<br><br>
+
 
 # Auto Mapper
 Auto Mapper simplifies mapping between aggregates and DTOs in both directions.
-<br>
 
-- [ ] Config AutoMapper
-
-<br>
+- [ ] Create a `MappingProfile` that inherits `Profile`, and use it to add configurations for mappings
 
 📂 Suggested Folder: Application/Mappers/Profiles
 
@@ -149,12 +137,9 @@ public class MappingProfile : Profile
         }
     }
 ```
-<br>
 
+- [ ] Register AutoMapper config file in `Program.cs` 
 
-📂 Suggested Folder: WebAPI
-
-**Program.cs**
 ```cs
  .
  .
@@ -170,6 +155,10 @@ public class MappingProfile : Profile
 ```
 
 # Result & Result Status
+
+- [ ] Create `ResultStatus` enum and `Result` class
+📂 Suggested Folder: Application/Result
+
 
 Result is a template to transfer data between services and controllers (in backend), so will use a generic type
 
@@ -228,17 +217,30 @@ public enum ResultStatus
 You can read more about enums: [W3Schools](https://www.w3schools.com/cs/cs_enums.php)
 
 
-📂 Suggested Folder: Application/Result
-
 # IService & Service
 
-- [ ] Use repositories and UnitOfWork in services to implement business logic
+Now, use `I[Entity]Repositry` and `IUnitOfWork` in services to implement business logic
+
+- [ ] Create `I[Entity]Service` and `[Entity]Service` which implements it
+
+📂 Suggested Folder for `I[Entity]Service`: Application/Interfaces
+
+📂 Suggested Folder for Services: Application/Services
 
 
-- existance of an interface for each service class is optional
+- existence of an interface for each service class is optional
 - services can have multiple repositories in them -> logic-based structure
 
-here's an example:
+An example of `I[Entity]Service`:
+
+```c#
+public interface ITransportationService
+{
+    Task<Result<IEnumerable<TransportationSearchResultDto>>> SearchTransportationsAsync(TransportationSearchRequestDto searchRequest);
+}
+```
+
+An example of `[Entity]Service`:
 
 ```cs
 public class TransportationService : ITransportationService
@@ -274,19 +276,23 @@ public class TransportationService : ITransportationService
 }
 ```
 
-📂 Suggested Folder: Application/Services
-
-- [ ] To handle dependency injection in Program.cs:
-```cs
-#region Register Services
+- [ ] Register services in `Program.cs`:
+```c#
+.
+.
+.
 builder.Services.AddScoped<ITransportationService, TransportationService>();
 builder.Services.AddScoped<ICityService, CityService>();
-#endregion
+.
+.
+.
 ```
 
 # Controller
+Now we're getting to endpoints, you should communicate with client side through web-api. So every controller uses Services in Application layer to receive requests and send responses with DTOs.
 
-- [ ] Now we're getting to endpoints, you should communicate with client side through web-api. So every controller uses Services in Application layer to recieve requests and send responses with DTOs.
+- [ ] Create an APIController (right click on the folder, and then under Add, select Controller, and then make sure to select the APIController type)
+📂 Suggested Folder: WebAPI/Controller
 
 You should use ```[ApiController]``` attribute on top of them, route them and handle different status codes. TransportationController:
 
@@ -331,16 +337,14 @@ public class TransportationController : ControllerBase
 - Ok, BadRequest, NotFound and StatusCode are Json results to send through api
 - Use TransportationService to communicate with Application
 
-To test your project, run it and use Swagger or Postman
-
 # Inserting Sample Data 
 
-> For testing purposes, add some data into the related tables. 
-> You are provided with a SQL script, that adds some sample data into the following tables
+For testing purposes, add some data into the related tables. 
+You are provided with a SQL script, that adds some sample data into the following tables
 
- > Important Notes: Note that different database names, and different table names will produce errors while executing the script. Consider adjusting these names before executing the script
+ **Important Notes:** Note that different database names, and different table names will produce errors while executing the script. Consider adjusting these names before executing the script
  
- - Cities 
+- Cities 
 - Companies 
 - LocationTypes
 - Locations 
@@ -350,5 +354,6 @@ To test your project, run it and use Swagger or Postman
 
 - [ ] Open `TransportationRelatedSampleData.sql` with SSMS, and execute the query
 
-# Test -> Postman 
 
+# Merge
+- [ ]  Create the feature/transportation-search branch based on develop
