@@ -1,4 +1,6 @@
 
+# Preparation 
+
 # Creating a project (Vite)
 
 # CORS
