@@ -6,7 +6,7 @@ https://chatgpt.com/share/67f18460-1c1c-8010-bc57-9f3b683ec87a
 
 - [ ]  Create the feature/transportation-search branch based on develop
 
-<br>
+
 
 # DTO
 In order to develop transportation search flow, three DTOs need to be created in the application layer.
@@ -32,6 +32,7 @@ public class CityDto
 ```cs
 public class TransportationSearchRequestDto
 {
+	public short? VehicleTypeId { get; init; }
     public int? FromCityId { get; init; }
     public int? ToCityId { get; init; }
     public DateTime? StartDate { get; init; }
@@ -71,6 +72,7 @@ TransportationRepositories
 public interface ITransportationRepository : IRepository<Transportation, long>
 {
     Task<IEnumerable<Transportation>> SearchTransportationsAsync(
+	    short? vehicleTypeId,
         int? fromCityId,
         int? toCityId, 
         DateTime? startDate, 
@@ -82,15 +84,18 @@ public interface ITransportationRepository : IRepository<Transportation, long>
 📂 Suggested Folder: Infrastructure/Services/Services/TransportationRepositories
 ```cs
 public async Task<IEnumerable<Transportation>> SearchTransportationsAsync(
+			short? vehicleTypeId,
             int? fromCityId, int? toCityId,
             DateTime? startDate, DateTime? endDate)
 {
     var query = DbContext.Transportations
+			    .Include(x => x.Vehicle)
                 .Include(x => x.FromLocation).ThenInclude(x => x.City)
                 .Include(x => x.ToLocation).ThenInclude(x => x.City)
                 .Include(x => x.Company)
                 .AsQueryable();
-                
+    query = query.Where(x => vehicleTypeId == null || x.Vehicle.VehicleTypeId == vehicleTypeId.Value);
+    
     query = query.Where
     (x => fromCityId == null || x.FromLocation.CityId == fromCityId.Value);
     
