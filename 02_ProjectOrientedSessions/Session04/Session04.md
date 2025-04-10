@@ -146,6 +146,24 @@ public class MappingProfile : Profile
 ```
 <br>
 
+
+📂 Suggested Folder: WebAPI
+
+**Program.cs**
+```cs
+ .
+ .
+ .
+
+ builder.Services.AddAutoMapper(typeof(MappingProfile));
+ 
+ var app = builder.Build();
+
+ .
+ .
+ .
+```
+
 # Result & Result Status (Amin)
 
 # IService & Service (Amin)
