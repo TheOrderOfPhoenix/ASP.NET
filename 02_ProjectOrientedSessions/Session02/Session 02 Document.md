@@ -430,10 +430,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Register repositories and Unit of Work
-builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-
 var app = builder.Build();
 app.Run();
 ```

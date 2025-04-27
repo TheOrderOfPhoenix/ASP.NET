@@ -1,3 +1,4 @@
+
 # Part 3: SOLID Principle
 https://www.geeksforgeeks.org/solid-principle-in-programming-understand-with-real-life-examples/
 

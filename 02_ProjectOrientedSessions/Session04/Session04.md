@@ -356,7 +356,7 @@ You are provided with a SQL script, that adds some sample data into the followin
 
 
 # Merge
-- [ ]  Create the feature/transportation-search branch based on develop
+- [ ] Create a PR and merge the current branch with develop
 
 
 # Additional Info
@@ -504,7 +504,7 @@ public class CustomerController : ControllerBase {
 ## List-like stuff in `C#`
 Absolutely, let’s go over the main “list-like” data types in C#. They all serve similar purposes—holding multiple items—but differ in functionality, performance, and use cases. Here’s a detailed breakdown:
 
-🔷 1. IEnumerable
+🔷 1. `IEnumerable`
 
 - Namespace: System.Collections.Generic
     
