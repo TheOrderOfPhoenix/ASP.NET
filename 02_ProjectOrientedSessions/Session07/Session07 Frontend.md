@@ -1,304 +1,496 @@
 
 
-
-Great — now we’re connecting both ends of your application. Let’s walk through **how authentication and authorization flow works on the frontend side (React)** when using **JWT-based authentication with a backend API**.
-
----
-
-## 🔁 Overall Frontend Authentication Flow (React + JWT)
-
-1. **User logs in**:
-    
-    - They submit credentials (username/password) via a login form.
-        
-    - Frontend sends a POST request to `/api/auth/login`.
-        
-    - Backend validates and responds with a **JWT** (and optionally a **refresh token**).
-        
-2. **Frontend stores the token**:
-    
-    - This is usually saved in:
-        
-        - `localStorage` ✅ simple, persistent
-            
-        - or an **HttpOnly cookie** ✅ safer, but needs server support
-            
-3. **Frontend sends the token on future API calls**:
-    
-    - Automatically attaches the token as a header:
-        
-        ```js
-        Authorization: Bearer <token>
-        ```
-        
-4. **Frontend restricts access to protected pages**:
-    
-    - You read the token from storage.
-        
-    - Decode it to extract role/claims.
-        
-    - Use React Router + `PrivateRoute` (or similar) to guard access.
-        
-
----
-
-## 🧱 How to Restrict Pages in React (Role-Based Routing)
-
-### ✅ Step 1: Decode and Check the Token
-
-```bash
-npm install jwt-decode
-```
-
-```js
-import jwtDecode from "jwt-decode";
-
-function getUserFromToken() {
-  const token = localStorage.getItem("token");
-  if (!token) return null;
-
-  try {
-    const decoded = jwtDecode(token);
-    return decoded; // contains roles, exp, username, etc.
-  } catch {
-    return null;
-  }
+# Branching
+# Adding Models
+📂 Suggested Folder: shared/models/authentication
+- [ ] `AuthResponseDto.tsx`
+```tsx
+export interface AuthResponseDto {
+  token: string;
+  phoneNumber: string;
+  roles: string[];
 }
 ```
 
----
-
-### ✅ Step 2: Create a Protected Route Component
-
-```jsx
-import { Navigate } from "react-router-dom";
-
-function PrivateRoute({ children, requiredRole }) {
-  const user = getUserFromToken();
-
-  if (!user) return <Navigate to="/login" />;
-  if (requiredRole && !user.role?.includes(requiredRole)) {
-    return <Navigate to="/unauthorized" />;
-  }
-
-  return children;
+- [ ] `LoginRequestDto`
+```tsx
+export interface LoginRequestDto {
+  phoneNumber: string;
+  password: string;
 }
 ```
 
----
-
-### ✅ Step 3: Use It in Routing
-
-```jsx
-<Route
-  path="/admin-dashboard"
-  element={
-    <PrivateRoute requiredRole="Admin">
-      <AdminDashboard />
-    </PrivateRoute>
-  }
-/>
-```
-
----
-
-## 🛡️ Where to Store the JWT?
-
-|Method|Persistent?|Secure?|Notes|
-|---|---|---|---|
-|`localStorage`|✅ Yes|❌ No (accessible to JS)|Good for simple apps|
-|`sessionStorage`|❌ No (clears on tab close)|❌ No||
-|`HttpOnly cookie`|✅ Yes|✅ Yes|Needs backend to set cookie|
-
-> 🔐 **If your app is vulnerable to XSS, use `HttpOnly` cookies instead of localStorage**.
-
----
-
-## 🧷 Automatically Adding JWT to Requests
-
-You can use **Axios interceptors**:
-
-```js
-// axios.js
-import axios from "axios";
-
-const api = axios.create({
-  baseURL: "http://your-api-url.com/api",
-});
-
-api.interceptors.request.use(config => {
-  const token = localStorage.getItem("token");
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
-  }
-  return config;
-});
-
-export default api;
-```
-
-Then use `api.get(...)` or `api.post(...)` in your services.
-
----
-
-## 🧠 Summary
-
-|Task|Solution|
-|---|---|
-|Protect route to logged-in users|Use custom `<PrivateRoute />` with token check|
-|Check if user has a role|Decode token and inspect `role` claim|
-|Send token with API requests|Use Axios interceptors|
-|Save token|LocalStorage (easy) or HttpOnly cookie (secure)|
-|Keep user logged in|Token stays in localStorage or cookie|
-|Handle logout|Clear the token from storage|
-
----
-
-Let me know if you want:
-
-- A sample React project with protected routes and JWT integration
-    
-- How to implement auto-logout when token expires
-    
-- How to use **refresh tokens**
-    
-
-Happy to walk you through any of it!
-
-That flow is **excellent** and matches exactly how modern applications with **JWT-based authentication** typically work. You're thinking about both UX (popup forms) and proper backend coordination — that's a solid start.
-
----
-
-## ✅ Your Flow — Reviewed & Annotated:
-
-### **1. Account Sign-Up (Register)**
-
-> **Frontend (React)**: Sign-up modal with:
-
-- Phone number
-    
-- Password (+ confirm password)
-    
-- Basic validations (empty fields, password length, etc.)
-    
-
-> **Backend (ASP.NET Core API)**:
-
-- Validate: Check if phone already exists
-    
-- Validate password strength (you can set rules)
-    
-- Hash the password securely (use `PasswordHasher<T>` or Identity's helper)
-    
-- Store the user in DB (with phone number as username or unique field)
-    
-- Return success/failure
-    
-
-✅ **Note**: Use `[ApiController]`, `[FromBody]`, and model validation on the backend for clean error reporting.
-
----
-
-### **2. Login Page (Popup)**
-
-> **Frontend (React)**:
-
-- Login modal with:
-    
-    - Phone number
-        
-    - Password
-        
-
-> **Backend**:
-
-- Validate credentials
-    
-- If valid, generate:
-    
-    - **JWT** (access token) — includes user ID and roles
-        
-    - (Optional) Refresh token
-        
-- Return the JWT token to the frontend
-    
-
-✅ **Token Payload Example**:
-
-```json
-{
-  "sub": "user_id_here",
-  "phone": "09xxxxxxxxx",
-  "role": "Customer",
-  "exp": 1234567890
+- [ ] `RegisterRequestDto`
+```tsx
+export interface RegisterRequestDto {
+  phoneNumber: string;
+  password: string;
+  confirmPassword: string;
 }
 ```
 
-✅ You’ll send this token to the frontend in the response.
+# Adding Authentication API Calls in Agent
+- [ ] Add the following code
+```tsx
+const Auth = {
+register: (data: RegisterRequestDto) =>
+    request.post<{ token: string }>('/auth/register', data),
+login: (data: LoginRequestDto) =>
+    request.post<{ token: string }>('/auth/login', data),
+};
+```
+- [ ] Update agent
+```tsx
+const agent = {
+    TransportationSearch,
+    Cities,
+    Auth
+}
+```
 
----
+# Creating AuthStore
+Suggested Folder
 
-### **3. Store the Token + Access Protected Page**
+```tsx
+import { AuthResponseDto } from '@/shared/models/authentication/AuthResponseDto';
+import {create} from 'zustand';
 
-> **Frontend**:
+interface User {
+  phoneNumber: string;
+  roles: any;
+}
 
-- Store the token (in `localStorage` for now)
-    
-- Use Axios to attach it on every request
-    
-- Use a `PrivateRoute` component to guard protected pages
-    
-- Access `/profile` page (protected by `[Authorize]` in backend)
-    
+  
 
-> **Backend**:
+interface AuthState {
+  isLoggedIn: boolean;
+  user: User | null;
+  token: string | null;
+  login: (response: AuthResponseDto) => void;
+  logout: () => void;
+  setToken: (token: string) => void;
+}
 
-- Secure `/profile` with `[Authorize(Roles = "Customer")]` or similar
-    
-- Parse token from `Authorization: Bearer <token>` header
-    
-- Allow or reject based on claims
-    
+  
 
----
+export const useAuthStore = create<AuthState>((set) => ({
+  isLoggedIn: false,
+  user: null,
+  token: null,
 
-## 🛠️ What You'll Need
 
-### Frontend:
+  login: (response) =>
+  set(() => ({
+    token: response.token,
+    user: {
+      phoneNumber: response.phoneNumber,
+      roles: response.roles
+    },
 
-- `react-router-dom`
-    
-- `axios`
-    
-- `jwt-decode`
-    
-- Modals (e.g., using Tailwind or a component lib)
-    
+    isLoggedIn: true,
+  })),
 
-### Backend:
+  logout: () =>
+    set(() => ({
+      token: null,
+      user: null,
+      isLoggedIn: false,
+    })),
 
-- ASP.NET Core API (you already have it)
-    
-- JWT configuration in `Program.cs`
-    
-- Custom authentication controller (`/api/auth/register`, `/api/auth/login`)
-    
-- Role support
-    
-- Token generation utility
-    
+  
 
----
+  setToken: (token) =>
+    set((state) => ({
+      token,
+      isLoggedIn: !!token,
+      user: state.user,
+    })),
+}));
+```
 
-## 🚀 Ready to Begin?
+# Add LoginModal
+```tsx
+import React, { useState } from "react";
+import { useAuthStore } from "@/store/authStore";
+import agent from "@/shared/api/agent";
+import { LoginRequestDto } from "@/shared/models/authentication/LoginRequestDto";
 
-Let's start with **Step 1**: Sign-up flow
+interface LoginModalProps {
+  onClose: () => void;
+}
 
-Would you like to begin with:
+  
 
-1. **Backend first** — setting up `/api/auth/register` endpoint and phone+password validation
-    
-2. **Frontend first** — creating the sign-up modal form in React
-    
+const LoginModal: React.FC<LoginModalProps> = ({ onClose }) => {
+  
+  const login = useAuthStore((state) => state.login);
 
-Let me know your preference and we’ll go step by step.
+  const [form, setForm] = useState<LoginRequestDto>({
+    phoneNumber: "",
+    password: "",
+  });
+
+  const [error, setError] = useState<string | null>(null);
+
+  const validate = () => {
+    const phoneRegex = /^(?:\+98|0)?9\d{9}$/;
+    if (!phoneRegex.test(form.phoneNumber)) {
+      return "Invalid phone number format";
+    }
+
+    if (!form.password || form.password.length < 8) {
+      return "Password must be at least 8 characters";
+    }
+    return null;
+  };
+
+  const handleSubmit = async () => {
+    const validationError = validate();
+    if (validationError) {
+      setError(validationError);
+      return;
+    }
+
+    try {
+      const response = await agent.Auth.login(form);
+      login(response.token); // update store with full auth info
+      setError(null);
+      onClose();
+    } catch (err: any) {
+      setError(err.response?.data?.message || "Login failed");
+    }
+  };
+
+  
+
+  return (
+    <div style={styles.overlay}>
+      <div style={styles.modal}>
+        <h2 style={{ marginBottom: "1rem" }}>Login</h2>
+        <input
+          type="text"
+          placeholder="Phone Number"
+          value={form.phoneNumber}
+          onChange={(e) => setForm({ ...form, phoneNumber: e.target.value })}
+          style={styles.input}
+        />
+
+        <input
+          type="password"
+          placeholder="Password"
+          value={form.password}
+          onChange={(e) => setForm({ ...form, password: e.target.value })}
+          style={styles.input}
+        />
+        <button onClick={handleSubmit} style={styles.button}>
+          Login
+        </button>
+        {error && (
+          <p style={{ color: "red", marginTop: "0.5rem", fontWeight: "bold" }}>
+            {error}
+          </p>
+        )}
+
+        <button
+          onClick={onClose}
+          style={{
+            ...styles.button,
+            marginTop: "0.5rem",
+            backgroundColor: "#ccc",
+            color: "#333",
+          }}
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  );
+};
+
+const styles: { [key: string]: React.CSSProperties } = {
+  overlay: {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: "rgba(0,0,0,0.5)",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    zIndex: 1000,
+  },
+
+  modal: {
+    backgroundColor: "white",
+    padding: "2rem",
+    borderRadius: "8px",
+    boxShadow: "0 2px 10px rgba(0,0,0,0.3)",
+    width: "320px",
+    display: "flex",
+    flexDirection: "column",
+  },
+
+  input: {
+    marginBottom: "1rem",
+    padding: "0.5rem",
+    fontSize: "1rem",
+    borderRadius: "4px",
+    border: "1px solid #ccc",
+  },
+
+  button: {
+    padding: "0.6rem 1.2rem",
+    fontSize: "1rem",
+    borderRadius: "4px",
+    border: "none",
+    backgroundColor: "#007bff",
+    color: "white",
+    cursor: "pointer",
+  },
+};
+
+export default LoginModal;
+```
+
+
+# Add RegisterModal
+
+```tsx
+import agent from "@/shared/api/agent";
+
+import { RegisterRequestDto } from "@/shared/models/authentication/RegisterRequestDto";
+
+import { useAuthStore } from "@/store/authStore";
+
+import React, { useState } from "react";
+
+  
+
+interface Props {
+  onClose: () => void;
+}
+
+  
+
+// Define RegisterRequestDto interface explicitly for form and request typing
+
+  
+
+const RegisterModal: React.FC<Props> = ({ onClose }) => {
+
+  const [form, setForm] = useState<RegisterRequestDto>({
+    phoneNumber: "",
+    password: "",
+    confirmPassword: "",
+  });
+
+  
+
+  const [error, setError] = useState<string | null>(null);
+
+  
+
+  const login = useAuthStore((state) => state.login);
+
+  
+
+  const validate = () => {
+
+    const { phoneNumber, password, confirmPassword } = form;
+
+    if (!phoneNumber || !password || !confirmPassword) {
+
+      return "All fields are required.";
+
+    }
+
+    if (!/^\d{11}$/.test(phoneNumber)) {
+
+      return "Phone number must be 11 digits.";
+
+    }
+
+    if (password.length < 6) {
+
+      return "Password must be at least 6 characters.";
+
+    }
+
+    if (password !== confirmPassword) {
+
+      return "Passwords do not match.";
+
+    }
+
+    return null;
+
+  };
+
+  
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+
+    setForm({ ...form, [e.target.name]: e.target.value });
+
+  };
+
+  
+
+  const handleSubmit = async (e: React.FormEvent) => {
+
+    e.preventDefault();
+
+    setError(null);
+
+  
+
+    const validationError = validate();
+
+    if (validationError) {
+      setError(validationError);
+      return;
+    }
+
+  
+
+    try {
+
+      // Use the form as RegisterRequestDto explicitly
+
+      const requestData: RegisterRequestDto = {
+        phoneNumber: form.phoneNumber,
+        password: form.password,
+        confirmPassword: form.confirmPassword,
+      };
+
+  
+
+      const response = await agent.Auth.register(requestData);
+      login(response.token);
+      setForm({ phoneNumber: "", password: "", confirmPassword: "" });
+      onClose();
+    } catch (err: any) {
+      setError(err.response?.data?.message || "Registration failed.");
+    }
+  };
+
+  
+
+  return (
+    <div style={styles.overlay}>
+      <div style={styles.modal}>
+        <h2 style={{ marginBottom: "1rem" }}>Register</h2>
+        <form
+          onSubmit={handleSubmit}
+          style={{ display: "flex", flexDirection: "column" }}
+        >
+
+          <input
+            type="text"
+            name="phoneNumber"
+            value={form.phoneNumber}
+            onChange={handleChange}
+            placeholder="Phone Number"
+            style={styles.input}
+          />
+
+          <input
+            type="password"
+            name="password"
+            value={form.password}
+            onChange={handleChange}
+            placeholder="Password"
+            style={styles.input}
+          />
+
+          <input
+            type="password"
+            name="confirmPassword"
+            value={form.confirmPassword}
+            onChange={handleChange}
+            placeholder="Confirm Password"
+            style={styles.input}
+          />
+
+          {error && (
+
+            <p
+              style={{ color: "red", marginTop: "0.5rem", fontWeight: "bold" }}
+            >
+              {error}
+            </p>
+          )}
+
+          <button type="submit" style={styles.button}>
+            Register
+          </button>
+
+        </form>
+
+        <button
+
+          onClick={onClose}
+
+          style={{
+            ...styles.button,
+            marginTop: "0.5rem",
+            backgroundColor: "#ccc",
+            color: "#333",
+          }}
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  );
+};
+
+  
+
+const styles: { [key: string]: React.CSSProperties } = {
+
+  overlay: {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: "rgba(0,0,0,0.5)",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    zIndex: 1000,
+  },
+
+  modal: {
+    backgroundColor: "white",
+    padding: "2rem",
+    borderRadius: "8px",
+    boxShadow: "0 2px 10px rgba(0,0,0,0.3)",
+    width: "320px",
+    display: "flex",
+    flexDirection: "column",
+  },
+
+  input: {
+    marginBottom: "1rem",
+    padding: "0.5rem",
+    fontSize: "1rem",
+    borderRadius: "4px",
+    border: "1px solid #ccc",
+  },
+
+  button: {
+    padding: "0.6rem 1.2rem",
+    fontSize: "1rem",
+    borderRadius: "4px",
+    border: "none",
+    backgroundColor: "#007bff",
+    color: "white",
+    cursor: "pointer",
+  },
+};
+
+export default RegisterModal;
+```
