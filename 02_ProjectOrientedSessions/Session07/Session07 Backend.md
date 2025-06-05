@@ -1,9 +1,10 @@
 
 # Add a field in Database
-- [ ] Add `User` field in `Roles` table
+- [ ] Add `User` field in `Roles` table using SSMS or Seed data in DbContext file
+- [ ] Make sure the property `PersonId` is nullable in `Account`, so you can add fields related to "Person" later after registeration
 
 # Branching
- - [ ] Create the feature/authentication branch based on develop
+- [ ] Create the feature/authentication branch based on develop
 
 # Adjusting Account and Configurations 
 
@@ -380,6 +381,7 @@ System.IdentityModel.Tokens.Jwt
 	"ExpiryMinutes": 60
 }
 ```
+Note that you should fill the values as you wish - these are just samples
 
 - [ ] Create  `JwtSettings` and add the following method
 📂 Suggested Folder: WebAPI/Authentication
@@ -404,7 +406,7 @@ string GenerateToken(AuthResponseDto authResponseDto);
 📂 Suggested Folder: WebAPI/Authentication
 
 use this project as a reference
-https://github.com/MehrdadShirvani/AlibabaClone-Backend/blob/develop/AlibabaClone.Application/Services/AuthService.cs
+https://github.com/MehrdadShirvani/AlibabaClone-Backend/blob/develop/AlibabaClone.WebAPI/Authentication/JwtGenerator.cs
 
 
 ## Configuring Jwt in Program.cs
