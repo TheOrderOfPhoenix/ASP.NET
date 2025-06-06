@@ -368,7 +368,7 @@ interface LoginModalProps {
 ## 🔹 Component Setup
 
 ```tsx
-const LoginModal: React.FC<LoginModalProps> = ({ onClose }) => {
+const LoginModal: React.FC<LoginModalProps> = ({ onClose }) => { ... };
 ```
 
 Defines a functional React component with the `onClose` prop destructured.
