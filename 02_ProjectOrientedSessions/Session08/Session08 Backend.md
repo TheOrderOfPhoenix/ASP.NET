@@ -3,6 +3,7 @@
 # Fixes
 - [ ] Check for missing `.ValueGeneratedOnAdd()` in all entity configuration.
 - [ ] Adjust the database setup according to the second version of ERD
+- [ ] new erd: https://github.com/TheOrderOfPhoenix/ASP.NET/blob/main/02_ProjectOrientedSessions/docs/AlibabaERD-Version02.pdf
 - [ ] Pay attention to the changes in logic and implementation of Person table (Id number is not unique anymore)
 - [ ] Add actual data in `TicketStatus`, `Gender`, `TransactionTypes` 
 - [ ] Add data in `Seat`, `Person`, `TicketOrder`, `Transaction`, `Ticket` for test. It is recommended to write python code for generating data for Seat table, according to the data already stored in Transportation and related Vehicle data
