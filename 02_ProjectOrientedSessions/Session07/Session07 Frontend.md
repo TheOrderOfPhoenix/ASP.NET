@@ -1,6 +1,6 @@
 
 # Branching
- - [ ] Create the feature/authentication branch based on develop
+- [ ] Create the feature/authentication branch based on develop
 
 # Adding Models
 Create three files inside this folder:
@@ -61,7 +61,7 @@ import {create} from 'zustand';
 
 interface User {
   phoneNumber: string;
-  roles: any;
+  roles: string[];
 }
 
   
@@ -161,7 +161,7 @@ This defines the overall structure of the authentication store:
 ## 🔹 Zustand Store Definition
 
 ```ts
-export const useAuthStore = create<AuthState>((set) => ({
+export const useAuthStore = create<AuthState>((set) => ({ ... });
 ```
 
 Creates a global auth store using Zustand. `create()` accepts a function that receives `set` (used to update state) and returns the initial store state and methods.
@@ -368,7 +368,7 @@ interface LoginModalProps {
 ## 🔹 Component Setup
 
 ```tsx
-const LoginModal: React.FC<LoginModalProps> = ({ onClose }) => {
+const LoginModal: React.FC<LoginModalProps> = ({ onClose }) => { ... };
 ```
 
 Defines a functional React component with the `onClose` prop destructured.
