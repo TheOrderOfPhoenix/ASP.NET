@@ -22,7 +22,7 @@ app.UseCors("Frontend");
 ```
 
 
-# **Important Note Before Starting**
+# Important Note Before Starting
 
 ## From now on, this session will be focused on the **frontend repository**
 
