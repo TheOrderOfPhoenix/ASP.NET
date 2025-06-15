@@ -684,7 +684,7 @@ export default RegisterModal;
 ## About RegisterModal
 
     
-## **Component Structure**
+### **Component Structure**
 
 ### 1. **Props**
 
@@ -797,5 +797,8 @@ const handleSubmit = async (e: React.FormEvent) => {
     
 ---
 
+# Handle login/logout and register buttons in navbar
+- [ ] implement a way for showing login and register buttons in navbar when user is not signed in
+- [ ] when clicked, the button should show the related modal, for the user to sign in or register
 # Merge
 - [ ] Create a PR and merge the current branch with develop
