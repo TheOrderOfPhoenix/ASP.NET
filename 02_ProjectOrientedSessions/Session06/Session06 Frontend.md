@@ -24,8 +24,6 @@ link to project:
 # Modifying Project From Single Component to Routed Pages
 
 
-
-
 Originally, your transportation search logic and UI may have all been inside one component — which quickly becomes messy and hard to manage as your app grows.
 
 Now we’ve **split the logic into two proper pages**:

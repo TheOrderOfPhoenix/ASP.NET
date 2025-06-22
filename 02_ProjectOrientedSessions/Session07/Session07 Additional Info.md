@@ -777,9 +777,9 @@ console.log(roles); // ["Admin", "Editor", "User"]
 
 ### Summary
 
-|Step|How it works|
-|---|---|
-|JWT creation|Multiple `"role"` claims added to token|
-|Backend authorization|Validates token and checks if user has required roles|
-|Frontend decoding|Extracts `role` claim(s) as array of strings|
-|Frontend UI control|Shows or hides content based on roles|
+| Step                  | How it works                                          |
+| --------------------- | ----------------------------------------------------- |
+| JWT creation          | Multiple `"role"` claims added to token               |
+| Backend authorization | Validates token and checks if user has required roles |
+| Frontend decoding     | Extracts `role` claim(s) as array of strings          |
+| Frontend UI control   | Shows or hides content based on roles                 |

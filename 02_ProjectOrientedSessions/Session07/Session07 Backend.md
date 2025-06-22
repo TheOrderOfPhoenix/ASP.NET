@@ -1,7 +1,7 @@
 
 # Add a field in Database
 - [ ] Add `User` field in `Roles` table using SSMS or Seed data in DbContext file
-- [ ] Make sure the property `PersonId` is nullable in `Account`, so you can add fields related to "Person" later after registeration
+- [ ] Make sure the property `PersonId` is nullable in `Account`, so you can add fields related to "Person" later after registration
 
 # Branching
 - [ ] Create the feature/authentication branch based on develop

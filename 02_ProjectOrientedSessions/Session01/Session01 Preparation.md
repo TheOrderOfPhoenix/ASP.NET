@@ -14,7 +14,7 @@ Meditates between the domain and data mapping layers, acting like an **in-memory
 - Decouples your application from persistence frameworks
 - Promotes testability
 > Repository should not have methods like Update and Save
-## A little note on Unit of Work
+# Unit of Work
 Keeps track of changes and coordinates the writings and savings
 ## Implementation:
 https://youtu.be/rtXpYpZdOzM?t=703

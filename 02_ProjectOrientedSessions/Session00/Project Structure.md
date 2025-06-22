@@ -37,7 +37,6 @@ Clean Architecture consists of **four main layers**:
         }
     }
     ```
-    
 
 ---
 
@@ -213,6 +212,8 @@ This ensures the **business logic is central** and **not coupled** to frameworks
 	- Domain Project 
 - Packages:
 	- AutoMapper
+	- Microsoft.AspNetCore.Authentication.JwtBearer
+	- System.IdentityModel.Tokens.Jwt
 	- Microsoft.EntityFrameworkCore.Design
 	- Microsoft.EntityFrameworkCore.SqlServer
 	- Microsoft.EntityFrameworkCore.Tools
@@ -273,6 +274,9 @@ This ensures the **business logic is central** and **not coupled** to frameworks
 	- Domain Project
 - Packages:
 	- Microsoft.EntityFrameworkCore.SqlServer
+	- Microsoft.EntityFrameworkCore.Design
+	- Microsoft.EntityFrameworkCore.Proxies
+	- Microsoft.EntityFrameworkCore.Tools
 ---
 
 ### **Additional Projects (Optional)**
@@ -281,8 +285,3 @@ This ensures the **business logic is central** and **not coupled** to frameworks
 - 📂 `MyApp.Shared` – Shared utilities (cross-cutting concerns like constants, helpers).
 
 
-# Frontend Project Structure (Will most likely change in future)
-
-```shell
-npx create-react-app alibabaclone-frontend --use-npm --template typescript cd alibabaclone-frontend npm start
-```

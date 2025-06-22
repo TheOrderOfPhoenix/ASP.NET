@@ -1,5 +1,5 @@
 
-Great question! The **accountRole** table is a **many-to-many join table** with only two foreign keys (`AccountId`, `RoleId`) and no extra fields. Since it's just linking **Accounts** and **Roles**, you might not need a repository for it. Let's explore the best approach.
+ The **accountRole** table is a **many-to-many join table** with only two foreign keys (`AccountId`, `RoleId`) and no extra fields. Since it's just linking **Accounts** and **Roles**, you might not need a repository for it. Let's explore the best approach.
 
 ---
 

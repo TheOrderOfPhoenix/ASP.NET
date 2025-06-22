@@ -2,25 +2,6 @@
 # Preparation 
 - [ ] Watch https://www.youtube.com/watch?v=SqcY0GlETPk&ab_channel=ProgrammingwithMosh
 
-# CORS (Backend Repository)
-- [ ] open `program.cs` and add the following lines
-
-```c#
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("Frontend", policy =>
-    {
-        policy.WithOrigins("http://localhost:5173")
-        .AllowAnyHeader()
-        .AllowAnyMethod();
-    });
-});
-
-...
-
-app.UseCors("Frontend");
-```
-
 
 # Important Note Before Starting
 
@@ -340,26 +321,18 @@ You're using `React.FC<Props>`.
 - `React.FC` (or `React.FunctionComponent`) is a **TypeScript type** that you can use to type your functional React components.
     
 - It **tells TypeScript** that:
-    
     - This component is a function
-        
     - It **receives props** (in your case, `Props`)
-        
     - It **returns JSX** (it returns something React can render)
-        
 
 ---
 
 ### Why use it?
 
 Here’s what you get when you use `React.FC`:
-
 1. ✅ **Prop typing** — You get auto-complete and error checking for props.
-    
 2. ✅ **Children** are automatically included. (More on this below.)
-    
 3. ✅ **Cleaner code** because TypeScript understands the shape of the component.
-    
 
 ---
 
@@ -370,7 +343,6 @@ You could just write:
 ```tsx
 const TransportationCard = ({ transportation }: Props) => { ... }
 ```
-
 and it would work!  
 But you lose some "extra typing safety" like automatic `children` typing.
 
@@ -419,9 +391,6 @@ Because `children` is **always** part of a `React.FC`.
 
 ---
 
-Would you like me to also show a real quick **example side-by-side** (with and without `React.FC`) so you can see the difference even more clearly? 🚀  
-(It's super fast but very helpful!)
-
 ## `CityDropdown` Component:
 
 ### 1. **State Variables**
@@ -432,7 +401,6 @@ const [selectedCity, setSelectedCity] = useState<number | undefined>();
 ```
 
 - `cities`: holds the list of cities retrieved from the backend (starts empty `[]`).
-    
 - `selectedCity`: holds the currently selected city’s ID (`number`) or `undefined` if nothing is selected yet.
     
 
@@ -450,11 +418,8 @@ useEffect(() => {
 
 - When the component **mounts** (`[]` dependency array = run once), it calls `agent.Cities.list()`.    
 - `agent.Cities.list()` presumably returns a promise that resolves to an array of `City` objects.
-    
 - On success → `setCities` updates the `cities` state.
-    
 - On failure → logs an error to the console.
-    
 
 ---
 
@@ -483,9 +448,6 @@ useEffect(() => {
     - Displayed text is the city's `title`.        
 
 ---
-You're very welcome! Let's break it down even more clearly:
-
----
 
 ### What is `useEffect`?
 
@@ -493,7 +455,6 @@ You're very welcome! Let's break it down even more clearly:
 It **tells React to run some code after the component renders**.
 
 Think of it like:
-
 - _"Hey React, when this component shows up on the screen, please also run this function!"_
     
 
@@ -539,17 +500,12 @@ Same with `selectedCity`:
 **Simple analogy:**
 
 Imagine your component is a whiteboard.
-
 - `useState` gives you a small _erasable box_ on the board.
-    
 - You can write something there (`cities`, `selectedCity`).
-    
 - If you want to change what’s written, you use the special pen `setCities` or `setSelectedCity`, **not your finger** (so React knows it changed and redraws the screen if needed).
 ---
 
-
 ## `TransportationCard` Component
-
 
 ### 1. **The Component Function**
 
@@ -563,7 +519,6 @@ const TransportationCard: React.FC<Props> = ({ transportation }) => {
 
 ---
 ### 2. **Inside the JSX**
-
 
 #### 2.1 Left Side — Price and Button
 
