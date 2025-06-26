@@ -21,7 +21,43 @@ Profile + some fixes to database
 
 - [ ] Fix claim extraction (`sub` → standardize JWT claim mapping). (`IUserContext` implmentation)
 
-### ✅ Profile Page (Account Info Tab)
+First, create an interface in Application layer:
+```
+public interface IUserContext
+{
+long GetUserId();
+}
+```
+Then, implement it in WebAPI in Auth folder:
+```
+public class UserContext : IUserContext
+{
+    private readonly IHttpContextAccessor _httpContextAccessor;
+
+    public UserContext(IHttpContextAccessor httpContextAccessor)
+    {
+        _httpContextAccessor = httpContextAccessor;
+    }
+
+    public long GetUserId()
+    {
+        var userIdStr = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        if (long.TryParse(userIdStr, out var userId))
+        {
+            return userId;
+        }
+        throw new InvalidOperationException("User ID is not available or invalid.");
+    }
+}
+```
+Finally, register things in Program.cs
+```
+// register user context
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<IUserContext, UserContext>();
+```
+
+## ✅ Profile Page (Account Info Tab)
 
 - [ ]  Create `ProfileDto` to represent combined data for account, person, bank detail, balance.    
 - [ ] Add `GetProfileAsync` in `AccountRepository` and expose via `AccountController`.
@@ -33,30 +69,23 @@ Profile + some fixes to database
 - [ ] Add mapping for all Dtos and fix related properties like `CreatorAccountId`.
     
 
----
-
-### ✅ List of Travelers
+## ✅ List of Travelers
 
 - [ ] Add `GetPeople` endpoint in `AccountController`.
 - [ ] Implement separation of `UpsertAccountPerson` and `UpsertPerson`.
 - [ ] Adjust Dto: `PersonDto` (with `id`, `creatorAccountId`, `englishFirstName`, etc.).
 
 
----
-
-### ✅ My Travels Tab
+## ✅ My Travels Tab
 
 - [ ]  Create `TicketOrderSummaryDto` (includes cities, vehicle name, price, etc.).
 - [ ] Add `GetTravels` in `AccountService`, and expose `GetMyTravels` in controller.
 
----
 
-### ✅ My Transactions Tab
+## ✅ My Transactions Tab
 
 - [ ] Create `TransactionDto` and mapping.
 - [ ]  Add method to get transactions by `AccountId`.
 - [ ]  Expose `GetMyTransactions` in `AccountController`.
 - [ ]  Add modal to simulate balance top-up (manual input).
 - [ ]  Format amount text based on transaction type: green (+) for income, red (–) for expense. 
-
----
