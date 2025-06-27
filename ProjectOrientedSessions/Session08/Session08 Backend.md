@@ -59,13 +59,141 @@ builder.Services.AddScoped<IUserContext, UserContext>();
 
 ## ✅ Profile Page (Account Info Tab)
 
-- [ ]  Create `ProfileDto` to represent combined data for account, person, bank detail, balance.    
+- [ ]  Create `ProfileDto` to represent combined data for account, person, bank detail, balance.
+```
+public class ProfileDto
+{
+    // from account
+    public string PhoneNumber { get; set; }
+    public string Email { get; set; }
+    public decimal Balance { get; set; }
+
+    // from person
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public string IdNumber { get; set; }
+    public DateTime? BirthDate { get; set; }
+
+    // from bank-account
+    public string IBAN { get; set; }
+    public string BankAccountNumber { get; set; }
+    public int CardNumber { get; set; }
+}
+```
+You can also find another version of this DTO in [Here](https://github.com/MehrdadShirvani/AlibabaClone-Backend/blob/develop/AlibabaClone.Application/DTOs/Account/ProfileDto.cs)
+
 - [ ] Add `GetProfileAsync` in `AccountRepository` and expose via `AccountController`.
+    - First, map dto to aggregate
+    ```
+    CreateMap<Account, ProfileDto>()
+	.ForMember(dest => dest.PhoneNumber, opt => opt.MapFrom(src => src.PhoneNumber))
+	.ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email))
+	.ForMember(dest => dest.Balance, opt => opt.MapFrom(src => src.Balance))
+	.ForMember(dest => dest.FirstName, opt => opt.MapFrom(src => src.Person != null ? src.Person.FirstName : ""))
+	.ForMember(dest => dest.LastName, opt => opt.MapFrom(src => src.Person != null ? src.Person.LastName : ""))
+	.ForMember(dest => dest.IdNumber, opt => opt.MapFrom(src => src.Person != null ? src.Person.IdNumber : ""))
+	.ForMember(dest => dest.BirthDate, opt => opt.MapFrom(src => src.Person != null ? src.Person.BirthDate : (DateTime?) null))
+	.ForMember(dest => dest.IBAN, opt => opt.MapFrom(src => src.BankAccount != null ? src.BankAccount.IBAN : ""))
+	.ForMember(dest => dest.BankAccountNumber, opt => opt.MapFrom(src => src.BankAccount != null ? src.BankAccount.BankAccountNumber : ""))
+	.ForMember(dest => dest.CardNumber, opt => opt.MapFrom(src => src.BankAccount != null ? src.BankAccount.CardNumber : ""));
+    ```
+    - Then, add the equivalent methods for AccountRepository, AccountService and AccountController
+    ```
+    public class AccountRepository : BaseRepository<AlibabaDbContext, Account, long>, IAccountRepository
+    {
+	    public AccountRepository(AlibabaDbContext context) : base(context)
+	    {
+
+	    }
+
+        public async Task<Account> GetByPhoneNumberAsync(string phoneNumber)
+        {
+		    var user = await DbSet.Include(a => a.AccountRoles).ThenInclude(x => x.Role).FirstOrDefaultAsync(x => x.PhoneNumber == phoneNumber);
+		    return user;
+        }
+
+        public async Task<Account> GetProfileAsync(long accountId)
+        {
+            var profile = await DbSet
+                .Include(a => a.Person)
+                .Include(a => a.BankAccount)
+                .FirstOrDefaultAsync(a => a.Id == accountId);
+
+            return profile;
+        }
+    }
+
+    ```
+    
+    ```
+    public class AccountService : IAccountService
+    {
+        private readonly IAccountRepository _accountRepository;
+        private readonly IMapper _mapper;
+
+        public async Task<Result<ProfileDto>> GetProfileAsync(long accountId)
+        {
+            var result = await _accountRepository.GetProfileAsync(accountId);
+            if (result == null)
+            {
+                return Result<ProfileDto>.NotFound(null);
+            }
+
+            return Result<ProfileDto>.Success(_mapper.Map<ProfileDto>(result));
+        }
+    }
+    ```
+
+    ```
+    [ApiController]
+    [Route("api/[controller]")]
+    public class AccountController : ControllerBase
+    {
+        private readonly IUserContext _userContext;
+        private readonly IAccountService _accountService;
+
+        public AccountController(IUserContext userContext, IAccountService accountService)
+        {
+            _userContext = userContext;
+            _accountService = accountService;
+        }
+
+        [HttpGet("profile")]
+        public async Task<IActionResult> GetProfile()
+        {
+            // get account-id from token
+            long userId = _userContext.GetUserId();
+            // check for user-id to be valid
+            if (userId <= 0)
+            {
+                return Unauthorized();
+            }
+
+            var result = await _accountService.GetProfileAsync(userId);
+            if (result.IsSuccess)
+            {
+                return Ok(result.Data);
+            }
+
+            return result.Status switch
+            {
+                ResultStatus.Unauthorized => Unauthorized(result.ErrorMessage),
+                ResultStatus.NotFound => NotFound(result.ErrorMessage),
+                ResultStatus.ValidationError => BadRequest(result.ErrorMessage),
+                _ => StatusCode(500, result.ErrorMessage)
+            };
+        }
+    }
+    ```
+    
+    Note: You should add neccessary interfaces and implement them
+
 - [ ] Implement:
     - [ ]  Edit Email (with validation): `EditEmailDto`, service method, and controller endpoint.
     - [ ] Edit Password: `EditPasswordDto`, service and controller.
     - [ ] Edit Person Info: `UpsertAccountPersonDto`, and endpoint to upsert personal data.
     - [ ] Edit BankAccountDetail: `UpsertBankAccountDetailDto` and relevant logic.
+
 - [ ] Add mapping for all Dtos and fix related properties like `CreatorAccountId`.
     
 
