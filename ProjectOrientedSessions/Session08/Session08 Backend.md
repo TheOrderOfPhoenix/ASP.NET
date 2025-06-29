@@ -334,6 +334,47 @@ public async Task<Result<long>> UpsertPersonAsync(long accountId, PersonDto dto)
     return Result<long>.Success(person.Id);
 }
 ```
+```
+[HttpPost("account-person")]
+public async Task<IActionResult> UpsertAccountPerson([FromBody] PersonDto dto)
+{
+    long accountId = _userContext.GetUserId();
+    if (accountId <= 0)
+    {
+        return Unauthorized();
+    }
+
+    var result = await _personService.UpsertAccountPersonAsync(accountId, dto);
+    return result.Status switch
+    {
+        ResultStatus.Success => NoContent(),
+        ResultStatus.Unauthorized => Unauthorized(result.ErrorMessage),
+        ResultStatus.NotFound => NotFound(result.ErrorMessage),
+        ResultStatus.ValidationError => BadRequest(result.ErrorMessage),
+        _ => StatusCode(500, result.ErrorMessage)
+    };
+}
+
+[HttpPost("person")]
+public async Task<IActionResult> UpsertPerson([FromBody] PersonDto dto)
+{
+    long accountId = _userContext.GetUserId();
+    if (accountId <= 0)
+    {
+        return Unauthorized();
+    }
+
+    var result = await _personService.UpsertPersonAsync(accountId, dto);
+    return result.Status switch
+    {
+        ResultStatus.Success => NoContent(),
+        ResultStatus.Unauthorized => Unauthorized(result.ErrorMessage),
+        ResultStatus.NotFound => NotFound(result.ErrorMessage),
+        ResultStatus.ValidationError => BadRequest(result.ErrorMessage),
+        _ => StatusCode(500, result.ErrorMessage)
+    };
+}
+```
 
 
 ## ✅ My Travels Tab
