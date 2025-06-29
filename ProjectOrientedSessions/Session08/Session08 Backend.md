@@ -212,9 +212,9 @@ You can also find another version of this DTO in [Here](https://github.com/Mehrd
  	    public string ConfirmNewPassword { get; set; }
 	}
  	```
-    - [ ] Edit Person Info: `UpsertPersonDto`, and endpoint to upsert personal data.
+    - [ ] Edit Person Info: `UpsertAccountPersonDto`, and endpoint to upsert personal data.
 	```
- 	public class UpsertPersonDto
+ 	public class UpsertAccountPersonDto
 	{
  	    public long Id { get; set; }
  	    public long CreatorId { get; set; }
