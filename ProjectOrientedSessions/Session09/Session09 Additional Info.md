@@ -1,3 +1,12 @@
+
+### ⚠ Important Tip
+If your `agent.ts` uses `useAuthStore().token` **at the top level**, remember:
+- On very first load, Zustand will **rehydrate** from storage _after_ initial render, so token may be `null` until rehydration is done.
+- Fix: either delay access until after `hasHydrated`, or refactor `agent` to inject token per request.
+
+
+
+
 To **safely handle concurrency** in your `CreateTicketOrderAsync` method — particularly for **seat reservation** on the same `Transportation` — you need to **prevent race conditions** where two users might reserve the same seat or oversell capacity.
 
 This is a **classic critical section problem**, and you can solve it using **application-level locking**, **database-level locking**, or both.
