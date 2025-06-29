@@ -190,11 +190,73 @@ You can also find another version of this DTO in [Here](https://github.com/Mehrd
 
 - [ ] Implement:
     - [ ]  Edit Email (with validation): `EditEmailDto`, service method, and controller endpoint.
+	```
+ 	public class EditEmailDto
+	{
+ 	    [EmailAddress(ErrorMessage = "Invalid email address format")]
+ 	    public string NewEmail { get; set; }
+	}
+ 	```
     - [ ] Edit Password: `EditPasswordDto`, service and controller.
-    - [ ] Edit Person Info: `UpsertAccountPersonDto`, and endpoint to upsert personal data.
-    - [ ] Edit BankAccountDetail: `UpsertBankAccountDetailDto` and relevant logic.
+	```
+ 	public class EditPasswordDto
+	{
+ 	    [Required(ErrorMessage = "Old password is required")]
+ 	    public string OldPassword { get; set; }
 
-- [ ] Add mapping for all Dtos and fix related properties like `CreatorAccountId`.
+ 	    [Required(ErrorMessage = "New password is required")]
+ 	    [MinLength(8, ErrorMessage = "At least 8 chars")]
+ 	    public string NewPassword { get; set; }
+
+ 	    [Compare("Password", ErrorMessage = "Password doesn't match")]
+ 	    public string ConfirmNewPassword { get; set; }
+	}
+ 	```
+    - [ ] Edit Person Info: `UpsertPersonDto`, and endpoint to upsert personal data.
+	```
+ 	public class UpsertPersonDto
+	{
+ 	    public long Id { get; set; }
+ 	    public long CreatorId { get; set; }
+
+ 	    [Required(ErrorMessage = "Firstname is required")]
+ 	    public string FirstName { get; set; }
+
+ 	    [Required(ErrorMessage = "Lastname is required")]
+ 	    public string LastName { get; set; }
+
+ 	    [Required(ErrorMessage = "National Id number is required")]
+ 	    [RegularExpression(@"^\d{10}$", ErrorMessage = "National ID number must be exactly 10 digits")]
+ 	    public string IdNumber { get; set; }
+
+ 	    [Required(ErrorMessage = "Gender is required")]
+ 	    public short GenderId { get; set; }
+
+ 	    [Required(ErrorMessage = "Phone number is required")]
+ 	    public string PhoneNumber { get; set; }
+
+ 	    [Required(ErrorMessage = "Birth date is required")]
+ 	    public DateTime BirthDate { get; set; }
+	}
+ 	```
+    - [ ] Edit BankAccountDetail: `UpsertBankAccountDetailDto` and relevant logic.
+	```
+ 	public class UpsertBankAccountDto
+ 	{
+ 	    [MinLength(24)]
+ 	    [MaxLength(24)]
+ 	    public string? IBAN { get; set; }
+
+ 	    [MinLength(16)]
+ 	    [MaxLength(16)]
+ 	    public string? CardNumber { get; set; }
+
+ 	    [MinLength(8)]
+ 	    public string? BankAccountNumber { get; set; }
+	}
+ 	```
+
+- [ ] Add mapping for all Dtos and check related properties like `CreatorAccountId`.
     
 
 ## ✅ List of Travelers
