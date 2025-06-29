@@ -64,7 +64,7 @@ builder.Services.AddScoped<IUserContext, UserContext>();
 public class ProfileDto
 {
     // from account
-    public string PhoneNumber { get; set; }
+    public string AccountPhoneNumber { get; set; }
     public string Email { get; set; }
     public decimal Balance { get; set; }
 
@@ -72,6 +72,7 @@ public class ProfileDto
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string IdNumber { get; set; }
+    public string PersonPhoneNumber { get; set; }
     public DateTime? BirthDate { get; set; }
 
     // from bank-account
@@ -212,9 +213,9 @@ You can also find another version of this DTO in [Here](https://github.com/Mehrd
  	    public string ConfirmNewPassword { get; set; }
 	}
  	```
-    - [ ] Edit Person Info: `UpsertAccountPersonDto`, and endpoint to upsert personal data.
+    - [ ] Edit Person Info: `PersonDto`, and endpoint to upsert personal data.
 	```
- 	public class UpsertAccountPersonDto
+ 	public class PersonDto
 	{
  	    public long Id { get; set; }
  	    public long CreatorId { get; set; }
@@ -261,9 +262,78 @@ You can also find another version of this DTO in [Here](https://github.com/Mehrd
 
 ## ✅ List of Travelers
 
-- [ ] Add `GetPeople` endpoint in `AccountController`.
-- [ ] Implement separation of `UpsertAccountPerson` and `UpsertPerson`.
-- [ ] Adjust Dto: `PersonDto` (with `id`, `creatorAccountId`, `englishFirstName`, etc.).
+- [ ] Add `GetMyPeople` endpoint in `AccountController`. To do so, first add essential methods in `PersonRepository`, `AccountService` and related interfaces.
+
+- [ ] Implement `UpsertAccountPerson` and `UpsertPerson`. Note that they should be considered separated.
+```
+public async Task<Result<long>> UpsertAccountPersonAsync(long accountId, PersonDto dto)
+{
+    var account = await _accountRepository.GetByIdAsync(accountId);
+    if (account == null)
+    {
+        throw new Exception("Account not found");
+    }
+    
+    // if account is not null, update its person
+    Person person;
+    if (account.PersonId.HasValue)
+    {
+        person = await _personRepository.GetByIdAsync(account.PersonId.Value);
+        if (person == null)
+        {
+            return Result<long>.Error(0, "No person found for this account");
+        }
+
+        _mapper.Map(dto, person);
+        person.CreatorId = account.Id;
+        person.Id = account.PersonId.Value;
+        _personRepository.Update(person);
+    }
+    else
+    {
+        person = _mapper.Map<Person>(dto);
+        person.CreatorId = account.Id;
+        await _personRepository.InsertAsync(person);
+    }
+    await _unitOfWork.CompleteAsync();
+
+    account.PersonId = person.Id;
+    _accountRepository.Update(account);
+    await _unitOfWork.CompleteAsync();
+
+    return Result<long>.Success(person.Id);
+}
+
+public async Task<Result<long>> UpsertPersonAsync(long accountId, PersonDto dto)
+{
+    var account = await _accountRepository.GetByIdAsync(accountId);
+    if (account == null)
+    {
+        throw new Exception("Account not found");
+    }
+
+    Person person = (await _personRepository.FindAsync(p => p.IdNumber == dto.IdNumber && p.CreatorId == accountId)).FirstOrDefault();
+    if (person != null)
+    {
+        if (dto.Id > 0 && dto.Id != person.Id)
+        {
+            return Result<long>.Error(0, "A person with this id number exists");
+        }
+        _mapper.Map(dto, person);
+        person.CreatorId = accountId;
+        _personRepository.Update(person);
+    }
+    else
+    {
+        person = _mapper.Map<Person>(dto);
+        person.CreatorId = accountId;
+        await _personRepository.InsertAsync(person);
+    }
+    await _unitOfWork.CompleteAsync();
+
+    return Result<long>.Success(person.Id);
+}
+```
 
 
 ## ✅ My Travels Tab
