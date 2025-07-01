@@ -380,8 +380,77 @@ public async Task<IActionResult> UpsertPerson([FromBody] PersonDto dto)
 ## ✅ My Travels Tab
 
 - [ ]  Create `TicketOrderSummaryDto` (includes cities, vehicle name, price, etc.).
+```
+public class TicketOrderSummaryDto
+{
+    public long Id { get; set; }
+    public string SerialNumber { get; set; }
+    public DateTime BoughtAt { get; set; }
+
+    // transaction
+    public decimal Price { get; set; }
+
+    // transportation
+    public DateTime TravelStartDate { get; set; }
+    public DateTime? TravelEndDate { get; set; }
+
+    // city
+    public string FromCity { get; set; }
+    public string ToCity { get; set; }
+
+    // company
+    public string CompanyName { get; set; }
+
+    // vehicle data
+    public short VehicleTypeId { get; set; }
+    public string VehicleName { get; set; }
+}
+```
+
 - [ ] Add `GetTravels` in `AccountService`, and expose `GetMyTravels` in controller.
 
+First, update interfaces and TicketOrderRepository, add the **mappings** and then go for the other things 
+
+In AccountService:
+```
+public async Task<Result<List<TicketOrderSummaryDto>>> GetTravelsAsync(long accountId)
+{
+    var result = await _ticketOrderRepository.GetAllByBuyerId(accountId);
+    if (result == null)
+    {
+        return Result<List<TicketOrderSummaryDto>>.NotFound(null);
+    }
+
+    return Result<List<TicketOrderSummaryDto>>.Success(_mapper.Map<List<TicketOrderSummaryDto>>(result));
+}
+```
+
+In AccountController:
+```
+[HttpGet("my-travels")]
+public async Task<IActionResult> GetMyTravels()
+{
+    long buyerId = _userContext.GetUserId();
+    if (buyerId <= 0)
+    {
+        return Unauthorized();
+    }
+
+    var result =  await _accountService.GetTravelsAsync(buyerId);
+    if (result.IsSuccess)
+    {
+        return Ok(result.Data);
+    }
+
+    return result.Status switch
+    {
+        ResultStatus.Unauthorized => Unauthorized(result.ErrorMessage),
+        ResultStatus.NotFound => NotFound(result.ErrorMessage),
+        ResultStatus.ValidationError => BadRequest(result.ErrorMessage),
+        _ => StatusCode(500, result.ErrorMessage)
+    };
+}
+```
 
 ## ✅ My Transactions Tab
 
