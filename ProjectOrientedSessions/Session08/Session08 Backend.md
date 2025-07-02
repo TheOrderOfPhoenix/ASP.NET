@@ -455,7 +455,91 @@ public async Task<IActionResult> GetMyTravels()
 ## ✅ My Transactions Tab
 
 - [ ] Create `TransactionDto` and mapping.
-- [ ]  Add method to get transactions by `AccountId`.
-- [ ]  Expose `GetMyTransactions` in `AccountController`.
+```
+public class TransactionDto
+{
+    public long Id { get; set; }
+    public short TransactionTypeId { get; set; }
+    public long AccountId { get; set; }
+    public long? TicketOrderId { get; set; }
+    public decimal BaseAmount { get; set; }
+    public decimal FinalAmount { get; set; }
+    public required string SerialNumber { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public string? Description { get; set; }
+    public string TransactionType { get; set; }
+}
+```
+
+- [ ]  Add method to get transactions by `AccountId` in `TransactionRepository`.
+```
+public async Task<List<Transaction>> GetTransactionsByAccountIdAsync(long accountId)
+{
+    var transactions = await DbSet
+        .Include(t => t.TransactionType)
+        .Include(t => t.TicketOrder)
+        .Where(t => t.AccountId == accountId).ToListAsync();
+    return transactions;
+}
+```
+
+- [ ]  Expose `GetMyTransactions` in `AccountController`. It's obvious you should first add the essential method `GetTransactionsAsync` in `AccountService`.
+```
+[HttpGet("my-transactions")]
+public async Task<IActionResult> GetMyTransactions()
+{
+    long accountId = _userContext.GetUserId();
+    if (accountId <= 0)
+    {
+        return Unauthorized();
+    }
+
+    var result = await _accountService.GetTransactionsAsync(accountId);
+    if (result.IsSuccess)
+    {
+        return Ok(result.Data);
+    }
+
+    return result.Status switch
+    {
+        ResultStatus.Unauthorized => Unauthorized(result.ErrorMessage),
+        ResultStatus.NotFound => NotFound(result.ErrorMessage),
+        ResultStatus.ValidationError => BadRequest(result.ErrorMessage),
+        _ => StatusCode(500, result.ErrorMessage)
+    };
+}
+```
 - [ ]  Add modal to simulate balance top-up (manual input).
-- [ ]  Format amount text based on transaction type: green (+) for income, red (–) for expense. 
+```
+public class TopUpDto
+{
+    public decimal Amount { get; set; }
+}
+```
+- [ ]  Add `TransactionService` and use its method `CreateTopUpAsync` to create and add a new transaction in `AccountService`. Then add an endpoint just like before.
+```
+public async Task<Result<long>> TopUpAsync(long accountId, TopUpDto dto)
+{
+    var account = await _accountRepository.GetByIdAsync(accountId);
+    if (account == null)
+    {
+        return Result<long>.Error(0, "Account not found");
+    }
+
+    account.Deposit(dto.Amount);
+    _accountRepository.Update(account);
+    await _unitOfWork.CompleteAsync();
+
+    var transactionId = await _transactionService.CreateTopUpAsync(accountId, dto.Amount);
+    return Result<long>.Success(transactionId.Data);
+}
+```
+
+## Postman
+Considering that all endpoints in `AccountController` require Authorization, You need to test your api in **Postman**.
+
+<br />
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Postman_%28software%29.png" width="100%">
+
+Postman is a client which lets the user test api professionally. 
+You can download it in [this link](https://www.postman.com/downloads/) and get started with it using [this video](https://www.youtube.com/watch?v=wEOLZq-7DYs&pp=0gcJCfwAo7VqN5tD)
