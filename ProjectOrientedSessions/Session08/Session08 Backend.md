@@ -64,7 +64,7 @@ builder.Services.AddScoped<IUserContext, UserContext>();
 public class ProfileDto
 {
     // from account
-    public string PhoneNumber { get; set; }
+    public string AccountPhoneNumber { get; set; }
     public string Email { get; set; }
     public decimal Balance { get; set; }
 
@@ -72,6 +72,7 @@ public class ProfileDto
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string IdNumber { get; set; }
+    public string PersonPhoneNumber { get; set; }
     public DateTime? BirthDate { get; set; }
 
     // from bank-account
@@ -190,30 +191,355 @@ You can also find another version of this DTO in [Here](https://github.com/Mehrd
 
 - [ ] Implement:
     - [ ]  Edit Email (with validation): `EditEmailDto`, service method, and controller endpoint.
+	```
+ 	public class EditEmailDto
+	{
+ 	    [EmailAddress(ErrorMessage = "Invalid email address format")]
+ 	    public string NewEmail { get; set; }
+	}
+ 	```
     - [ ] Edit Password: `EditPasswordDto`, service and controller.
-    - [ ] Edit Person Info: `UpsertAccountPersonDto`, and endpoint to upsert personal data.
-    - [ ] Edit BankAccountDetail: `UpsertBankAccountDetailDto` and relevant logic.
+	```
+ 	public class EditPasswordDto
+	{
+ 	    [Required(ErrorMessage = "Old password is required")]
+ 	    public string OldPassword { get; set; }
 
-- [ ] Add mapping for all Dtos and fix related properties like `CreatorAccountId`.
+ 	    [Required(ErrorMessage = "New password is required")]
+ 	    [MinLength(8, ErrorMessage = "At least 8 chars")]
+ 	    public string NewPassword { get; set; }
+
+ 	    [Compare("Password", ErrorMessage = "Password doesn't match")]
+ 	    public string ConfirmNewPassword { get; set; }
+	}
+ 	```
+    - [ ] Edit Person Info: `PersonDto`, and endpoint to upsert personal data.
+	```
+ 	public class PersonDto
+	{
+ 	    public long Id { get; set; }
+ 	    public long CreatorId { get; set; }
+
+ 	    [Required(ErrorMessage = "Firstname is required")]
+ 	    public string FirstName { get; set; }
+
+ 	    [Required(ErrorMessage = "Lastname is required")]
+ 	    public string LastName { get; set; }
+
+ 	    [Required(ErrorMessage = "National Id number is required")]
+ 	    [RegularExpression(@"^\d{10}$", ErrorMessage = "National ID number must be exactly 10 digits")]
+ 	    public string IdNumber { get; set; }
+
+ 	    [Required(ErrorMessage = "Gender is required")]
+ 	    public short GenderId { get; set; }
+
+ 	    [Required(ErrorMessage = "Phone number is required")]
+ 	    public string PhoneNumber { get; set; }
+
+ 	    [Required(ErrorMessage = "Birth date is required")]
+ 	    public DateTime BirthDate { get; set; }
+	}
+ 	```
+    - [ ] Edit BankAccountDetail: `UpsertBankAccountDetailDto` and relevant logic.
+	```
+ 	public class UpsertBankAccountDto
+ 	{
+ 	    [MinLength(24)]
+ 	    [MaxLength(24)]
+ 	    public string? IBAN { get; set; }
+
+ 	    [MinLength(16)]
+ 	    [MaxLength(16)]
+ 	    public string? CardNumber { get; set; }
+
+ 	    [MinLength(8)]
+ 	    public string? BankAccountNumber { get; set; }
+	}
+ 	```
+
+- [ ] Add mapping for all Dtos and check related properties like `CreatorAccountId`.
     
 
 ## ✅ List of Travelers
 
-- [ ] Add `GetPeople` endpoint in `AccountController`.
-- [ ] Implement separation of `UpsertAccountPerson` and `UpsertPerson`.
-- [ ] Adjust Dto: `PersonDto` (with `id`, `creatorAccountId`, `englishFirstName`, etc.).
+- [ ] Add `GetMyPeople` endpoint in `AccountController`. To do so, first add essential methods in `PersonRepository`, `AccountService` and related interfaces.
+
+- [ ] Implement `UpsertAccountPerson` and `UpsertPerson`. Note that they should be considered separated.
+```
+public async Task<Result<long>> UpsertAccountPersonAsync(long accountId, PersonDto dto)
+{
+    var account = await _accountRepository.GetByIdAsync(accountId);
+    if (account == null)
+    {
+        throw new Exception("Account not found");
+    }
+    
+    // if account is not null, update its person
+    Person person;
+    if (account.PersonId.HasValue)
+    {
+        person = await _personRepository.GetByIdAsync(account.PersonId.Value);
+        if (person == null)
+        {
+            return Result<long>.Error(0, "No person found for this account");
+        }
+
+        _mapper.Map(dto, person);
+        person.CreatorId = account.Id;
+        person.Id = account.PersonId.Value;
+        _personRepository.Update(person);
+    }
+    else
+    {
+        person = _mapper.Map<Person>(dto);
+        person.CreatorId = account.Id;
+        await _personRepository.InsertAsync(person);
+    }
+    await _unitOfWork.CompleteAsync();
+
+    account.PersonId = person.Id;
+    _accountRepository.Update(account);
+    await _unitOfWork.CompleteAsync();
+
+    return Result<long>.Success(person.Id);
+}
+
+public async Task<Result<long>> UpsertPersonAsync(long accountId, PersonDto dto)
+{
+    var account = await _accountRepository.GetByIdAsync(accountId);
+    if (account == null)
+    {
+        throw new Exception("Account not found");
+    }
+
+    Person person = (await _personRepository.FindAsync(p => p.IdNumber == dto.IdNumber && p.CreatorId == accountId)).FirstOrDefault();
+    if (person != null)
+    {
+        if (dto.Id > 0 && dto.Id != person.Id)
+        {
+            return Result<long>.Error(0, "A person with this id number exists");
+        }
+        _mapper.Map(dto, person);
+        person.CreatorId = accountId;
+        _personRepository.Update(person);
+    }
+    else
+    {
+        person = _mapper.Map<Person>(dto);
+        person.CreatorId = accountId;
+        await _personRepository.InsertAsync(person);
+    }
+    await _unitOfWork.CompleteAsync();
+
+    return Result<long>.Success(person.Id);
+}
+```
+```
+[HttpPost("account-person")]
+public async Task<IActionResult> UpsertAccountPerson([FromBody] PersonDto dto)
+{
+    long accountId = _userContext.GetUserId();
+    if (accountId <= 0)
+    {
+        return Unauthorized();
+    }
+
+    var result = await _personService.UpsertAccountPersonAsync(accountId, dto);
+    return result.Status switch
+    {
+        ResultStatus.Success => NoContent(),
+        ResultStatus.Unauthorized => Unauthorized(result.ErrorMessage),
+        ResultStatus.NotFound => NotFound(result.ErrorMessage),
+        ResultStatus.ValidationError => BadRequest(result.ErrorMessage),
+        _ => StatusCode(500, result.ErrorMessage)
+    };
+}
+
+[HttpPost("person")]
+public async Task<IActionResult> UpsertPerson([FromBody] PersonDto dto)
+{
+    long accountId = _userContext.GetUserId();
+    if (accountId <= 0)
+    {
+        return Unauthorized();
+    }
+
+    var result = await _personService.UpsertPersonAsync(accountId, dto);
+    return result.Status switch
+    {
+        ResultStatus.Success => NoContent(),
+        ResultStatus.Unauthorized => Unauthorized(result.ErrorMessage),
+        ResultStatus.NotFound => NotFound(result.ErrorMessage),
+        ResultStatus.ValidationError => BadRequest(result.ErrorMessage),
+        _ => StatusCode(500, result.ErrorMessage)
+    };
+}
+```
 
 
 ## ✅ My Travels Tab
 
 - [ ]  Create `TicketOrderSummaryDto` (includes cities, vehicle name, price, etc.).
+```
+public class TicketOrderSummaryDto
+{
+    public long Id { get; set; }
+    public string SerialNumber { get; set; }
+    public DateTime BoughtAt { get; set; }
+
+    // transaction
+    public decimal Price { get; set; }
+
+    // transportation
+    public DateTime TravelStartDate { get; set; }
+    public DateTime? TravelEndDate { get; set; }
+
+    // city
+    public string FromCity { get; set; }
+    public string ToCity { get; set; }
+
+    // company
+    public string CompanyName { get; set; }
+
+    // vehicle data
+    public short VehicleTypeId { get; set; }
+    public string VehicleName { get; set; }
+}
+```
+
 - [ ] Add `GetTravels` in `AccountService`, and expose `GetMyTravels` in controller.
 
+First, update interfaces and TicketOrderRepository, add the **mappings** and then go for the other things 
+
+In AccountService:
+```
+public async Task<Result<List<TicketOrderSummaryDto>>> GetTravelsAsync(long accountId)
+{
+    var result = await _ticketOrderRepository.GetAllByBuyerId(accountId);
+    if (result == null)
+    {
+        return Result<List<TicketOrderSummaryDto>>.NotFound(null);
+    }
+
+    return Result<List<TicketOrderSummaryDto>>.Success(_mapper.Map<List<TicketOrderSummaryDto>>(result));
+}
+```
+
+In AccountController:
+```
+[HttpGet("my-travels")]
+public async Task<IActionResult> GetMyTravels()
+{
+    long buyerId = _userContext.GetUserId();
+    if (buyerId <= 0)
+    {
+        return Unauthorized();
+    }
+
+    var result =  await _accountService.GetTravelsAsync(buyerId);
+    if (result.IsSuccess)
+    {
+        return Ok(result.Data);
+    }
+
+    return result.Status switch
+    {
+        ResultStatus.Unauthorized => Unauthorized(result.ErrorMessage),
+        ResultStatus.NotFound => NotFound(result.ErrorMessage),
+        ResultStatus.ValidationError => BadRequest(result.ErrorMessage),
+        _ => StatusCode(500, result.ErrorMessage)
+    };
+}
+```
 
 ## ✅ My Transactions Tab
 
 - [ ] Create `TransactionDto` and mapping.
-- [ ]  Add method to get transactions by `AccountId`.
-- [ ]  Expose `GetMyTransactions` in `AccountController`.
+```
+public class TransactionDto
+{
+    public long Id { get; set; }
+    public short TransactionTypeId { get; set; }
+    public long AccountId { get; set; }
+    public long? TicketOrderId { get; set; }
+    public decimal BaseAmount { get; set; }
+    public decimal FinalAmount { get; set; }
+    public required string SerialNumber { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public string? Description { get; set; }
+    public string TransactionType { get; set; }
+}
+```
+
+- [ ]  Add method to get transactions by `AccountId` in `TransactionRepository`.
+```
+public async Task<List<Transaction>> GetTransactionsByAccountIdAsync(long accountId)
+{
+    var transactions = await DbSet
+        .Include(t => t.TransactionType)
+        .Include(t => t.TicketOrder)
+        .Where(t => t.AccountId == accountId).ToListAsync();
+    return transactions;
+}
+```
+
+- [ ]  Expose `GetMyTransactions` in `AccountController`. It's obvious you should first add the essential method `GetTransactionsAsync` in `AccountService`.
+```
+[HttpGet("my-transactions")]
+public async Task<IActionResult> GetMyTransactions()
+{
+    long accountId = _userContext.GetUserId();
+    if (accountId <= 0)
+    {
+        return Unauthorized();
+    }
+
+    var result = await _accountService.GetTransactionsAsync(accountId);
+    if (result.IsSuccess)
+    {
+        return Ok(result.Data);
+    }
+
+    return result.Status switch
+    {
+        ResultStatus.Unauthorized => Unauthorized(result.ErrorMessage),
+        ResultStatus.NotFound => NotFound(result.ErrorMessage),
+        ResultStatus.ValidationError => BadRequest(result.ErrorMessage),
+        _ => StatusCode(500, result.ErrorMessage)
+    };
+}
+```
 - [ ]  Add modal to simulate balance top-up (manual input).
-- [ ]  Format amount text based on transaction type: green (+) for income, red (–) for expense. 
+```
+public class TopUpDto
+{
+    public decimal Amount { get; set; }
+}
+```
+- [ ]  Add `TransactionService` and use its method `CreateTopUpAsync` to create and add a new transaction in `AccountService`. Then add an endpoint just like before.
+```
+public async Task<Result<long>> TopUpAsync(long accountId, TopUpDto dto)
+{
+    var account = await _accountRepository.GetByIdAsync(accountId);
+    if (account == null)
+    {
+        return Result<long>.Error(0, "Account not found");
+    }
+
+    account.Deposit(dto.Amount);
+    _accountRepository.Update(account);
+    await _unitOfWork.CompleteAsync();
+
+    var transactionId = await _transactionService.CreateTopUpAsync(accountId, dto.Amount);
+    return Result<long>.Success(transactionId.Data);
+}
+```
+
+## Postman
+Considering that all endpoints in `AccountController` require Authorization, You need to test your api in **Postman**.
+
+<br />
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Postman_%28software%29.png" width="100%">
+
+Postman is a client which lets the user test api professionally. 
+You can download it in [this link](https://www.postman.com/downloads/) and get started with it using [this video](https://www.youtube.com/watch?v=wEOLZq-7DYs&pp=0gcJCfwAo7VqN5tD)
