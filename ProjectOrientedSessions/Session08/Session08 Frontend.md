@@ -5,7 +5,7 @@
 ---
 ### 🔐 Account & Authentication
 - [ ] Use Axios request interceptor to:
-    - [ ]  Attach token to requests
+    - [ ] Attach token to requests
     - [ ] Handle logout logic
 ---
 ### API
