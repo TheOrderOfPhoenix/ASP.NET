@@ -54,30 +54,138 @@ const Profile = {
 
 - [ ]  Add empty pages/tabs for:
     - [ ] `ProfileSummary`
-	- [ ] `MyTravels`
-	- [ ] `ListOfTravelers`
-	- [ ] Favorites
-    - [ ] Support
+    - [ ] - [ ] `MyTravels`
     - [ ] `MyTransactions`
-- [ ] Implement `ProfilePage` component
+
+- [ ] Implement `ProfilePage` using the components created. This is an example of how it can be done:
+```ts
+import InfoAccount from "./InfoAccount";
+import InfoPeople from "./InfoPeople";
+import InfoTransactions from "./InfoTransactions";
+import InfoTravels from "./InfoTravels";
+import { useState } from "react";
+
+const tabs = [
+  { label: "Account", component: <InfoAccount /> },
+  { label: "Transactions", component: <InfoTransactions /> },
+  { label: "Travels", component: <InfoTravels /> },
+  { label: "People", component: <InfoPeople /> }
+];
+
+const Profile = () => {
+  const [selected, setSelected] = useState(0);
+  return (
+    <div className="max-w-4xl mx-auto py-8 px-4">
+      <div className="flex flex-col md:flex-row gap-8">
+        <aside className="md:w-64 w-full bg-white rounded-lg shadow p-4 flex md:flex-col flex-row gap-2 md:gap-0 mb-4 md:mb-0">
+          {tabs.map((tab, idx) => (
+            <button
+              key={tab.label}
+              className={`text-right px-4 py-2 rounded transition font-medium text-base md:text-lg w-full ${
+                selected === idx
+                  ? "bg-blue-100 text-blue-700"
+                  : "hover:bg-gray-100 text-gray-700"
+              }`}
+              onClick={() => setSelected(idx)}
+              type="button"
+            >
+              {tab.label}
+            </button>
+          ))}
+        </aside>
+        <main className="flex-1 min-w-0">{tabs[selected].component}</main>
+      </div>
+    </div>
+  );
+};
+
+export default Profile;
+
+```
+
 - [ ]  Create prototype of `ProfilePage` and integrate with navbar. (Create a button or link to access `ProfilePage`, only when user is logged in)
+
 - [ ] Define and adjust routes for profile and its tabs
-- [ ] Implement route-based tab handling inside `ProfilePage`
+```ts
+const AppRoutes = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  );
+};
+
+export default AppRoutes;
+
+```
+
+- [ ] Implement tab handling inside `ProfilePage`. You can also do it **route-based**.
 
 ## Profile Summary 
 ### 📦 DTOs / Models
 -  Add models for:
     - [ ]  `EditEmailDto`
+	```ts
+ 	export interface EditEmailDto {
+	    newEmail: string;
+	}
+ 	```
     - [ ]  `EditPasswordDto`
+	```ts
+ 	export interface EditPasswordDto {
+	    oldPassword: string;
+	    newPassword: string;
+	    confirmNewPassword: string;
+	}
+ 	```
     - [ ]  `PersonDto`
+	```ts
+	export interface PersonDto {
+ 	    id?: number;
+ 	    creatorAccountId?: number;
+ 	    firstName: string;
+	    lastName: string;
+ 	    idNumber: string;
+	    genderId: number;
+	    phoneNumber: string;
+	    birthDate: string;
+ 	}
+ 	```
     - [ ]  `ProfileDto`
+	```ts
+ 	export interface ProfileDto {
+	    accountPhoneNumber: string;
+	    email: string;
+	    balance: number;
+
+	    firstName: string;
+	    lastName: string;
+	    idNumber: string;
+	    personPhoneNumber: string;
+	    birthDate: Date | string | null;
+
+	    iban: string;
+	    bankAccountNumber: string;
+	    cardNumber: string;
+ 	}
+ 	```
     - [ ] `UpsertBankAccountDetailDto`
+	```ts
+	export interface UpsertBankAccountDto {
+	    iban?: string;
+	    bankAccountNumber?: string;
+ 	    cardNumber?: string;
+ 	}
+ 	```
  
- - [ ] Implement the process of showing and editing the data
+ - [ ] Implement the process of showing and editing the data. To do so, you can use modal components and set their functionality in the pages.
 
 ## 🧍 List of Travelers
 - [ ]  Implement `ListOfTravelers` page for showing, editing, and adding new people
-
 
 ## 💳 Transactions Module
 - [ ] Add `TransactionDto` model
