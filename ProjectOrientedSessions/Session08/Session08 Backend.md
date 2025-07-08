@@ -9,7 +9,7 @@ Profile + some fixes to database
     - New ERD: [Here](https://github.com/TheOrderOfPhoenix/ASP.NET/blob/main/ProjectOrientedSessions/docs/AlibabaERD-Version02.pdf)
     - Note: Pay attention to the changes in logic and implementation of Person table (Id number is not unique anymore). So remove this code in PersonConfiguration:
 
-      ```
+      ```csharp
       builder.HasIndex(p => p.IdNumber)
           .IsUnique();
       ```
@@ -22,14 +22,14 @@ Profile + some fixes to database
 - [ ] Fix claim extraction (`sub` → standardize JWT claim mapping). (`IUserContext` implmentation)
 
 First, create an interface in Application layer:
-```
+```csharp
 public interface IUserContext
 {
-long GetUserId();
+    long GetUserId();
 }
 ```
 Then, implement it in WebAPI in Auth folder:
-```
+```csharp
 public class UserContext : IUserContext
 {
     private readonly IHttpContextAccessor _httpContextAccessor;
@@ -51,7 +51,7 @@ public class UserContext : IUserContext
 }
 ```
 Finally, register things in Program.cs
-```
+```csharp
 // register user context
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IUserContext, UserContext>();
@@ -60,7 +60,7 @@ builder.Services.AddScoped<IUserContext, UserContext>();
 ## ✅ Profile Page (Account Info Tab)
 
 - [ ]  Create `ProfileDto` to represent combined data for account, person, bank detail, balance.
-```
+```csharp
 public class ProfileDto
 {
     // from account
@@ -85,7 +85,7 @@ You can also find another version of this DTO in [Here](https://github.com/Mehrd
 
 - [ ] Add `GetProfileAsync` in `AccountRepository` and expose via `AccountController`.
     - First, map dto to aggregate
-    ```
+    ```csharp
     CreateMap<Account, ProfileDto>()
 	.ForMember(dest => dest.PhoneNumber, opt => opt.MapFrom(src => src.PhoneNumber))
 	.ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email))
@@ -99,7 +99,7 @@ You can also find another version of this DTO in [Here](https://github.com/Mehrd
 	.ForMember(dest => dest.CardNumber, opt => opt.MapFrom(src => src.BankAccount != null ? src.BankAccount.CardNumber : ""));
     ```
     - Then, add the equivalent methods for AccountRepository, AccountService and AccountController
-    ```
+    ```csharp
     public class AccountRepository : BaseRepository<AlibabaDbContext, Account, long>, IAccountRepository
     {
 	    public AccountRepository(AlibabaDbContext context) : base(context)
@@ -126,7 +126,7 @@ You can also find another version of this DTO in [Here](https://github.com/Mehrd
 
     ```
     
-    ```
+    ```csharp
     public class AccountService : IAccountService
     {
         private readonly IAccountRepository _accountRepository;
@@ -145,7 +145,7 @@ You can also find another version of this DTO in [Here](https://github.com/Mehrd
     }
     ```
 
-    ```
+    ```csharp
     [ApiController]
     [Route("api/[controller]")]
     public class AccountController : ControllerBase
@@ -191,7 +191,7 @@ You can also find another version of this DTO in [Here](https://github.com/Mehrd
 
 - [ ] Implement:
     - [ ]  Edit Email (with validation): `EditEmailDto`, service method, and controller endpoint.
-	```
+	```csharp
  	public class EditEmailDto
 	{
  	    [EmailAddress(ErrorMessage = "Invalid email address format")]
@@ -199,7 +199,7 @@ You can also find another version of this DTO in [Here](https://github.com/Mehrd
 	}
  	```
     - [ ] Edit Password: `EditPasswordDto`, service and controller.
-	```
+	```csharp
  	public class EditPasswordDto
 	{
  	    [Required(ErrorMessage = "Old password is required")]
@@ -214,7 +214,7 @@ You can also find another version of this DTO in [Here](https://github.com/Mehrd
 	}
  	```
     - [ ] Edit Person Info: `PersonDto`, and endpoint to upsert personal data.
-	```
+	```csharp
  	public class PersonDto
 	{
  	    public long Id { get; set; }
@@ -241,7 +241,7 @@ You can also find another version of this DTO in [Here](https://github.com/Mehrd
 	}
  	```
     - [ ] Edit BankAccountDetail: `UpsertBankAccountDetailDto` and relevant logic.
-	```
+	```csharp
  	public class UpsertBankAccountDto
  	{
  	    [MinLength(24)]
@@ -265,7 +265,7 @@ You can also find another version of this DTO in [Here](https://github.com/Mehrd
 - [ ] Add `GetMyPeople` endpoint in `AccountController`. To do so, first add essential methods in `PersonRepository`, `AccountService` and related interfaces.
 
 - [ ] Implement `UpsertAccountPerson` and `UpsertPerson`. Note that they should be considered separated.
-```
+```csharp
 public async Task<Result<long>> UpsertAccountPersonAsync(long accountId, PersonDto dto)
 {
     var account = await _accountRepository.GetByIdAsync(accountId);
@@ -334,7 +334,7 @@ public async Task<Result<long>> UpsertPersonAsync(long accountId, PersonDto dto)
     return Result<long>.Success(person.Id);
 }
 ```
-```
+```csharp
 [HttpPost("account-person")]
 public async Task<IActionResult> UpsertAccountPerson([FromBody] PersonDto dto)
 {
@@ -380,7 +380,7 @@ public async Task<IActionResult> UpsertPerson([FromBody] PersonDto dto)
 ## ✅ My Travels Tab
 
 - [ ]  Create `TicketOrderSummaryDto` (includes cities, vehicle name, price, etc.).
-```
+```csharp
 public class TicketOrderSummaryDto
 {
     public long Id { get; set; }
@@ -412,7 +412,7 @@ public class TicketOrderSummaryDto
 First, update interfaces and TicketOrderRepository, add the **mappings** and then go for the other things 
 
 In AccountService:
-```
+```csharp
 public async Task<Result<List<TicketOrderSummaryDto>>> GetTravelsAsync(long accountId)
 {
     var result = await _ticketOrderRepository.GetAllByBuyerId(accountId);
@@ -426,7 +426,7 @@ public async Task<Result<List<TicketOrderSummaryDto>>> GetTravelsAsync(long acco
 ```
 
 In AccountController:
-```
+```csharp
 [HttpGet("my-travels")]
 public async Task<IActionResult> GetMyTravels()
 {
@@ -455,7 +455,7 @@ public async Task<IActionResult> GetMyTravels()
 ## ✅ My Transactions Tab
 
 - [ ] Create `TransactionDto` and mapping.
-```
+```csharp
 public class TransactionDto
 {
     public long Id { get; set; }
@@ -472,7 +472,7 @@ public class TransactionDto
 ```
 
 - [ ]  Add method to get transactions by `AccountId` in `TransactionRepository`.
-```
+```csharp
 public async Task<List<Transaction>> GetTransactionsByAccountIdAsync(long accountId)
 {
     var transactions = await DbSet
@@ -484,7 +484,7 @@ public async Task<List<Transaction>> GetTransactionsByAccountIdAsync(long accoun
 ```
 
 - [ ]  Expose `GetMyTransactions` in `AccountController`. It's obvious you should first add the essential method `GetTransactionsAsync` in `AccountService`.
-```
+```csharp
 [HttpGet("my-transactions")]
 public async Task<IActionResult> GetMyTransactions()
 {
@@ -510,14 +510,14 @@ public async Task<IActionResult> GetMyTransactions()
 }
 ```
 - [ ]  Add modal to simulate balance top-up (manual input).
-```
+```csharp
 public class TopUpDto
 {
     public decimal Amount { get; set; }
 }
 ```
 - [ ]  Add `TransactionService` and use its method `CreateTopUpAsync` to create and add a new transaction in `AccountService`. Then add an endpoint just like before.
-```
+```csharp
 public async Task<Result<long>> TopUpAsync(long accountId, TopUpDto dto)
 {
     var account = await _accountRepository.GetByIdAsync(accountId);
@@ -539,7 +539,12 @@ public async Task<Result<long>> TopUpAsync(long accountId, TopUpDto dto)
 Considering that all endpoints in `AccountController` require Authorization, You need to test your api in **Postman**.
 
 <br />
-<img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Postman_%28software%29.png" width="100%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Postman_%28software%29.png" width="60%">
 
 Postman is a client which lets the user test api professionally. 
 You can download it in [this link](https://www.postman.com/downloads/) and get started with it using [this video](https://www.youtube.com/watch?v=wEOLZq-7DYs&pp=0gcJCfwAo7VqN5tD)
+
+
+## Notes:
+- Check the codes as they're put here before **debugging**, you can check them with the repositories.
+- Complete the task step by step in each endpoint to preserve the principals of *Clean Architecture*.
