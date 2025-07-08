@@ -54,8 +54,9 @@ const Profile = {
 
 - [ ]  Add empty pages/tabs for:
     - [ ] `ProfileSummary`
-    - [ ] - [ ] `MyTravels`
+    - [ ] `MyTravels`
     - [ ] `MyTransactions`
+    - [ ] `MyPeople`
 
 - [ ] Implement `ProfilePage` using the components created. This is an example of how it can be done:
 ```ts
@@ -185,13 +186,48 @@ export default AppRoutes;
  - [ ] Implement the process of showing and editing the data. To do so, you can use modal components and set their functionality in the pages.
 
 ## 🧍 List of Travelers
-- [ ]  Implement `ListOfTravelers` page for showing, editing, and adding new people
+- [ ]  Implement `ListOfTravelers` page for showing, editing, and adding new people. You can use the same modal used for `UpsertAccountPerson`.
 
 ## 💳 Transactions Module
 - [ ] Add `TransactionDto` model
+```ts
+export interface TransactionDto {
+    id: number;
+    transactionTypeId: number;
+    accountId: number;
+    ticketOrderId?: number;
+    baseAmount: number;
+    finalAmount: number;
+    serialNumber: string;
+    createdAt: Date | string;
+    description?: string;
+    transactionType: string;
+}
+```
 - [ ]  Implement `MyTransactions` page
+Note: It is recommended to add a component to be displayed as a card, including the table of information, then use it in the page of MyTransactions
 
 ## 🚆 Travel Module
-- [ ] Add `TicketOrderSummaryDto`, `TravelerTicketDto` models
-- [ ] Implement `MyTravels` page
-- [ ] Implement `TravelOrderDetailsPage`
+- [ ] Add `TicketOrderSummaryDto` model
+```ts
+export interface TicketOrderSummaryDto {
+    id: number;
+    serialNumber: string;
+    boughtAt: Date | string;
+
+    price: number;
+
+    travelStartDate: Date | string;
+    travelEndDate: Date | string;
+
+    fromCity: string;
+    toCity: string;
+
+    companyName: string;
+
+    vehicleTypeId: number;
+    vehicleName: string;
+}
+```
+
+- [ ] Implement `MyTravels` page. Note that this page can be similarly implemented by a card.
