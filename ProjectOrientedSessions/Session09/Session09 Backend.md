@@ -21,9 +21,9 @@ SerialNumber = Guid.NewGuid().ToString("N")
 - [ ] Check out new ERD: [Here](https://github.com/TheOrderOfPhoenix/ASP.NET/blob/main/ProjectOrientedSessions/docs/AlibabaERD-Version02.pdf)
 - [ ] Add migrations for the above database changes.
 
-## 🧑‍💼 Service Layer
+## 🧑‍💼 Path to Service Layer
 
-- [ ] Create DTOs `CreateTravellerTicketDto` and `CreateTicketOrderDto`:
+- [ ] Create DTOs `CreateTravellerTicketDto` and `CreateTicketOrderDto` and the **mappings**:
 ```csharp
 public class CreateTravellerTicketDto
 {
@@ -61,6 +61,9 @@ public class CreateTicketOrderDto
     public long TransportationId { get; set; }
     public List<CreateTravellerTicketDto> MyProperty { get; set; }
 }
+```
+```csharp
+
 ```
 Note: If you have the **Coupon** feature in your project, then add a `CouponCode` property in `CreateTicketOrderDto`.
 
@@ -261,24 +264,81 @@ public async Task<Result<long>> CreateTicketOrderAsync(long accountId, CreateTic
 
 ## 🎯 Controller Layer
 
-- [ ]  Create `TicketOrderController` with the following endpoints:
-    - [ ] `POST /CreateTicketOrder`
-    - [ ] `GET /DownloadPdf`
+- [ ] Create `TicketOrderController` with the endpoint `POST /CreateTicketOrder`
+```csharp
+[ApiController]
+[Route("api/[controller]")]
+[Authorize(Roles = "User")]
+public class TicketOrderController : ControllerBase
+{
+    private readonly IUserContext _userContext;
+    private readonly ITicketOrderService _ticketOrderService;
+
+    public TicketOrderController(IUserContext userContext,
+        ITicketOrderService ticketOrderService)
+    {
+        _userContext = userContext;
+        _ticketOrderService = ticketOrderService;
+    }
+
+    [HttpPost("create-order")]
+    public async Task<IActionResult> CreateTicketOrder([FromBody] CreateTicketOrderDto dto)
+    {
+        long accountId = _userContext.GetUserId();
+        // check for account-id to be valid
+        if (accountId <= 0)
+        {
+            return Unauthorized();
+        }
+
+        var result = await _ticketOrderService.CreateTicketOrderAsync(accountId, dto);
+        if (result.IsSuccess)
+        {
+            return Ok(result.Data);
+        }
+
+        return result.Status switch
+        {
+            ResultStatus.Unauthorized => Unauthorized(result.ErrorMessage),
+            ResultStatus.NotFound => NotFound(result.ErrorMessage),
+            ResultStatus.ValidationError => BadRequest(result.ErrorMessage),
+            _ => StatusCode(500, result.ErrorMessage)
+        };
+    }
+}
+```
         
-## 🔁 DTOs & Mappings
-
-- [ ]  Add `CreateTicketOrderDto`, `CreateTravelerTicketDto`.
-- [ ]  Add `TicketOrderSummaryDto`, `TravelerTicketDto`.
-- [ ]  Add mappings in `MappingProfile`.
-
 ## 🗃️ Repository Layer
 
-- [ ]  Create `ITicketOrderRepository`, `TicketOrderRepository`.
-- [ ]  Implement:
-    - [ ] `FindAndLoadAllDetails`
-    - [ ] `GetAllByBuyerId`
+Implement there methods in `TicketOrderRepository` and its interface
+- [ ] `FindAndLoadAllDetails`
+```csharp
+public Task<TicketOrder?> FindAndLoadAllDetailsAsync(long id)
+{
+    var ticketOrder = DbSet
+        .Include(to => to.Transportation).ThenInclude(t => t.FromLocation).ThenInclude(fl => fl.City)
+        .Include(to => to.Transportation).ThenInclude(t => t.ToLocation).ThenInclude(tl => tl.City)
+        .Include(to => to.Tickets).ThenInclude(t => t.Traveler)
+        .Where(to => to.Id == id).FirstOrDefaultAsync();
 
----
+    return ticketOrder;
+}
+```
+
+- [ ] `GetAllByBuyerId`
+```csharp
+public async Task<List<TicketOrder>> GetAllByBuyerId(long buyerId)
+{
+    var ticketOrders = await DbSet
+        .Include(to => to.Transaction)
+        .Include(to => to.Transportation).ThenInclude(t => t.FromLocation)
+        .Include(to => to.Transportation).ThenInclude(t => t.ToLocation)
+        .Include(to => to.Transportation).ThenInclude(t => t.Company)
+        .Include(to => to.Transportation).ThenInclude(t => t.Vehicle)
+        .Where(to => to.BuyerId == buyerId).ToListAsync();
+    return ticketOrders;
+}
+```
 
 # Transportation and Seat Selection
 
