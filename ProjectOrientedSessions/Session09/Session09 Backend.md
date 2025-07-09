@@ -342,33 +342,90 @@ public async Task<List<TicketOrder>> GetAllByBuyerId(long buyerId)
 
 # Transportation and Seat Selection
 
-- [ ]  Add `TransportationSeatDto`.
-- [ ]  Add method `GetSeatsByVehicleId` in `ISeatRepository` and implement it.
-- [ ]  Add mapping from `Seat` to `TransportationSeatDto`.
-- [ ]  Add `GetTransportationSeatsAsync` in `ITransportationService` and implement.
-- [ ]  Add `GetTransportationSeats` endpoint in `TransportationController`.
-- [ ] Fix vehicle and seat-related mapping issues (e.g., missing `VehicleTypeId`, logic errors).
-- [ ]  Ensure `RemainingCapacity` is treated as calculated (ignored in EF, removed from schema).
+- [ ] Add `TransportationSeatDto`.
+```csharp
+public class TransportationSeatDto
+{
+    public long Id { get; set; }
+    public int Row { get; set; }
+    public int Column { get; set; }
+    public bool IsVIP { get; set; }
+    public bool IsAvailable { get; set; }
+    public string? Description { get; set; }
+    public bool IsReserved { get; set; }
+    public short? GenderId { get; set; }
+}
+```
 
----
+- [ ] Add mapping from `Seat` to `TransportationSeatDto`.
+```csharp
+CreateMap<Seat, TransportationSeatDto>()
+    .ForMember(dest => dest.IsReserved, opt => opt.MapFrom(src => src.Tickets.Any(t => t.TicketStatusId == (int)TicketStatusEnum.Reserved)))
+    .ForMember(dest => dest.GenderId, opt => opt.MapFrom(src => src.Tickets.Any(t => t.TicketStatusId == (int)TicketStatusEnum.Reserved) ?
+    src.Tickets.First(t => t.TicketStatusId == (int)TicketStatusEnum.Reserved).Traveler.GenderId : (short?)null));
+```
 
-# Coupon System
+- [ ] Add method `GetSeatsByVehicleId` in `ISeatRepository` and implement it.
+```csharp
+public Task<List<Seat>> GetSeatsByVehicleIdAsync(long vehicleId)
+{
+    var seats = DbSet
+        .Include(s => s.Vehicle)
+        .Include(s => s.Tickets).ThenInclude(t => t.Traveler)
+        .Where(s => s.VehicleId == vehicleId).ToListAsync();
+    return seats;
+}
+```
 
-## 🏗️ Domain & Infrastructure
-- [ ]  Add `Coupon` entity with `IsExpired`, `CouponCode` (unique).
-- [ ]  Add `ICouponRepository`, `CouponRepository`.
-- [ ] Add `DiscountDto`, `CouponValidationRequestDto`.
-- [ ]  Add migrations for new `Coupon` table.
+- [ ] Add `GetTransportationSeatsAsync` in `ITransportationService` and implement.
+```csharp
+public async Task<Result<List<TransportationSeatDto>>> GetTransportationSeatsAsync(long transportationId)
+{
+    var transportation = await _transportationRepository.GetByIdAsync(transportationId);
+	if (transportation == null)
+	{
+		return Result<List<TransportationSeatDto>>.Error(null, "Transportation not found"); 
+	}
 
-### 🧑‍💼 Service & Logic
-- [ ]  Create `ICouponService`, implement validation logic.
-- [ ]  Add coupon validation in `TicketOrderService`.
-### 🎯 Controller
-- [ ]  Add `ValidateCoupon` endpoint in `CouponController`.
+	var seats = await _seatRepository.GetSeatsByVehicleIdAsync(transportation.VehicleId);
+	if (seats == null || seats.Count != 0)
+	{
+		return Result<List<TransportationSeatDto>>.Success(_mapper.Map<List<TransportationSeatDto>>(seats));
+	}
 
----
+	return Result<List<TransportationSeatDto>>.NotFound(null);
+}
+```
 
-# Payment & Transactions
+- [ ] Add `GetTransportationSeats` endpoint in `TransportationController`.
+```csharp
+[HttpGet("{transportationId}/seats")]
+public async Task<IActionResult> GetTransportationSeats(long transportationId)
+{
+	var result = await _transportationService.GetTransportationSeatsAsync(transportationId);
+    if (result.IsSuccess)
+    {
+		return Ok(result.Data);
+    }
+
+    return result.Status switch
+    {
+        ResultStatus.Unauthorized => Unauthorized(result.ErrorMessage),
+        ResultStatus.NotFound => NotFound(result.ErrorMessage),
+        ResultStatus.ValidationError => BadRequest(result.ErrorMessage),
+        _ => StatusCode(500, result.ErrorMessage)
+    };
+}
+```
+
+- [ ] Ensure `RemainingCapacity` is treated as calculated (ignored in EF, removed from schema).
+```csharp
+public int RemainingCapacity => Vehicle.Capacity -
+	TicketOrders?.SelectMany(to => to.Tickets)
+	.Count(t => t.TicketStatusId == 1) ?? 0;
+```
+
+## Payment & Transactions
 
 - [ ]  Add `CouponId` to `PayForTicketOrderAsync` in `IAccountService` & implementation.
 - [ ] Add `CouponId` to `TransactionDto` (adjusted to `CouponCode` later).
@@ -377,9 +434,7 @@ public async Task<List<TicketOrder>> GetAllByBuyerId(long buyerId)
 - [ ]  Add logic for creating transactions with tickets.
 - [ ]  Add endpoint `GetMyTransactions` and DTOs (`TransactionDto`).
 
----
-
-## ✅ Ticket Review & Confirmation
+### ✅ Ticket Review & Confirmation
 
 - [ ] Add `TicketOrderSummaryDto`, map details: from/to city, company, vehicle, time.
 - [ ]  Implement `GetTravelOrderDetails` endpoint to fetch ticket summary.
@@ -387,16 +442,6 @@ public async Task<List<TicketOrder>> GetAllByBuyerId(long buyerId)
 - [ ]  Include coupon entry and balance payment option.
 - [ ]  Use ticket + person data (via `GetTicketOrderTravelersDetails`).
 
----
-
-## ✅ PDF Generation
-
-- [ ] Install `QuestPDF` in infrastructure.
-- [ ]  Create `IPdfGenerator`, implement with QuestPDF.
-- [ ] Register `IPdfGenerator` service.
-- [ ]  Create `PdfGenerator` logic to render ticket PDFs.
-- [ ]  Add PDF download endpoint (`DownloadPdf`) in `TicketOrderController`.
----
-# Merge
+## Merge
 - [ ] Create a PR and merge the current branch with develop
 
