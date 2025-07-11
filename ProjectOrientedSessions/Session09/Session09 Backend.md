@@ -425,23 +425,88 @@ public int RemainingCapacity => Vehicle.Capacity -
 	.Count(t => t.TicketStatusId == 1) ?? 0;
 ```
 
-## Payment & Transactions
-
-- [ ]  Add `CouponId` to `PayForTicketOrderAsync` in `IAccountService` & implementation.
-- [ ] Add `CouponId` to `TransactionDto` (adjusted to `CouponCode` later).
-- [ ]  Add `TopUpAccount` logic (DTO, Controller, Service).
-- [ ]  Add `Transaction` relationship to `TicketOrder` as one-to-one.
-- [ ]  Add logic for creating transactions with tickets.
-- [ ]  Add endpoint `GetMyTransactions` and DTOs (`TransactionDto`).
-
 ### ✅ Ticket Review & Confirmation
 
-- [ ] Add `TicketOrderSummaryDto`, map details: from/to city, company, vehicle, time.
-- [ ]  Implement `GetTravelOrderDetails` endpoint to fetch ticket summary.
-- [ ]  Display number of travelers, per-seat price, and total cost.
-- [ ]  Include coupon entry and balance payment option.
-- [ ]  Use ticket + person data (via `GetTicketOrderTravelersDetails`).
+- [ ] Make sure you have `TravlerTicketDto`, mapped to `` with the details
+```csharp
+public class TravellerTicketDto
+{
+    public long Id { get; set; }
+    public required string SerialNumber { get; set; }
+    public required string TravellerName { get; set; }
+    public DateTime BirthDate { get; set; }
+    public required string SeatNumber { get; set; }
+    public required string TicketStatus { get; set; }
+    public string? CompanionName { get; set; }
+    public string? Description { get; set; }
+}
+```
+```csharp
+CreateMap<Ticket, TravellerTicketDto>()
+    .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
+    .ForMember(dest => dest.TravellerName, opt => opt.MapFrom(src => src.Traveler != null ? $"{src.Traveler.FirstName} {src.Traveler.LastName}" : ""))
+    .ForMember(dest => dest.SerialNumber, opt => opt.MapFrom(src => src.SerialNumber))
+    .ForMember(dest => dest.TicketStatus, opt => opt.MapFrom(src => src.TicketStatus.Ttile))
+    .ForMember(dest => dest.CompanionName, opt => opt.MapFrom(src => src.Companion != null ? $"{src.Companion.FirstName} {src.Companion.LastName}" : ""))
+    .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description));
+```
+
+- [ ] Implement `GetTicketOrderDetails` endpoint to fetch ticket summary, make sure to create required methods as well
+```csharp
+[HttpGet("my-travels/{ticketOrderId}")]
+public async Task<IActionResult> GetTravelDetails(long ticketOrderId)
+{
+    long accountId = _userContext.GetUserId();
+    if (accountId <= 0)
+    {
+        return Unauthorized();
+    }
+
+    var result = await _accountService.GetTicketOrderDetailsAsync(accountId, ticketOrderId);
+    if (result.IsSuccess)
+    {
+        return Ok(result.Data);
+    }
+
+    return result.Status switch
+    {
+        ResultStatus.Unauthorized => Unauthorized(result.ErrorMessage),
+        ResultStatus.NotFound => NotFound(result.ErrorMessage),
+        ResultStatus.ValidationError => BadRequest(result.ErrorMessage),
+        _ => StatusCode(500, result.ErrorMessage)
+    };
+}
+```
+```csharp
+public async Task<Result<List<TravellerTicketDto>>> GetTicketOrderDetailsAsync(long accoundId, long ticketOrderid)
+{
+    var result = await _ticketRepository.GetTicketsByTicketOrderId(ticketOrderid);
+    if (result != null)
+    {
+        if (result.Count > 0 && result.First().TicketOrder.BuyerId != accoundId)
+        {
+            return Result<List<TravellerTicketDto>>.Error(null, "Account unauthorized");
+        }
+
+        return Result<List<TravellerTicketDto>>.Success(_mapper.Map<List<TravellerTicketDto>>(result));
+    }
+
+    return Result<List<TravellerTicketDto>>.NotFound(null);
+}
+```
+```csharp
+public async Task<List<Ticket>> GetTicketsByTicketOrderId(long ticketOrderId)
+{
+    var tickets = await DbSet
+        .Include(t => t.Traveler)
+        .Include(t => t.TicketStatus)
+        .Include(t => t.Companion)
+        .Include(t => t.Seat)
+        .Include(t => t.TicketOrder)
+        .Where(t => t.TicketOrderId == ticketOrderId).ToListAsync();
+    return tickets;
+}
+```
 
 ## Merge
 - [ ] Create a PR and merge the current branch with develop
-
