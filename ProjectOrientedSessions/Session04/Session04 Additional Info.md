@@ -1,34 +1,24 @@
-### 1. **Should I have an `IEntityService` and then `EntityService` for each of my entities?**
+## *Should I have an `IEntityService` and then `EntityService` for each of my entities?**
 
 Not necessarily **for _every_** entity — only if it **makes sense**.
-
 - The Application Layer should expose **use cases** — not just CRUD logic for each entity.
-    
 - If an entity has business logic or interactions that need orchestration (e.g., validations, aggregations, calling repositories, etc.), then **yes**, create a service.
-    
 - Otherwise, for basic operations, **directly using a repository (via a unit of work or interface)** from the use case handler might be fine.
-### 2. **Is it OK to have services not related to a specific entity?**
+## **Is it OK to have services not related to a specific entity?**
 
 Absolutely, **yes**. In fact, that’s expected in a Clean Architecture setup.
 
 Examples:
-
 - A `ReportGenerationService` that combines bookings, customers, and payments.
-    
 - A `TokenService` for authentication tokens.
-    
 - A `CurrencyConversionService` that hits an external API.
-    
 - A `NotificationService` that sends emails or SMS.
-    
 
 👉 As long as these services **live in the Application Layer** and follow **dependency inversion** (i.e., they depend only on interfaces, not implementations), you’re doing great.
 
-### 3. **Is it necessary to have an interface for each service?**
+## **Is it necessary to have an interface for each service?**
 
-
-
-### 🔹 **What’s the Difference Between Services and Repositories?**
+## **What’s the Difference Between Services and Repositories?**
 
 | Aspect             | **Service**                                                            | **Repository**                                                  |
 | ------------------ | ---------------------------------------------------------------------- | --------------------------------------------------------------- |
@@ -37,7 +27,7 @@ Examples:
 | **Focus**          | Coordinates multiple domain/repo operations, validation, business flow | Fetching/storing data for a specific entity                     |
 | **Example**        | `PlaceOrderService`, `ReportService`                                   | `ICustomerRepository`, `IOrderRepository`                       |
 
-### What does `init` mean?
+## What does `init` mean?
 
 `init` is an **access modifier for properties** that allows you to **set a property only during object initialization**, **but not after**.
 
@@ -62,21 +52,15 @@ Examples:
 ### But when should you prefer `class`?
 
 Use `class` if your DTO or model:
-
 - Needs to be **mutable** after creation
-    
 - Has to **interact with legacy APIs/libraries**
-    
 - Needs **inheritance or polymorphism** (not well supported in `record`)
-    
 - Has **rich behavior** (logic, methods, validation, etc.)
-    
 
 > For example, in the Domain Layer (Entities, ValueObjects), you'll usually stick to **`class`** — because that's where behavior lives.
 
 ## RESTful APIs:
-https://aws.amazon.com/what-is/restful-api/#:~:text=RESTful%20API%20is%20an%20interface,applications%20to%20perform%20various%20tasks.
-
+[read more](https://aws.amazon.com/what-is/restful-api/#:~:text=RESTful%20API%20is%20an%20interface,applications%20to%20perform%20various%20tasks.)
 ## What Conditions Make an API RESTful?
 
 ### Key Principles of REST:
@@ -140,22 +124,15 @@ public class CustomerController : ControllerBase {
 
 
 ## List-like stuff in `C#`
-Absolutely, let’s go over the main “list-like” data types in C#. They all serve similar purposes—holding multiple items—but differ in functionality, performance, and use cases. Here’s a detailed breakdown:
+They all serve similar purposes—holding multiple items—but differ in functionality, performance, and use cases. Here’s a detailed breakdown:
 
 🔷 1. `IEnumerable`
-
 - Namespace: System.Collections.Generic
-    
 - Most basic "list-like" abstraction.
-    
 - Read-only (forward-only iteration).
-    
 - You can use foreach on it.
-    
 - Doesn’t support indexing (no .Count, no [i]).
-    
 - Often used as the return type to expose a stream of data without giving full collection control.
-    
 
 Example:
 
@@ -166,42 +143,28 @@ foreach (var num in numbers)
 ```
 
 💡 Ideal when:
-
 - You want to return a sequence without exposing modification.
-    
 - You’re using LINQ chains.
-    
 - You’re returning data from a database query.
-    
 
 ---
 
 🔷 2. ICollection
-
 - Extends IEnumerable.
-    
 - Adds Count and Add/Remove/Clear methods.
-    
 - Still abstract—List and HashSet implement it.
-    
 
 💡 Useful when:
-
 - You want to expose a collection that can be modified (e.g. Add or Remove).
-    
 - You care about the Count.
     
 
 ---
 
-🔷 3. IList
-
-- Extends ICollection and IEnumerable.
-    
-- Adds index access: list[0] etc.
-    
+🔷 3. `IList`
+- Extends `ICollection` and `IEnumerable`.
+- Adds index access: `list[0]` etc.
 - Think of it like a mutable array with dynamic size.
-    
 
 💡 Use when:
 
@@ -215,15 +178,10 @@ foreach (var num in numbers)
 🔷 4. List
 
 - A concrete class (not interface).
-    
-- Implements IList, ICollection, IEnumerable.
-    
+- Implements `IList`, `ICollection`, `IEnumerable`.
 - Backed by an array (auto-resizes).
-    
 - Fast read and write.
-    
-- Supports Add, Remove, Insert, IndexOf, etc.
-    
+- Supports `Add`, `Remove`, `Insert`, `IndexOf`, etc.
 
 Example:
 
@@ -238,32 +196,23 @@ var second = list[1]; // "Two"
 
 ---
 
-🔷 5. IReadOnlyCollection & IReadOnlyList
+🔷 5. `IReadOnlyCollection` & `IReadOnlyList`
 
-- IReadOnlyCollection: Just Count and IEnumerable.
-    
-- IReadOnlyList: Adds indexing without modification.
-    
+- `IReadOnlyCollection`: Just Count and `IEnumerable`.
+- `IReadOnlyList`: Adds indexing without modification.
 - Used to expose lists safely (read-only).
-    
 
 💡 Used when:
-
 - You want to return a list, but prevent any changes.
-    
 
 ---
 
-🔷 6. Array (T[])
+🔷 6. `Array(T[])`
 
 - Fixed-size.
-    
 - Fastest for indexing.
-    
 - Cannot change size.
-    
-- Implements IList (via Array).
-    
+- Implements `IList` (via Array).
 
 Example:
 
@@ -276,27 +225,20 @@ numbers[0] = 42;
 
 ---
 
-🔷 7. ObservableCollection
+🔷 7. `ObservableCollection`
 
-- For WPF/Blazor/WinForms data-binding.
-    
+- For WPF/`Blazor`/WinForms data-binding.
 - Notifies UI when items are added/removed.
-    
 - Implements IList.
-    
 
 💡 Use in UI apps when the view needs to react to collection changes.
 
 ---
 
 🔷 8. HashSet
-
 - Unordered, no duplicates.
-    
-- Implements ICollection, not IList.
-    
+- Implements `ICollection`, not `IList`.
 - No index access.
-    
 
 💡 Best for fast membership checking (contains x).
 
@@ -315,6 +257,3 @@ numbers[0] = 42;
 |ObservableCollection|✔️|✔️|✔️|✔️|UI binding for collections|
 |HashSet|❌|✔️|❌|❌|Fast lookup, uniqueness enforcement|
 
-—
-
-If you tell me the scenario (e.g. search results, modifying a cart, populating a drop-down), I can recommend the best type for it. Want that?

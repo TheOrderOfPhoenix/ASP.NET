@@ -1,19 +1,20 @@
-# Preparation: 
+
+
+# 🛠️ Task Checklist
+
+## Preparation: 
 The unedited conversation with Chat GPT, concerning almost all of the aspects of this session:
 (optional): read this to get a better understanding of the topic:
 https://chatgpt.com/share/67f18460-1c1c-8010-bc57-9f3b683ec87a
 
-# Branching
+## 🚧Branching
 - [ ]  Create the feature/transportation-search branch based on develop
 
-# DTO
+## DTO
 In order to develop transportation search flow, three DTOs need to be created in the application layer.
 
 - [ ]  Create DTOs related to transportation search flow
-
 📂 Suggested Folder: Application/DTOs/City`
-
-
 ```cs
 public class CityDto
 {
@@ -23,34 +24,35 @@ public class CityDto
 ```
 
 📂 Suggested Folder: Application/DTOs/Transportation
-
 ```cs
 public class TransportationSearchRequestDto
 {
      public short? VehicleTypeId { get; init; }
-     public int? FromCityId { get; init; }
-     public int? ToCityId { get; init; }
-     public DateTime? StartDate { get; init; }
-     public DateTime? EndDate { get; init; }
-}
+public int? FromCityId { get; init; }
+public int? ToCityId { get; init; }
+public DateTime? StartDate { get; init; }
+public DateTime? EndDate { get; init; }
 ```
 
 ```cs
 public class TransportationSearchResultDto
 {
     public long Id { get; init; }
-    public required string CompanyTitle { get; init; }   
-    public required string FromLocationTitle { get; init; }
-    public required string ToLocationTitle { get; init; }
-    public required string FromCityTitle { get; init; }
-    public required string ToCityTitle { get; init; }
-    public DateTime StartDateTime { get; init; }
-    public DateTime? EndDateTime { get; init; }
-    public decimal Price { get; init; } 
-}
+public int VehicleTypeId { get; init; }   
+public string? VehicleTitle { get; init; }   
+public required string CompanyTitle { get; init; }   
+public required string FromLocationTitle { get; init; }
+public required string ToLocationTitle { get; init; }
+public required string FromCityTitle { get; init; }
+public required string ToCityTitle { get; init; }
+public DateTime StartDateTime { get; init; }
+public DateTime? EndDateTime { get; init; }
+public decimal Price { get; init; }
+public int RemainingCapacity { get; init; }
+
 ```
 
-# Repository
+## Repository
 There are a few things to be add to some repositories for transportation search flow.
 
 - [ ] Create DTOs related to transportation search flow
@@ -108,7 +110,7 @@ public class TransportationRepository :
 ```
 
 
-# Auto Mapper
+## Auto Mapper
 Auto Mapper simplifies mapping between aggregates and DTOs in both directions.
 
 - [ ] Create a `MappingProfile` that inherits `Profile`, and use it to add configurations for mappings
@@ -157,7 +159,7 @@ public class MappingProfile : Profile
  .
 ```
 
-# Result & Result Status
+## Result & Result Status
 
 - [ ] Create `ResultStatus` enum and `Result` class
 📂 Suggested Folder: Application/Result
@@ -220,22 +222,18 @@ public enum ResultStatus
 You can read more about enums: [W3Schools](https://www.w3schools.com/cs/cs_enums.php)
 
 
-# `IService` & Service
+## `IService` & Service
 
 Now, use `I[Entity]Repositry` and `IUnitOfWork` in services to implement business logic
-
 - [ ] Create `I[Entity]Service` and `[Entity]Service` which implements it
 
 📂 Suggested Folder for `I[Entity]Service`: Application/Interfaces
 
 📂 Suggested Folder for Services: Application/Services
-
-
 - existence of an interface for each service class is optional
 - services can have multiple repositories in them -> logic-based structure
 
 An example of `I[Entity]Service`:
-
 ```c#
 public interface ITransportationService
 {
@@ -244,7 +242,6 @@ public interface ITransportationService
 ```
 
 An example of `[Entity]Service`:
-
 ```cs
 public class TransportationService : ITransportationService
 {
@@ -291,7 +288,7 @@ builder.Services.AddScoped<ICityService, CityService>();
 .
 ```
 
-# Controller
+## Controller
 Now we're getting to endpoints, you should communicate with client side through web-api. So every controller uses Services in Application layer to receive requests and send responses with DTOs.
 
 - [ ] Create an APIController (right click on the folder, and then under Add, select Controller, and then make sure to select the APIController type)
@@ -336,17 +333,16 @@ public class TransportationController : ControllerBase
 }
 ```
 
-- HttpGet: handles a GET request from client -> important for routing
-- Ok, BadRequest, NotFound and StatusCode are Json results to send through api
-- Use TransportationService to communicate with Application
+- `HttpGet`: handles a GET request from client -> important for routing
+- Ok, `BadRequest`, `NotFound` and `StatusCode` are json results to send through API
+- Use `TransportationService` to communicate with Application
 
-# Inserting Sample Data 
+## Inserting Sample Data 
 
 For testing purposes, add some data into the related tables. 
 You are provided with a SQL script, that adds some sample data into the following tables
 
  **Important Notes:** Note that different database names, and different table names will produce errors while executing the script. Consider adjusting these names before executing the script
- 
 - Cities 
 - Companies 
 - LocationTypes
@@ -356,8 +352,14 @@ You are provided with a SQL script, that adds some sample data into the followin
 - Transportation
 
 - [ ] Open `TransportationRelatedSampleData.sql` with SSMS, and execute the query
+> Note: there has been changes in database structure since this note and this file has been written. 
 
 
-# Merge
+## 🚧Merge
 - [ ] Create a PR and merge the current branch with develop
 
+# 🧠 Hints & Notes
+# 🙌 Acknowledgements
+
+- ChatGPT for snippet refinement and explanations
+# 🔍 References
