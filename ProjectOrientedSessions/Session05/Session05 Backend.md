@@ -1,4 +1,6 @@
-# CORS (Backend Repository)
+
+# 🛠️ Task Checklist
+## CORS (Backend Repository)
 - [ ] open `program.cs` and add the following lines
 
 ```c#
@@ -17,3 +19,9 @@ builder.Services.AddCors(options =>
 app.UseCors("Frontend");
 ```
 
+
+# 🧠 Hints & Notes
+# 🙌 Acknowledgements
+
+- ChatGPT for snippet refinement and explanations
+# 🔍 References
