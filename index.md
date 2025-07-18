@@ -72,10 +72,12 @@ A **Clean Architecture-based** backend designed to be **modular, testable, and s
 - **Presentation Layer** 🌐
     - ASP.NET Core RESTful Web API
 
-✅ **Why Clean Architecture?**
+**Why Clean Architecture?**
 - Clear **dependency direction** (outer layers depend only on inner ones).
 - Easier testing (business logic independent of frameworks).
 - High **maintainability and scalability**.
+
+
 
 #### **🎨 Frontend — Transportation Management Web App**
 - **Tech Stack**: React, TypeScript, Zustand, Axios, Tailwind CSS
