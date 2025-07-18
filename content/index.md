@@ -14,6 +14,21 @@ The goal wasn’t just to learn a technology; it was to foster **self-driven lea
 
 The first part of the program focused on equipping everyone with fundamental web development **and solid software architecture principles**.
 
+| Session | Notes                                                                            |
+| ------- | -------------------------------------------------------------------------------- |
+| 00      | [[Session00 Architecture]]                                                       |
+| 01      | [[Session01 Additional Info]]<br>[[Session01 Backend]]                           |
+| 02      | [[Session02 Additional Info]]<br>[[Session02 Backend]]                           |
+| 03      | [[Session03 Additional Info]]<br>[[Session03 Backend]]                           |
+| 04      | [[Session04 Additional Info]]<br>[[Session04 Backend]]                           |
+| 05      | [[Session05 Additional Info]]<br>[[Session05 Backend]]<br>[[Session05 Frontend]] |
+| 06      | [[Session06 Additional Info]]<br>[[Session06 Frontend]]                          |
+| 07      | [[Session07 Additional Info]]<br>[[Session07 Backend]]<br>[[Session07 Frontend]] |
+| 08      | [[Session08 Backend]]<br>[[Session08 Frontend]]                                  |
+| 09      | [[Session09 Additional Info]]<br>[[Session09 Backend]]<br>[[Session09 Frontend]] |
+| 10      | [[Docker – Overview]]                                                            |
+
+
 ### **🗺️ Roadmap of What We Learned**
 
 1. **🌐 Web Fundamentals** — HTTP, REST, and the client-server model
@@ -38,6 +53,17 @@ These sessions ensured that all participants, regardless of prior experience, co
 ## **💻 Project-Based Sessions**
 
 Once the fundamentals were solid, we moved to building a **real project**.
+
+| Session | Notes               |
+| ------- | ------------------- |
+| 00      | [[Session00 Notes]] |
+| 01      | [[Session01 Notes]] |
+| 02      | [[Session02 Notes]] |
+| 03      | [[Session03 Notes]] |
+| 04      | [[Session04 Notes]] |
+| 05      | [[Session05 Notes]] |
+| 06      | [[Session06 Notes]] |
+| 07      | [[Session07 Notes]] |
 
 ### **📝 Planning Phase**
 
