@@ -1,144 +1,199 @@
-# Part 0: Roadmap of this Session
+# Session 1: Working with Models and MVC Basics in ASP.NET Core
 
-## Getting Started with MVC Projects 
- - [x] Directory Structure: Detailed explanation of the MVC directory 
- - [x] (Controllers, Views, Models, wwwroot) and the role of Program.cs in  configuration. 
- - [x] Routing and Controllers: Custom routing, attribute routing, and  handling various HTTP requests. 
- - [x] Actions in Controllers: Exploring different return types and handling  different HTTP requests. 
-## Controllers and Routing
-- [x] Routing Basics: Attribute-based routing and custom route parameters. 
-- [x] Controller Actions: How to handle different return types like JSON, HTML, and redirect results.
-- [x] The address can contain static parts 
-- [ ] How to set the Default Page in ASP 
+## 📝 Overview
+
+In this session, we’ll cover the following concepts:
+
+- MVC project structure and configuration
+- Controllers and routing (including static segments and default page setting)
+- Introduction to Models in ASP.NET Core
+- C# OOP essentials: properties, encapsulation, and access modifiers
+- Passing models (single and list) from controllers to views
+- Strongly-typed Razor views
+
+## 📚 Topics Covered
+
+### ✅ MVC Project Structure & Routing
+
+> Learn how ASP.NET Core organizes files and configures routes for handling web requests.  
+> 🔗 [Microsoft Docs - MVC Introduction](https://learn.microsoft.com/en-us/aspnet/core/mvc/overview)
+
+### ✅ C# Properties & OOP Essentials
+
+> Explore object-oriented programming basics in C#, including properties and encapsulation.  
+> 🔗 [C# OOP Overview](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/oop)
+
+### ✅ Models and Views
+
+> Understand how to define models and pass them to views in ASP.NET Core MVC.  
+> 🔗 [Microsoft Docs - Work with Data in MVC](https://learn.microsoft.com/en-us/aspnet/core/mvc/models/)
+
+## 📌 Notes
+
+> _Collected from various sources including W3Schools, Microsoft Docs, and ChatGPT_
 
 ---
 
-# Part 1: Understanding Models in ASP.NET Core MVC
+### 📍 Part 0: Roadmap of This Session
 
-Models are a fundamental part of the MVC architecture, representing the data structure and logic of your application. They interact with the database and contain properties that hold data and methods that implement business logic.
+#### ✅ Getting Started with MVC Projects
 
-### **Model Structure and Purpose**
+- [x] **Directory Structure**:  
+       Learn about the standard folders: `Controllers`, `Views`, `Models`, and `wwwroot`. Understand the role of `Program.cs` in bootstrapping and routing.
 
-- **Data Representation**: Models define the structure of data (often aligning with database tables).
-- **Data Handling**: Models encapsulate data manipulation logic, like validation and relationships.
-- **Data Transport**: Models pass data between the controller and the view.
+- [x] **Routing and Controllers**:
 
-In ASP.NET Core MVC, models are typically located in a **Models** folder, and each model represents a specific data entity, like `Product`, `Customer`, or `Order`.
+  - Custom routing using templates like `{controller}/{action}/{id?}`
+  - Attribute routing using `[Route]`, `[HttpGet]`, etc.
+  - Static segments in routes:  
+    Example: `[Route("products/all")]` creates `/products/all`.
+
+- [x] **Actions in Controllers**:
+
+  - Return types like `ViewResult`, `JsonResult`, `ContentResult`
+  - Handle multiple HTTP methods (GET, POST, etc.)
+
+- 🔲 **How to Set Default Page in ASP.NET Core**  
+  _(To do: Discuss how to change the default route in `Program.cs`, e.g. set controller = Products, action = List)_
 
 ---
 
-# 2. Properties in Models and Object-Oriented Programming (OOP) in `C#`
+### 📍 Part 1: Understanding Models in ASP.NET Core MVC
 
-To understand how models work, let’s cover key OOP concepts in C#, which is essential for defining and managing models in ASP.NET Core MVC.
+Models are a fundamental part of the MVC architecture, representing the **data structure and logic** of your application. They interact with the database and contain properties that hold data and methods that implement business logic.
 
-### **Properties in C#**
+#### 🧠 Model Structure and Purpose
 
-Properties in C# provide a flexible way to access and modify the fields of a class. They use `get` and `set` accessors to control how data is read or assigned.
+- **Data Representation**: Models reflect real-world data structures, often aligning with database tables.
+- **Data Handling**: Models encapsulate validation, relationships, and business logic.
+- **Data Transport**: Used to transfer data between controllers and views.
 
-Here’s an example of a basic `Product` model with properties:
+In ASP.NET Core MVC, models are typically stored in a `Models` folder, with one class per entity (`Product`, `Customer`, `Order`, etc.).
 
+---
 
-```c#
+### 📍 Part 2: Properties in Models & C# OOP Concepts
+
+#### ✅ Properties in C#
+
+Properties in C# provide a controlled way to access and modify private fields using `get` and `set`.
+
+````csharp
 public class Product {
-
-public int Id { get; set; }
-// Auto-implemented property     
-public decimal Price { get; set; }
+    public int Id { get; set; } // Auto-property
+    public decimal Price { get; set; }
 }
-```
 
-- **Auto-implemented properties** (`Price`): Define a property without explicit backing fields, useful when no custom logic is needed.
+- **Auto-Implemented Properties**:
+    Simplify property declarations when no extra logic is needed.
 
 
-### **Encapsulation and Access Modifiers**
+#### ✅ Encapsulation and Access Modifiers
 
-Encapsulation in OOP hides the internal state of an object and restricts access to its properties and methods. C# provides access modifiers like `public`, `private`, `protected`, and `internal` to control access.
+Encapsulation hides the internal workings of a class from the outside world.
 
-In ASP.NET Core MVC, models typically use **public properties** for easy access from other parts of the application (like controllers and views).
+- **Access Modifiers**:
+
+    - `public`: Accessible from anywhere
+
+    - `private`: Only inside the class
+
+    - `protected`: Inside the class and derived classes
+
+    - `internal`: Only within the current assembly
+
+
+**MVC models typically use public properties** so they can be accessed in views and controllers.
 
 ---
 
-# 3. Passing a Model to a View
+### 📍 Part 3: Passing a Model to a View
 
-In ASP.NET Core MVC, data is passed from the controller to the view using models. You can pass a single model, a list of models, or even multiple models in complex scenarios.
+#### ✅ Step 1: Define the Model
 
-### **Steps to Pass a Model from Controller to View**
-
-1. **Define the Model** First, define the model class. Let’s use the `Product` model as our example.
-    
-```c#
-public class Product 
-{
-	public int Id { get; set; }
-	public string Name { get; set; }     
-	public decimal Price { get; set; } 
+```csharp
+public class Product {
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public decimal Price { get; set; }
 }
-```
+````
 
-1. **Create a Controller Action** In your controller, create an action that will pass the model data to the view.
-    
-```c#
+#### ✅ Step 2: Create a Controller Action
 
+```csharp
 public class ProductsController : Controller {
-	public IActionResult Details()
-	{
-		var product = new Product{
-		Id = 1,
-		Name = "Laptop",
-		Price = 1500.00m
-	};
-// Pass the model to the view
-	return View(product);
-	}
- }
-```
-
-In this example, the `Details` action creates an instance of `Product` and passes it to the view using `View(product);`.
-    
-3. **Strongly-Typed Views** When passing a model to a view, it’s common to make the view "strongly typed" to enable IntelliSense and compile-time checking.
-    
-    - Open or create a view for your action (like `Details.cshtml`).
-        
-    - At the top of the view, specify the model type with the `@model` directive.
-        
-```
-@model Product  <h2>Product Details</h2> <p>Product Name: @Model.Name</p> <p>Price: @Model.Price</p>
-```
-
-    
-In this example:
-
-- `@model Product` specifies that the view expects a `Product` model.
-- `@Model.Name` and `@Model.Price` retrieve properties of the `Product` instance.
-
-### **Passing a List of Models**
-
-To pass a collection of models, define the controller action to return a list and set the view model type accordingly.
-
-
-```c#
-public IActionResult List() {
-	var products = new List<Product> {
-		new Product { Id = 1, Name = "Laptop", Price = 1500.00m },         new Product { Id = 2, Name = "Smartphone", Price = 800.00m }     
-	}; 
-    return View(products); }
-```
-
-In the `List.cshtml` view:
-
-
-```c#
-@model IEnumerable<Product>  
-	<h2>Product List</h2> 
-	<ul>
-	@foreach (var product in Model)
-	{
-	         <li>@product.Name - @product.Price</li>
+    public IActionResult Details() {
+        var product = new Product {
+            Id = 1,
+            Name = "Laptop",
+            Price = 1500.00m
+        };
+        return View(product); // Passing model to view
     }
-    </ul>
+}
 ```
 
-This example uses `IEnumerable<Product>` as the model type to handle a list of `Product` objects.
+#### ✅ Step 3: Strongly-Typed View (`Details.cshtml`)
+
+```cshtml
+@model Product
+
+<h2>Product Details</h2>
+<p>Product Name: @Model.Name</p>
+<p>Price: @Model.Price</p>
+```
+
+- `@model` tells Razor this view receives a `Product`
+- `@Model` gives access to passed data
 
 ---
 
+### 📍 Passing a List of Models to the View
+
+#### ✅ Controller Action:
+
+```csharp
+public IActionResult List() {
+    var products = new List<Product> {
+        new Product { Id = 1, Name = "Laptop", Price = 1500.00m },
+        new Product { Id = 2, Name = "Smartphone", Price = 800.00m }
+    };
+    return View(products);
+}
+```
+
+#### ✅ View (`List.cshtml`):
+
+```cshtml
+@model IEnumerable<Product>
+
+<h2>Product List</h2>
+<ul>
+@foreach (var product in Model) {
+    <li>@product.Name - @product.Price</li>
+}
+</ul>
+```
+
+- Use `IEnumerable<Product>` to pass lists
+- Razor supports `foreach` directly on the `Model`
+
+---
+
+## 🧪 Practice
+
+- Explore and explain the MVC folder structure
+- Create a model class `Product`
+- Build a controller that returns a single model to a view
+- Create a strongly-typed Razor view using `@model`
+- Return a list of `Product` models and display them in a loop
+- Show how to set the default controller and action in `Program.cs`
+
+## 🙏 Acknowledgments
+
+Sources:
+
+- [w3schools.com](https://www.w3schools.com/)
+- [Microsoft Learn](https://learn.microsoft.com/en-us/aspnet/core/)
+- ChatGPT sessions (2025)
