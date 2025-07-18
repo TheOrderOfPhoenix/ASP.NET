@@ -98,11 +98,11 @@ A **modern, component-driven frontend** built with **React + TypeScript**, desig
 
 ## **👥 Projects by Members**
 
-| **Member**                                                                                   | **Projects**                                                                                                                                                 |
-| -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Mehrdad Shirvani [🐙 GitHub](https://github.com/MehrdadShirvani)**                         | [Backend API](https://github.com/MehrdadShirvani/AlibabaClone-Backend) • [Frontend Web App](https://github.com/mehrdadShirvani/AlibabaClone-Frontend)        |
-| **Ali Taherzadeh [🐙 GitHub](https://github.com/AliThz)** | [Backend API](https://github.com/alithz/AlibabaClone-Backend) • [Frontend Web App](https://github.com/alithz/AlibabaClone-Frontend) |
-| **Amin Ghoorchian [🐙 GitHub](https://github.com/AminGh05)** | [Backend API](https://github.com/AminGh05/Alibaba-Clone-Backend) • [Frontend Web App](https://github.com/AminGh05/Alibaba-Clone-Frontend) |
+| **Member**                                                           | **Projects**                                                                                                                                          |
+| -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Mehrdad Shirvani [🐙 GitHub](https://github.com/MehrdadShirvani)** | [Backend API](https://github.com/MehrdadShirvani/AlibabaClone-Backend) • [Frontend Web App](https://github.com/mehrdadShirvani/AlibabaClone-Frontend) |
+| **Ali Taherzadeh [🐙 GitHub](https://github.com/AliThz)**            | [Backend API](https://github.com/alithz/AlibabaClone-Backend) • [Frontend Web App](https://github.com/alithz/AlibabaClone-Frontend)                   |
+| **Amin Ghoorchian [🐙 GitHub](https://github.com/AminGh05)**         | [Backend API](https://github.com/AminGh05/Alibaba-Clone-Backend) • [Frontend Web App](https://github.com/AminGh05/Alibaba-Clone-Frontend)             |
 
 ## **🙏 Acknowledgements**
 
