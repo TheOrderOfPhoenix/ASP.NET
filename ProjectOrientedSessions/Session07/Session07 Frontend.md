@@ -1,4 +1,3 @@
-
 # Branching
 - [ ] Create the feature/authentication branch based on develop
 

@@ -1,12 +1,31 @@
 
-# Add a field in Database
+
+# 🛠️ Task Checklist
+## 🚧 Branching
+
+- [ ] Create the `feature/[name]` branch from `develop`
+
+## Task
+- [ ] Task
+📂 Suggested Folder: `Domain/Framework/Interfaces/Respositories`
+# 🧠 Hints & Notes
+# 🙌 Acknowledgements
+
+- ChatGPT for snippet refinement and explanations
+# 🔍 References
+
+
+
+This file
+---
+## Add a field in Database
 - [ ] Add `User` field in `Roles` table using SSMS or Seed data in DbContext file
 - [ ] Make sure the property `PersonId` is nullable in `Account`, so you can add fields related to "Person" later after registration
 
-# Branching
+## Branching
 - [ ] Create the feature/authentication branch based on develop
 
-# Adjusting Account and Configurations 
+## Adjusting Account and Configurations 
 
 - [ ] Add navigation property for `AccountRoles` in Account
 ```c#
@@ -32,9 +51,9 @@ builder.HasOne<Role>(ar => ar.Role)
     .OnDelete(DeleteBehavior.Restrict);
 ```
 
-# Creating DTOs
+## Creating DTOs
 📂 Suggested Folder: ApplicationLayer/DTOs/[RelatedFolder]
-## AccountDto
+### AccountDto
 - [ ] Create `AccountDto` to expose relevant account information:
 ```c#
 public class AccountDto
@@ -47,7 +66,7 @@ public class AccountDto
     public List<string> Roles { get; set; }
 }
 ```
-## AuthResponseDto
+### AuthResponseDto
 - [ ] Define a DTO for authentication responses:
 ```c#
 public class AuthResponseDto
@@ -66,7 +85,7 @@ public class LoginRequestDto
     public string Password { get; set; } = null!;
 }
 ```
-## RegisterRequestDto
+### RegisterRequestDto
 - [ ] Define a DTO for registration with validation attributes:
 ```c#
 public class RegisterRequestDto
@@ -135,10 +154,8 @@ Frontend validation is for **user experience**, not security.
 
 ✅ **Both.**
 
-- **Frontend**: show real-time UX feedback (“Password must be 6+ characters”).
-    
+- **Frontend**: show real-time UX feedback (“Password must be 6+ characters”).  
 - **Backend**: enforce security.
-    
 
 **Backend is the source of truth.**  
 Frontend can be bypassed (e.g., Postman).
@@ -146,9 +163,7 @@ Frontend can be bypassed (e.g., Postman).
 In the backend, you can either:
 
 - Use annotations like `[MinLength(6)]`
-    
 - Or do manual checks:
-    
 
 ```csharp
 if (dto.Password.Length < 6)
@@ -173,7 +188,6 @@ But again: if someone sends malformed input manually (e.g., via Postman), backen
 💡 **Best practice:**
 
 - Validate `ConfirmPassword` in frontend (UX)
-    
 - Do one last check in backend, or use `[Compare]` for auto-validation
     
 
