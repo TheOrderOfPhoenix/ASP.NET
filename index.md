@@ -50,10 +50,7 @@ Once the fundamentals were solid, we moved to building a **real project**.
 Each member implemented their **own version** of the project, following Clean Architecture guidelines while experimenting with different approaches.
 
 
-
-### **🚦 Project Overview**
-
-#### **🔗 Backend — Transportation Management API**
+### **🔗 Backend — Transportation Management API**
 
 A **Clean Architecture-based** backend designed to be **modular, testable, and scalable**.
 
@@ -79,7 +76,7 @@ A **Clean Architecture-based** backend designed to be **modular, testable, and s
 
 
 
-#### **🎨 Frontend — Transportation Management Web App**
+### **🎨 Frontend — Transportation Management Web App**
 - **Tech Stack**: React, TypeScript, Zustand, Axios, Tailwind CSS
 - **Focus**: A simple but modern UI to consume the API and simulate real-world use cases
 
