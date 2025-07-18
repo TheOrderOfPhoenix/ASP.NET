@@ -1,6 +1,6 @@
 ## **Choosing the right datatype for integer values, specially IDs (Chat GPT):**
 
-### **1️⃣ Integer Data Types (int, short, long) in C# and SQL Server**
+### **1 Integer Data Types (int, short, long) in C# and SQL Server**
 
 | **C# Type** | **SQL Server Type** | **Size** | **Range**                                               |
 | ----------- | ------------------- | -------- | ------------------------------------------------------- |
@@ -16,7 +16,7 @@
 - `BIGINT` is needed only if you expect **billions** of records.
 ---
 
-### **2️⃣ What to Use for User ID, Ticket ID, Gender ID? (Some examples)**
+### **2 What to Use for User ID, Ticket ID, Gender ID? (Some examples)**
 
 | **Field**   | **Recommended C# Type** | **SQL Server Type**     | **Why?**                                                    |
 | ----------- | ----------------------- | ----------------------- | ----------------------------------------------------------- |
@@ -29,7 +29,7 @@
 
 ---
 
-### **3️⃣ Should I Use GUIDs for User IDs or Ticket IDs?**
+### **3 Should I Use GUIDs for User IDs or Ticket IDs?**
 
 - **Use `GUID` (`UNIQUEIDENTIFIER`) for IDs only if:**
     - Data is distributed across multiple databases.
@@ -65,7 +65,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 
 C# **IntelliSense** suggests adding `required` to string properties because of **nullable reference types (NRT)** introduced in **C# 8.0+**.
 
-### **1️⃣ What Does `required` Do?**
+### **2 What Does `required` Do?**
 
 - `required` **forces initialization** of the property when creating an object.
 - It is **not a data annotation** (like `[Required]` in EF Core), but a **C# keyword** that affects **compile-time checks**.
