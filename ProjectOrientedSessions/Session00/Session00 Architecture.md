@@ -1,4 +1,4 @@
-# Overview of Clean Architecture in an ASP.NET Core Project (by Chat GPT)
+# Overview of Clean Architecture
 
 Clean Architecture is a software design pattern that promotes separation of concerns, testability, and maintainability. It structures an application into layers, ensuring dependencies flow inwards (towards business logic) and that the core logic is independent of frameworks and external dependencies.
 
@@ -186,15 +186,8 @@ This ensures the **business logic is central** and **not coupled** to frameworks
 
 ---
 
-### **Summary**
-
-- **Domain Layer**: Core business logic (Entities, Domain Events, Domain Services).
-- **Application Layer**: Use cases (Application Services, CQRS, DTOs).
-- **Infrastructure Layer**: External dependencies (Repositories, External APIs, Logging).
-- **Presentation Layer**: UI & API (Controllers, Views, Frontend).
-
 # Backend Project Structure
-## **Solution Name: MyApp (or your project name)**
+## **Solution Name: MyApp**
 
 📂 **MyApp.sln** (Solution file)
 
@@ -244,14 +237,12 @@ This ensures the **business logic is central** and **not coupled** to frameworks
 - **Purpose:** Represents the core business logic and entities without dependencies on infrastructure or frameworks.
 
 📂 `MyApp.Domain`
-
 - 📂 **Aggregates** – Groups related entities following DDD principles.
 - 📂 **Framework** - **Interfaces**  – Contains domain-level abstractions like repository interfaces and entity interface.
 - 📂 **Framework** - **Interfaces**  – **Repositories**
 - 📂 **Framework** - **Base**
 - 📂 **Enums** – Defines domain-specific enumerations.
 - 📂 **Factories** 
-
 ### Dependencies:
 - Packages: 
 	- Microsoft.Extensions.DependencyInjection
@@ -262,7 +253,6 @@ This ensures the **business logic is central** and **not coupled** to frameworks
 - **Purpose:** Implements external dependencies such as databases, logging, APIs, and caching.
 
 📂 `MyApp.Infrastructure`
-
 - 📂 **Framework** - **Base** – Implements `IRepository<TEntity>` for data access.
 - 📂 **Configurations** – Stores EF Core entity configurations.
 - 📂 **Services** - Repositories 
@@ -283,5 +273,8 @@ This ensures the **business logic is central** and **not coupled** to frameworks
 
 - 📂 `MyApp.Tests` – Unit and integration tests.
 - 📂 `MyApp.Shared` – Shared utilities (cross-cutting concerns like constants, helpers).
+
+# Acknowledgements
+- ChatGPT for snippet refinement and explanations
 
 
