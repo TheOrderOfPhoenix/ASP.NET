@@ -14,20 +14,16 @@ The goal wasn’t just to learn a technology; it was to foster **self-driven lea
 
 The first part of the program focused on equipping everyone with fundamental web development **and solid software architecture principles**.
 
-| Session | Notes                                                                            |
-| ------- | -------------------------------------------------------------------------------- |
-| 00      | [[Session00 Architecture]]                                                       |
-| 01      | [[Session01 Additional Info]]<br>[[Session01 Backend]]                           |
-| 02      | [[Session02 Additional Info]]<br>[[Session02 Backend]]                           |
-| 03      | [[Session03 Additional Info]]<br>[[Session03 Backend]]                           |
-| 04      | [[Session04 Additional Info]]<br>[[Session04 Backend]]                           |
-| 05      | [[Session05 Additional Info]]<br>[[Session05 Backend]]<br>[[Session05 Frontend]] |
-| 06      | [[Session06 Additional Info]]<br>[[Session06 Frontend]]                          |
-| 07      | [[Session07 Additional Info]]<br>[[Session07 Backend]]<br>[[Session07 Frontend]] |
-| 08      | [[Session08 Backend]]<br>[[Session08 Frontend]]                                  |
-| 09      | [[Session09 Additional Info]]<br>[[Session09 Backend]]<br>[[Session09 Frontend]] |
-| 10      | [[Docker – Overview]]                                                            |
-
+| Session | Notes               |
+| ------- | ------------------- |
+| 00      | [[Session00 Notes]] |
+| 01      | [[Session01 Notes]] |
+| 02      | [[Session02 Notes]] |
+| 03      | [[Session03 Notes]] |
+| 04      | [[Session04 Notes]] |
+| 05      | [[Session05 Notes]] |
+| 06      | [[Session06 Notes]] |
+| 07      | [[Session07 Notes]] |
 
 ### **🗺️ Roadmap of What We Learned**
 
@@ -54,17 +50,19 @@ These sessions ensured that all participants, regardless of prior experience, co
 
 Once the fundamentals were solid, we moved to building a **real project**.
 
-| Session | Notes               |
-| ------- | ------------------- |
-| 00      | [[Session00 Notes]] |
-| 01      | [[Session01 Notes]] |
-| 02      | [[Session02 Notes]] |
-| 03      | [[Session03 Notes]] |
-| 04      | [[Session04 Notes]] |
-| 05      | [[Session05 Notes]] |
-| 06      | [[Session06 Notes]] |
-| 07      | [[Session07 Notes]] |
-
+| Session | Notes                                                                            |
+| ------- | -------------------------------------------------------------------------------- |
+| 00      | [[Session00 Architecture]]                                                       |
+| 01      | [[Session01 Additional Info]]<br>[[Session01 Backend]]                           |
+| 02      | [[Session02 Additional Info]]<br>[[Session02 Backend]]                           |
+| 03      | [[Session03 Additional Info]]<br>[[Session03 Backend]]                           |
+| 04      | [[Session04 Additional Info]]<br>[[Session04 Backend]]                           |
+| 05      | [[Session05 Additional Info]]<br>[[Session05 Backend]]<br>[[Session05 Frontend]] |
+| 06      | [[Session06 Additional Info]]<br>[[Session06 Frontend]]                          |
+| 07      | [[Session07 Additional Info]]<br>[[Session07 Backend]]<br>[[Session07 Frontend]] |
+| 08      | [[Session08 Backend]]<br>[[Session08 Frontend]]                                  |
+| 09      | [[Session09 Additional Info]]<br>[[Session09 Backend]]<br>[[Session09 Frontend]] |
+| 10      | [[Docker – Overview]]                                                            |
 ### **📝 Planning Phase**
 
 - ✅ Selected the project collaboratively (**Transportation Management System**)
@@ -146,3 +144,39 @@ This is just the beginning. Our future goals:
 
 _"🔥 May this small spark inspire greater movements."_
 
+<details>
+<summary>Graph View Index (auto-links)</summary>
+
+[[Session00 Architecture]]  
+[[Session01 Additional Info]]  
+[[Session01 Backend]]  
+[[Session02 Additional Info]]  
+[[Session02 Backend]]  
+[[Session03 Additional Info]]  
+[[Session03 Backend]]  
+[[Session04 Additional Info]]  
+[[Session04 Backend]]  
+[[Session05 Additional Info]]  
+[[Session05 Backend]]  
+[[Session05 Frontend]]  
+[[Session06 Additional Info]]  
+[[Session06 Frontend]]  
+[[Session07 Additional Info]]  
+[[Session07 Backend]]  
+[[Session07 Frontend]]  
+[[Session08 Backend]]  
+[[Session08 Frontend]]  
+[[Session09 Additional Info]]  
+[[Session09 Backend]]  
+[[Session09 Frontend]]  
+[[Docker – Overview]]  
+[[Session00 Notes]]  
+[[Session01 Notes]]  
+[[Session02 Notes]]  
+[[Session03 Notes]]  
+[[Session04 Notes]]  
+[[Session05 Notes]]  
+[[Session06 Notes]]  
+[[Session07 Notes]]
+
+</details>
