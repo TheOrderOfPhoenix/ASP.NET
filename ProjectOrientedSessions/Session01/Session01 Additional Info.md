@@ -102,11 +102,8 @@ var invalidUser = new User(); // ❌ Compilation Error: Name is required
 
 ## **A note about strings in C# (Chat GPT) :**
 **`string` is nullable in C#**, but in **nullable reference types (C# 8+), `string` is treated as non-nullable unless explicitly marked `string?`**.
-
 - **`string`** → Default behavior (non-nullable by default in nullable context).
 - **`string?`** → Explicitly nullable.
-
-
 
 ## **Why virtual navigation properties? (Chat GPT):**
 
@@ -147,4 +144,6 @@ var tickets = context.Tickets.ToList(); // Loads all tickets foreach (var ticket
 3. **Total Queries:** **1 + 100 = 101 queries!** 🚨 **Bad performance!**
 
 ---
+
+
 
