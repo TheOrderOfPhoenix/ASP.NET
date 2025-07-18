@@ -1,33 +1,25 @@
 
-# 1. Configurations
-## Preparation 
-- [ ] Read the documentation:
-https://learn.microsoft.com/en-us/ef/core/modeling/
 
-## Branching
+# 🛠️ Task Checklist
+## 🚧 Branching (Configurations)
 - [ ] Create the feature/entity-configurations branch based on develop
-
-## Where Should You Place Configuration Files?
-
-✅ **Best Practice:** Place all configuration files in the **Infrastructure** layer.  
-📂 Suggested Folder: `Infrastructure/Configurations`
-### **Reason:**
-
-- The **Domain layer** should be **clean** (only entities, no database-related logic).
-- The **Infrastructure layer** handles **database interactions**, so configurations belong here.
-
- 
+## Preparation 
+- [ ] Read the [documentation](https://learn.microsoft.com/en-us/ef/core/modeling/):
 ## Create configuration classes
+📂 Suggested Folder: `Infrastructure/Configurations`
 - [ ] Create the classes with this format: `[Entity]Configutaion.cs`
 - [ ] The class should implement the `IEntityTypeConfiguration<[Entity]>`
-## Examples and Details
 
+### Where Should You Place Configuration Files?
+✅ **Best Practice:** Place all configuration files in the **Infrastructure** layer.  
+#### **Reason:**
+- The **Domain layer** should be **clean** (only entities, no database-related logic).
+- The **Infrastructure layer** handles **database interactions**, so configurations belong here.
+### Use this as a reference:
+[reference](https://github.com/MehrdadShirvani/AlibabaClone-Backend/tree/develop/AlibabaClone.Infrastructure/Configurations)
+### Explanations and Details
 
-### **Use this as a reference:**
-https://github.com/MehrdadShirvani/AlibabaClone-Backend/tree/develop/AlibabaClone.Infrastructure/Configurations
----
-
-### **How to Define Keys (Primary Keys & Identity)**
+#### **How to Define Keys (Primary Keys & Identity)**
 
 You **don’t** need to explicitly define the **primary key (PK)** if you follow EF Core conventions (`Id` or `EntityNameId`). However, if you want to be explicit:
 
@@ -47,8 +39,7 @@ public class TicketConfiguration : IEntityTypeConfiguration<Ticket>
 > 🛑 **NOTE:** If you’re using a GUID as the ID, you might need `.ValueGeneratedNever()` instead.
 
 ---
-
-### **How to Define Foreign Keys?**
+#### **How to Define Foreign Keys?**
 
 Use `HasOne()` and `WithMany()` for **one-to-many** relationships.
 
@@ -70,11 +61,11 @@ public class TicketConfiguration : IEntityTypeConfiguration<Ticket>
 
 ---
 
-### **How to Introduce Navigation Properties with Different Names?**
+#### **How to Introduce Navigation Properties with Different Names?**
 
 If your navigation property **doesn’t match** the entity name, you should explicitly specify it using `HasOne()` and `WithMany()`.
 
-### **Example: Ticket has a Buyer (which is an Account)**
+#### **Example: Ticket has a Buyer (which is an Account)**
 
 ```csharp
 builder.HasOne(t => t.Buyer)  // Navigation property (Ticket → Account)
@@ -86,11 +77,11 @@ builder.HasOne(t => t.Buyer)  // Navigation property (Ticket → Account)
 
 ---
 
-### **How to Configure Column Types? (nvarchar, date, etc.)**
+#### **How to Configure Column Types? (nvarchar, date, etc.)**
 
 You can **manually specify column types** using `.HasColumnType()`.
 
-### **All Strings Should Be `nvarchar` with Specific Lengths**
+#### **All Strings Should Be `nvarchar` with Specific Lengths**
 
 ```csharp
 builder.Property(t => t.TicketNumber)
@@ -99,22 +90,19 @@ builder.Property(t => t.TicketNumber)
        .HasColumnType("nvarchar(20)");
 ```
 
-### **Store Some DateTime Fields as SQL `DATE` Instead of `DATETIME2`**
+#### **Store Some DateTime Fields as SQL `DATE` Instead of `DATETIME2`**
 
 ```csharp
 builder.Property(t => t.PurchaseDate)
        .HasColumnType("date");  // Instead of default "datetime2"
 ```
 
-> 🚀 **Best Practice:** Always set **string lengths** to avoid `nvarchar(MAX)`, which hurts performance.
-
 ---
-
-### **How to Define Constraints? (Not Null, Length, etc.)**
+#### **How to Define Constraints? (Not Null, Length, etc.)**
 
 Use `.IsRequired()` for **NOT NULL** and `.HasMaxLength()` for length constraints.
 
-### **Example: Ticket Number Must Be Unique & Required**
+##### **Example: Ticket Number Must Be Unique & Required**
 
 ```csharp
 builder.Property(t => t.TicketNumber)
@@ -127,104 +115,14 @@ builder.HasIndex(t => t.TicketNumber)
 
 ---
 
-### **Final Configuration File Example (TicketConfiguration.cs)**
 
-Here’s a **complete** example of a configuration file:
-
-```csharp
-public class TicketConfiguration : IEntityTypeConfiguration<Ticket>
-{
-    public void Configure(EntityTypeBuilder<Ticket> builder)
-    {
-        builder.HasKey(t => t.Id);
-
-        builder.Property(t => t.TransportationId)
-            .IsRequired();
-
-        builder.Property(t => t.SeatId)
-            .IsRequired();
-
-        builder.Property(t => t.BuyerId)
-            .IsRequired();
-
-        builder.Property(t => t.TravelerId)
-            .IsRequired();
-
-        builder.Property(t => t.CreatedAt)
-            .IsRequired();
-
-        builder.Property(t => t.CompanionId)
-            .IsRequired(false);
-
-        builder.Property(t => t.TicketStatusId)
-            .IsRequired();
-
-        builder.Property(t => t.SerialNumber)
-            .IsRequired()
-            .HasMaxLength(50)
-            .IsUnicode(false);
-
-        builder.Property(t => t.Description)
-            .HasMaxLength(200)
-            .IsUnicode(false);
-
-        // Relationships
-        builder.HasOne(t => t.Transportation)
-            .WithMany(t => t.Tickets)
-            .HasForeignKey(t => t.TransportationId)
-            .OnDelete(DeleteBehavior.Restrict);
-
-        builder.HasOne(t => t.Seat)
-            .WithMany(s => s.Tickets)
-            .HasForeignKey(t => t.SeatId)
-            .OnDelete(DeleteBehavior.Restrict);
-
-        builder.HasOne(t => t.Buyer)
-            .WithMany(a => a.BoughtTickets)
-            .HasForeignKey(t => t.BuyerId)
-            .OnDelete(DeleteBehavior.Restrict);
-
-        builder.HasOne(t => t.Traveler)
-            .WithMany(p => p.TraveledTickets)
-            .HasForeignKey(t => t.TravelerId)
-            .OnDelete(DeleteBehavior.Restrict);
-
-        builder.HasOne(t => t.Companion)
-            .WithMany()
-            .HasForeignKey(t => t.CompanionId)
-            .OnDelete(DeleteBehavior.Restrict);
-
-        builder.HasOne(t => t.TicketStatus)
-            .WithMany()
-            .HasForeignKey(t => t.TicketStatusId)
-            .OnDelete(DeleteBehavior.Restrict);
-    }
-}
-```
-
----
-
-### **Summary & Best Practices**
-
-✅ **Store Configuration Files in:** `Infrastructure/Configurations`  
-✅ **Define Foreign Keys:** Use `HasOne()` and `WithMany()`  
-✅ **Explicitly Define Navigation Properties** if the names differ  
-✅ **Column Types:** Use `.HasColumnType()` for `nvarchar`, `date`, etc.  
-✅ **Constraints:** Use `.IsRequired()`, `.HasMaxLength()`, `.IsUnique()`
-
----
-
-
-
-### **1. Join Tables with Multiple IDs**
-
+#### **Join Tables with Multiple IDs**
 In many-to-many relationships, a join table is created to link two entities. This join table typically contains foreign keys referencing the primary keys of the two entities involved in the relationship.
 
-#### **Example of a Join Table**
 
 Suppose we have two entities, `Student` and `Course`, and we want to create a many-to-many relationship between them. We'll create a join table called `StudentCourses`.
 
-#### **Entities**
+##### **Entities**
 
 ```csharp
 public class Student : Entity<long>
@@ -249,7 +147,7 @@ public class StudentCourse
 }
 ```
 
-#### **Configuration for Join Table**
+##### **Configuration for Join Table**
 
 You would configure the join table using the Fluent API:
 
@@ -273,139 +171,157 @@ public class StudentCourseConfiguration : IEntityTypeConfiguration<StudentCourse
 }
 ```
 
-#### **Key Points for Join Tables**
+### Final Configuration File Example (`TicketConfiguration.cs`)
 
-- **Composite Primary Key**: The join table uses a composite key made up of both foreign keys.
-- **Navigation Properties**: This enables navigation from `Student` to `Course` and vice versa.
-
----
-
-### **2. Using GUIDs That Should Be Auto-Generated**
-
-GUIDs (Globally Unique Identifiers) can be used as primary keys in your entities. In EF Core, you can configure them to auto-generate when a new entity is created.
-
-#### **Example Entity Using GUID**
+Here’s an example of a configuration file:
 
 ```csharp
-public class SomeEntity
+public class TicketConfiguration : IEntityTypeConfiguration<Ticket>
 {
-    public Guid Id { get; set; } = Guid.NewGuid(); // Auto-generate GUID
-    public string Name { get; set; }
-}
-```
-
-#### **Configuration for GUID**
-
-When configuring an entity with a GUID as the primary key, you don’t need a specific setup in the configuration, but you can enforce that the `Id` is generated on addition.
-
-```csharp
-builder.Property(e => e.Id)
-    .ValueGeneratedOnAdd()
-    .HasDefaultValueSql("NEWSEQUENTIALID()"); // Optionally use NEWID() for random GUID
-```
-
-#### **How It Works**
-
-- **`Guid.NewGuid()`** generates a new GUID when a new entity instance is created.
-- **Database**: If you use `NEWSEQUENTIALID()` in SQL Server, it generates sequential GUIDs, which can improve indexing performance.
-
-#### **Example Configuration in DbContext**
-
-Here's how you might define an entity with GUIDs in your `DbContext`:
-
-```csharp
-public class ApplicationDbContext : DbContext
-{
-    public DbSet<SomeEntity> SomeEntities { get; set; }
-
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    public void Configure(EntityTypeBuilder<Ticket> builder)
     {
-        modelBuilder.Entity<SomeEntity>(builder =>
-        {
-            builder.HasKey(e => e.Id);
-            builder.Property(e => e.Id)
-                .ValueGeneratedOnAdd()
-                .HasDefaultValueSql("NEWSEQUENTIALID()");
-        });
+        builder.HasKey(t => t.Id);
+        builder.Property(a => a.Id)
+            .ValueGeneratedOnAdd();
+
+        builder.Property(t => t.TicketOrderId)
+            .IsRequired();
+
+        builder.Property(t => t.SeatId)
+            .IsRequired();
+
+        builder.Property(t => t.TravelerId)
+            .IsRequired();
+
+        builder.Property(t => t.CreatedAt)
+            .IsRequired();
+
+        builder.Property(t => t.CanceledAt)
+            .IsRequired(false);
+
+        builder.Property(t => t.CompanionId)
+            .IsRequired(false);
+
+        builder.Property(t => t.TicketStatusId)
+            .IsRequired();
+
+        builder.Property(t => t.SerialNumber)
+            .IsRequired()
+            .HasMaxLength(50)
+            .IsUnicode(false);
+        builder.HasIndex(x => x.SerialNumber).IsUnique();
+
+
+        builder.Property(t => t.Description)
+            .HasMaxLength(200)
+            .IsUnicode(false);
+
+        // Relationships
+        builder.HasOne(t => t.TicketOrder)
+            .WithMany(t => t.Tickets)
+            .HasForeignKey(t => t.TicketOrderId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        builder.HasOne(t => t.Seat)
+            .WithMany(s => s.Tickets)
+            .HasForeignKey(t => t.SeatId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        builder.HasOne(t => t.Traveler)
+            .WithMany(p => p.TraveledTickets)
+            .HasForeignKey(t => t.TravelerId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        builder.HasOne(t => t.Companion)
+            .WithMany()
+            .HasForeignKey(t => t.CompanionId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        builder.HasOne(t => t.TicketStatus)
+            .WithMany()
+            .HasForeignKey(t => t.TicketStatusId)
+            .OnDelete(DeleteBehavior.Restrict);
     }
 }
 ```
-
----
-
-
-## Merge
+## 🚧  Merge
 - [ ] Create a PR and merge the current branch with develop
 
-# 2. Application DBContext and ConnectionString Configurations
+## 🚧 Branching (Application `DBContext` and Connection String Configurations)
 
 ## Preparation 
-- [ ] Read the documentation:
-https://learn.microsoft.com/en-us/ef/core/modeling/
+- [ ] Read the [documentation](https://learn.microsoft.com/en-us/ef/core/modeling/):
 
 ## Branching
 - [ ] Create the feature/setup-dbContext branch based on develop
 
 ## Database Context
+📂 Suggested Folder: `Infrastructure/ApplicationDbContext.cs
 - [ ] Create ApplicationDBContext 
-	- [ ] Location: Infrastructure/ApplicationDbContext.cs
 	- [ ] Inherits DbContext
 	- [ ] Create the constructor like the code below
-	- [ ] Add the Needed DbSets
+	- [ ] Add the necessary DbSets
 	- [ ] Override `OnModelCreating` and `OnConfiguring` as below
-
 ```csharp
-using AlibabaClone.Domain.Aggregates.AccountAggregates;
-
-using Microsoft.EntityFrameworkCore;
-
-namespace AlibabaClone.Infrastructure
+public class ApplicationDBContext : DbContext
 {
-    public class ApplicationDBContext : DbContext
+    public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : base(options)
     {
-        public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : base(options)
-        {
 
-        }
+    }
 
-        public DbSet<Account> Accounts { get; set; }
-        public DbSet<AccountRole> AccountRoles { get; set; }
-        public DbSet<Gender> Genders{ get; set; }
-        public DbSet<Person> People { get; set; }
-        public DbSet<Role> Roles { get; set; }
+    public DbSet<Account> Accounts { get; set; }
+    public DbSet<AccountRole> AccountRoles { get; set; }
+    public DbSet<Gender> Genders{ get; set; }
+    public DbSet<BankAccountDetail> BankAccountDetails{ get; set; }
+    public DbSet<Person> People { get; set; }
+    public DbSet<Role> Roles { get; set; }
 
-		//... Add other DbSets as well
+    public DbSet<Company> Companies { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDBContext).Assembly);
-            base.OnModelCreating(modelBuilder);
-        }
+    public DbSet<City> Cities { get; set; }
+    public DbSet<Location> Locations { get; set; }
+    public DbSet<LocationType> LocationTypes{ get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseLazyLoadingProxies();
-        }
+    public DbSet<Transaction> Transactions { get; set; }
+    public DbSet<Coupon> Coupons{ get; set; }
+    public DbSet<TransactionType> TransactionTypes { get; set; }
+
+    public DbSet<Ticket> Tickets { get; set; }
+    public DbSet<TicketOrder> TicketOrders { get; set; }
+    public DbSet<TicketStatus> TicketStatuses { get; set; }
+    public DbSet<Transportation> Transportations { get; set; }
+
+    public DbSet<Seat> Seats { get; set; }
+    public DbSet<Vehicle> Vehicles { get; set; }
+    public DbSet<VehicleType> VehicleTypes { get; set; }
+
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.UseCollation("Persian_100_CI_AI");
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDBContext).Assembly);
+        base.OnModelCreating(modelBuilder);
+    }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        optionsBuilder.UseLazyLoadingProxies();
     }
 }
-
 ```
 
-
-
 ---
-
 ## Configuring the Database in ASP.NET Core
 
-### 📌 **Connection String **
-- [ ] Modify `appsettings.json` and add the following. (They might have a type or something... search the web to make sure)
-
-- [ ] Adjust the ConnectionString to meet your needs
+### 📌 **Connection String**
+- [ ] Modify `appsettings.json` and add the following. 
+- [ ] Adjust the Connection String to meet your needs
 ### Option 1:
 ```json
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=YOUR_SERVER;Database=YourDb;User Id=USERNAME;Password=PASSWORD;Trusted_Connection=True;TrustServerCertificate=True"
+  "DefaultConnection": "Server=YOUR_SERVER;Database=YourDb;User Id=USERNAME;Password=PASSWORD;TrustServerCertificate=True;"
   }
 }
 ```
@@ -413,11 +329,11 @@ namespace AlibabaClone.Infrastructure
 ```json
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=YOUR_SERVER;Database=YourDb;Integrated Security=TRUE;Trusted_Connection=True;TrustServerCertificate=True"
-  }
+  "DefaultConnection": "Server=YOUR_SERVER;Database=YourDb;Integrated Security=True;TrustServerCertificate=True;"
+	}
 }
 ```
-- [ ] Put this `appsettings.json` in **`gitignore`** if you think is needed 
+- [ ] Put this `appsettings.json` in **`gitignore`**
 ### **Registering EF Core in `Program.cs`**
 - [ ] Modify `Program.cs`
  
@@ -433,12 +349,11 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 var app = builder.Build();
 app.Run();
 ```
-## Merge
+
+## 🚧  Merge
 - [ ] Create a PR and merge the current branch with develop
 ---
-
-# Migrations and Database Setup
-## Branching
+## 🚧Branching (Migrations and Database Setup)
 - [ ] Create the feature/migrations branch based on develop
 
 ## Using Package Manager Console 
@@ -452,7 +367,14 @@ Add-Migration InitialCreate
 ```
 Update-Database
 ```
-## Merge
+## 🚧Merge
 - [ ] Create a PR and merge the current branch with develop
----
+
+# 🧠 Hints & Notes
+# 🙌 Acknowledgements
+
+- ChatGPT for snippet refinement and explanations
+# 🔍 References
+[[Session02 Additional Info]]
+
 
