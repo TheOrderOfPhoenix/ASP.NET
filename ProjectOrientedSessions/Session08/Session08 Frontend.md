@@ -1,4 +1,5 @@
-# ✅ Frontend Profile Page Implementation Checklist
+
+# 🛠️ Task Checklist
 
 ## ⚙️ Tooling & Fixes
 - [ ]  Install and configure `react-hook-form`
@@ -231,3 +232,16 @@ export interface TicketOrderSummaryDto {
 ```
 
 - [ ] Implement `MyTravels` page. Note that this page can be similarly implemented by a card.
+
+
+# 🧠 Hints & Notes
+# 🙌 Acknowledgements
+
+- ChatGPT for snippet refinement and explanations
+# 🔍 References
+
+
+
+
+
+

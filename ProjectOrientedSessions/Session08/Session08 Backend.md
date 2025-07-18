@@ -1,5 +1,5 @@
-# Session 8
-Profile + some fixes to database
+
+# 🛠️ Task Checklist
 
 ## Fixes
 - [ ] Check for missing `.ValueGeneratedOnAdd()` in all entity configurations in ```Infrastructure/Configurations```.
@@ -19,7 +19,7 @@ Profile + some fixes to database
 
 - [ ] Add data in `Seat`, `Person`, `TicketOrder`, `Transaction`, `Ticket` for test. It is recommended to write python code for generating data for Seat table, according to the data already stored in Transportation and related Vehicle data. There is also a [SeatGenerator](https://github.com/TheOrderOfPhoenix/ASP.NET/blob/main/ProjectOrientedSessions/Session08/SeatGenerator.py) in this repository, as well.
 
-- [ ] Fix claim extraction (`sub` → standardize JWT claim mapping). (`IUserContext` implmentation)
+- [ ] Fix claim extraction (`sub` → standardize JWT claim mapping). (`IUserContext` implementation)
 
 First, create an interface in Application layer:
 ```csharp
@@ -187,10 +187,10 @@ You can also find another version of this DTO in [Here](https://github.com/Mehrd
     }
     ```
     
-    Note: You should add neccessary interfaces and implement them
+Note: You should add necessary interfaces and implement them
 
 - [ ] Implement:
-    - [ ]  Edit Email (with validation): `EditEmailDto`, service method, and controller endpoint.
+- [ ]  Edit Email (with validation): `EditEmailDto`, service method, and controller endpoint.
 	```csharp
  	public class EditEmailDto
 	{
@@ -198,7 +198,7 @@ You can also find another version of this DTO in [Here](https://github.com/Mehrd
  	    public string NewEmail { get; set; }
 	}
  	```
-    - [ ] Edit Password: `EditPasswordDto`, service and controller.
+- [ ] Edit Password: `EditPasswordDto`, service and controller.
 	```csharp
  	public class EditPasswordDto
 	{
@@ -213,7 +213,7 @@ You can also find another version of this DTO in [Here](https://github.com/Mehrd
  	    public string ConfirmNewPassword { get; set; }
 	}
  	```
-    - [ ] Edit Person Info: `PersonDto`, and endpoint to upsert personal data.
+- [ ] Edit Person Info: `PersonDto`, and endpoint to `upsert` personal data.
 	```csharp
  	public class PersonDto
 	{
@@ -240,7 +240,7 @@ You can also find another version of this DTO in [Here](https://github.com/Mehrd
  	    public DateTime BirthDate { get; set; }
 	}
  	```
-    - [ ] Edit BankAccountDetail: `UpsertBankAccountDetailDto` and relevant logic.
+- [ ] Edit `BankAccountDetail`: `UpsertBankAccountDetailDto` and relevant logic.
 	```csharp
  	public class UpsertBankAccountDto
  	{
@@ -258,7 +258,6 @@ You can also find another version of this DTO in [Here](https://github.com/Mehrd
  	```
 
 - [ ] Add mapping for all Dtos and check related properties like `CreatorAccountId`.
-    
 
 ## ✅ List of Travelers
 
@@ -334,6 +333,7 @@ public async Task<Result<long>> UpsertPersonAsync(long accountId, PersonDto dto)
     return Result<long>.Success(person.Id);
 }
 ```
+
 ```csharp
 [HttpPost("account-person")]
 public async Task<IActionResult> UpsertAccountPerson([FromBody] PersonDto dto)
@@ -536,7 +536,7 @@ public async Task<Result<long>> TopUpAsync(long accountId, TopUpDto dto)
 ```
 
 ## Postman
-Considering that all endpoints in `AccountController` require Authorization, You need to test your api in **Postman**.
+Considering that all endpoints in `AccountController` require Authorization, You need to test your API in **Postman**.
 
 <br />
 <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Postman_%28software%29.png" width="60%">
@@ -544,7 +544,17 @@ Considering that all endpoints in `AccountController` require Authorization, You
 Postman is a client which lets the user test api professionally. 
 You can download it in [this link](https://www.postman.com/downloads/) and get started with it using [this video](https://www.youtube.com/watch?v=wEOLZq-7DYs&pp=0gcJCfwAo7VqN5tD)
 
-
-## Notes:
+# 🧠 Hints & Notes
 - Check the codes as they're put here before **debugging**, you can check them with the repositories.
 - Complete the task step by step in each endpoint to preserve the principals of *Clean Architecture*.
+
+# 🙌 Acknowledgements
+
+- ChatGPT for snippet refinement and explanations
+# 🔍 References
+
+
+
+
+
+
