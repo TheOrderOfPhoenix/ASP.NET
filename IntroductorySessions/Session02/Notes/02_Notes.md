@@ -40,9 +40,9 @@ In this session, we’ll cover the following concepts:
 
 🖼️ **Diagrams**:
 
-- ![[Pasted image 20241105101014.png]]
-- ![[Pasted image 20241105111037.png]]
-- ![[Pasted image 20241105111022.png]]
+- [](../../../Assets/Pasted image 20241105101014.png)
+- [](../../../Assets/Pasted image 20241105111037.png)
+- [](../../../Assets/Pasted image 20241105111022.png)
 
 ---
 
