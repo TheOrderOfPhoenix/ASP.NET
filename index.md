@@ -77,10 +77,24 @@ A **Clean Architecture-based** backend designed to be **modular, testable, and s
 
 
 ### **🎨 Frontend — Transportation Management Web App**
-- **Tech Stack**: React, TypeScript, Zustand, Axios, Tailwind CSS
-- **Focus**: A simple but modern UI to consume the API and simulate real-world use cases
+A **modern, component-driven frontend** built with **React + TypeScript**, designed with a focus on **clarity, modularity, and maintainability**.
 
-The frontend is built with **React + TypeScript** and designed with a strong emphasis on **clarity, modularity, and maintainability**. State is managed predictably using **Zustand**, organized into well-defined slices to ensure separation of concerns and ease of composition. All API communications are centralized through a single **Axios instance**, streamlining request handling and global error interception. The UI follows a **modular component architecture** using **TailwindCSS**, promoting reusability and visual consistency across the application. Navigation is structured with **React Router DOM**, utilizing nested and dynamic routes for scalability and clean navigation flow, while maintaining a **unidirectional data flow** to keep interactions between components, state, and services predictable and traceable.
+- **State Management 🧩**
+    - Managed predictably using **Zustand**, organized into **well-defined slices** for clear separation of concerns.
+    - Promotes ease of composition and scalability as the app grows.
+- **API Communication 🔗**
+    - All HTTP requests routed through a **centralized Axios instance**.
+    - Handles **global error interception, authentication headers, and response transformations** consistently.
+- **UI Components 🎨**
+    - Built with **TailwindCSS** using a **modular, reusable component approach**.
+    - Encourages **visual consistency** and speeds up UI development.
+- **Routing & Navigation 🗺️**
+    - **React Router DOM** for nested and dynamic routing.
+    - Clear and scalable navigation flow for multi-step processes (e.g., ticket reservation).
+- **Data Flow 🔄**
+    - Strict **unidirectional data flow**, making interactions between components, state, and services predictable and easy to debug.
+- **User Experience ✨**
+    - A simple but modern UI optimized for clarity and responsiveness, simulating real-world use cases with a clean architecture mindset.
 
 ## **👥 Projects by Members**
 
