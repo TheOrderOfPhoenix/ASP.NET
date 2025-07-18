@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>Session07 Additional Info</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="ASP.NET"/><meta property="og:title" content="Session07 Additional Info"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Session07 Additional Info"/><meta name="twitter:description" content="AUTHENTICATION METHODS FOR ASP.NET CORE WEB API 1."/><meta property="og:description" content="AUTHENTICATION METHODS FOR ASP.NET CORE WEB API 1."/><meta property="og:image:alt" content="AUTHENTICATION METHODS FOR ASP.NET CORE WEB API 1."/><meta property="twitter:domain" content="quartz.jzhao.xyz"/><meta property="og:url" content="https://quartz.jzhao.xyz/02-Project-Based/Session07/Session07-Additional-Info"/><meta property="twitter:url" content="https://quartz.jzhao.xyz/02-Project-Based/Session07/Session07-Additional-Info"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="AUTHENTICATION METHODS FOR ASP.NET CORE WEB API 1."/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  padding: 2rem;
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcnVubmVyL3dvcmsvQVNQLk5FVC9BU1AuTkVUL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTs7QUFJRjtFQUNFO0VBQ0E7RUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi5leHBhbmQtYnV0dG9uIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbG9hdDogcmlnaHQ7XG4gIHBhZGRpbmc6IDAuNHJlbTtcbiAgbWFyZ2luOiAwLjNyZW07XG4gIHJpZ2h0OiAwOyAvLyBOT1RFOiByaWdodCB3aWxsIGJlIHNldCBpbiBtZXJtYWlkLmlubGluZS50c1xuICBjb2xvcjogdmFyKC0tZ3JheSk7XG4gIGJvcmRlci1jb2xvcjogdmFyKC0tZGFyayk7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgYm9yZGVyOiAxcHggc29saWQ7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgb3BhY2l0eTogMDtcbiAgdHJhbnNpdGlvbjogMC4ycztcblxuICAmID4gc3ZnIHtcbiAgICBmaWxsOiB2YXIoLS1saWdodCk7XG4gICAgZmlsdGVyOiBjb250cmFzdCgwLjMpO1xuICB9XG5cbiAgJjpob3ZlciB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTtcbiAgfVxuXG4gICY6Zm9jdXMge1xuICAgIG91dGxpbmU6IDA7XG4gIH1cbn1cblxucHJlIHtcbiAgJjpob3ZlciA+IC5leHBhbmQtYnV0dG9uIHtcbiAgICBvcGFjaXR5OiAxO1xuICAgIHRyYW5zaXRpb246IDAuMnM7XG4gIH1cbn1cblxuI21lcm1haWQtY29udGFpbmVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICBjb250YWluOiBsYXlvdXQ7XG4gIHotaW5kZXg6IDk5OTtcbiAgbGVmdDogMDtcbiAgdG9wOiAwO1xuICB3aWR0aDogMTAwdnc7XG4gIGhlaWdodDogMTAwdmg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGRpc3BsYXk6IG5vbmU7XG4gIGJhY2tkcm9wLWZpbHRlcjogYmx1cig0cHgpO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNSk7XG5cbiAgJi5hY3RpdmUge1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgfVxuXG4gICYgPiAjbWVybWFpZC1zcGFjZSB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB0b3A6IDUwJTtcbiAgICBsZWZ0OiA1MCU7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gICAgaGVpZ2h0OiA4MHZoO1xuICAgIHdpZHRoOiA4MHZ3O1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG5cbiAgICAmID4gLm1lcm1haWQtY29udGVudCB7XG4gICAgICBwYWRkaW5nOiAycmVtO1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://quartz.jzhao.xyz/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://quartz.jzhao.xyz/02-Project-Based/Session07/Session07-Additional-Info-og-image.webp"/><meta property="og:image:url" content="https://quartz.jzhao.xyz/02-Project-Based/Session07/Session07-Additional-Info-og-image.webp"/><meta name="twitter:image" content="https://quartz.jzhao.xyz/02-Project-Based/Session07/Session07-Additional-Info-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="02-Project-Based/Session07/Session07-Additional-Info"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">ASP.NET</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><p>Search</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Reader mode"><title>Reader mode</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-content"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div class="explorer-content" aria-expanded="false"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../02-Project-Based/">02 Project Based</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../02-Project-Based/Session07/">Session07</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Session07 Additional Info</a></div></nav><h1 class="article-title">Session07 Additional Info</h1><p show-comma="true" class="content-meta"><time datetime="2025-07-18T11:32:09.000Z">Jul 18, 2025</time><span>12 min read</span></p></div></div><article class="popover-hint"><h1 id="authentication-methods-for-aspnet-core-web-api">AUTHENTICATION METHODS FOR ASP.NET CORE WEB API<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#authentication-methods-for-aspnet-core-web-api" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h3 id="1-jwt-json-web-token-authentication">1. <strong>JWT (JSON Web Token) Authentication</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-jwt-json-web-token-authentication" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>Most common for SPAs (like your React frontend)</strong></p>
+<ul>
+<li>
+<p>✅ <strong>Stateless</strong>: No session stored on the server.</p>
+</li>
+<li>
+<p>🔐 <strong>Token structure</strong>: Header + Payload (including roles) + Signature.</p>
+</li>
+<li>
+<p>🎯 Good for: SPAs, mobile apps, APIs.</p>
+</li>
+<li>
+<p>📦 Libraries: <code>Microsoft.AspNetCore.Authentication.JwtBearer</code>.</p>
+</li>
+</ul>
+<p><strong>Setup Highlights:</strong></p>
+<ul>
+<li>
+<p>Client sends credentials → API generates token with user roles → Client stores token → Client sends token in <code>Authorization</code> header (<code>Bearer &lt;token></code>).</p>
+</li>
+<li>
+<p>Server verifies signature and extracts user identity and roles from the token.</p>
+</li>
+</ul>
+<p><strong>Role support</strong>:</p>
+<ul>
+<li>
+<p>You embed roles inside the JWT (<code>&quot;roles&quot;: [&quot;Admin&quot;, &quot;User&quot;]</code>).</p>
+</li>
+<li>
+<p>Use <code>[Authorize(Roles = &quot;Admin&quot;)]</code>.</p>
+</li>
+</ul>
+<hr/>
+<h3 id="2-cookie-based-authentication">2. <strong>Cookie-Based Authentication</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-cookie-based-authentication" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>Traditional approach for server-rendered apps (not ideal for APIs)</strong></p>
+<ul>
+<li>
+<p>🛑 <strong>Not recommended for APIs</strong> due to CSRF vulnerability and session overhead.</p>
+</li>
+<li>
+<p>🗂 Stores session identifier in browser cookie.</p>
+</li>
+<li>
+<p>Useful when using ASP.NET Core MVC or Razor Pages (not Web API).</p>
+</li>
+</ul>
+<hr/>
+<h3 id="3-oauth2--openid-connect-oidc">3. <strong>OAuth2 + OpenID Connect (OIDC)</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-oauth2--openid-connect-oidc" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>Best for federated login, single sign-on (SSO), or external providers</strong></p>
+<ul>
+<li>
+<p>🔗 Integrates with Identity Providers (IDPs) like:</p>
+<ul>
+<li>
+<p>Azure AD</p>
+</li>
+<li>
+<p>Google, Facebook, GitHub</p>
+</li>
+<li>
+<p>Auth0, Okta, Duende IdentityServer</p>
+</li>
+</ul>
+</li>
+<li>
+<p>📦 Library: <code>Microsoft.AspNetCore.Authentication.OpenIdConnect</code></p>
+</li>
+<li>
+<p>Uses <strong>access tokens</strong> (JWT) issued by an authority.</p>
+</li>
+</ul>
+<p><strong>Role support</strong>:</p>
+<ul>
+<li>
+<p>Roles/claims provided by the Identity Provider.</p>
+</li>
+<li>
+<p>You map these claims to roles in the API.</p>
+</li>
+<li>
+<p><code>[Authorize(Roles = &quot;Admin&quot;)]</code> still works.</p>
+</li>
+</ul>
+<hr/>
+<h3 id="4-api-key-authentication">4. <strong>API Key Authentication</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-api-key-authentication" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>Lightweight alternative (not ideal for user-based roles)</strong></p>
+<ul>
+<li>
+<p>Client includes a static API key in headers or query string.</p>
+</li>
+<li>
+<p>🔐 No user context → ❌ no role-based support unless you map API keys to roles in a custom way.</p>
+</li>
+<li>
+<p>🔧 Implemented manually in middleware or filters.</p>
+</li>
+</ul>
+<hr/>
+<h3 id="5-basic-authentication">5. <strong>Basic Authentication</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#5-basic-authentication" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>User provides <code>username:password</code> in Base64 via <code>Authorization</code> header.</p>
+</li>
+<li>
+<p>❌ Insecure unless used with HTTPS.</p>
+</li>
+<li>
+<p>⚠️ Rarely used anymore — not good for role-based systems or production apps.</p>
+</li>
+</ul>
+<hr/>
+<h3 id="6-aspnet-core-identity">6. <strong>ASP.NET Core Identity</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#6-aspnet-core-identity" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>Full-featured user management system (often combined with JWT)</strong></p>
+<ul>
+<li>
+<p>✅ Provides login, registration, role management, password hashing, etc.</p>
+</li>
+<li>
+<p>🎯 Good choice if you want to <strong>own the user system</strong> and <strong>manage roles</strong> yourself.</p>
+</li>
+<li>
+<p>Can be used with:</p>
+<ul>
+<li>
+<p>JWT tokens (custom token generation)</p>
+</li>
+<li>
+<p>Cookie auth (not for APIs)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>🔧 Use <code>UserManager</code>, <code>RoleManager</code>.</p>
+</li>
+</ul>
+<p><strong>Example</strong>: Use Identity for creating users and roles, then issue JWTs on login.</p>
+<hr/>
+<h2 id="summary-table">Summary Table<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#summary-table" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Method</th><th>Stateless</th><th>Token-Based</th><th>Role Support</th><th>Ideal For</th></tr></thead><tbody><tr><td>JWT Authentication</td><td>✅</td><td>✅</td><td>✅</td><td>APIs, SPAs (React, etc.)</td></tr><tr><td>Cookie Authentication</td><td>❌</td><td>❌</td><td>✅</td><td>Server-side apps only</td></tr><tr><td>OAuth2 + OpenID Connect</td><td>✅</td><td>✅</td><td>✅</td><td>External login, SSO, enterprise</td></tr><tr><td>API Key</td><td>✅</td><td>❌</td><td>❌ (manual)</td><td>Simple apps, service-to-service</td></tr><tr><td>Basic Auth</td><td>✅</td><td>❌</td><td>❌ (manual)</td><td>Very basic use, not recommended</td></tr><tr><td>ASP.NET Core Identity</td><td>❌</td><td>Optional</td><td>✅</td><td>User/Role management</td></tr></tbody></table></div>
+<hr/>
+<h1 id="web-security-and-jwt-terms">Web Security and JWT Terms<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#web-security-and-jwt-terms" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h3 id="-csp-content-security-policy">🧨 <strong>CSP (Content Security Policy)</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-csp-content-security-policy" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>Definition:</strong><br/>
+A <strong>browser security mechanism</strong> that helps prevent <strong>XSS attacks</strong> by controlling which sources the browser can load content from.</p>
+<p><strong>Example Usage:</strong><br/>
+It can prevent JavaScript from running unless it’s from a trusted source.</p>
+<p><strong>Example CSP header:</strong></p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="http" data-theme="github-light github-dark"><code data-language="http" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">Content-Security-Policy</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> default-src 'self'; script-src 'self' https://trustedscripts.example.com</span></span></code></pre></figure>
+<hr/>
+<h3 id="-xss-cross-site-scripting">💥 <strong>XSS (Cross-Site Scripting)</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-xss-cross-site-scripting" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>Definition:</strong><br/>
+A vulnerability where an attacker <strong>injects malicious JavaScript</strong> into a web page that gets executed in a user’s browser.</p>
+<p><strong>Why It Matters for JWT:</strong><br/>
+If you store JWTs in <code>localStorage</code>, and your app is vulnerable to XSS, the attacker can steal the token and impersonate the user.</p>
+<p><strong>Prevention:</strong></p>
+<ul>
+<li>
+<p>Never trust user input (sanitize!)</p>
+</li>
+<li>
+<p>Use <strong>CSP headers</strong></p>
+</li>
+<li>
+<p>Avoid inline scripts</p>
+</li>
+<li>
+<p>Use frameworks that auto-escape HTML (like React, Razor)</p>
+</li>
+</ul>
+<hr/>
+<h3 id="-payload-in-jwt">📦 <strong>Payload (in JWT)</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-payload-in-jwt" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>Definition:</strong><br/>
+The <strong>middle part</strong> of a JWT. It contains the <strong>claims</strong> (user data, permissions, roles, etc.) in a <strong>Base64-encoded JSON</strong> format.</p>
+<p><strong>Example:</strong></p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="json" data-theme="github-light github-dark"><code data-language="json" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;sub&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;1234567890&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;name&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;John Doe&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;role&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;Admin&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;exp&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">1716850984</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<p>⚠️ <strong>Note:</strong> Payload is <strong>not encrypted</strong>, just encoded — anyone can read it, but not modify it without invalidating the signature.</p>
+<hr/>
+<h3 id="️-signature-in-jwt">✍️ <strong>Signature (in JWT)</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-signature-in-jwt" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>Definition:</strong><br/>
+The <strong>third part</strong> of the token. It’s a cryptographic hash (HMAC or RSA/ECDSA) of the header and payload, signed with a <strong>secret</strong> or private key.</p>
+<p><strong>Purpose:</strong><br/>
+To verify that the token <strong>hasn’t been tampered with</strong>.</p>
+<p><strong>Structure:</strong></p>
+<pre><code>JWT = base64(header) + '.' + base64(payload) + '.' + signature
+</code></pre>
+<p>Only the server (with the secret key) can validate the signature.</p>
+<hr/>
+<h3 id="-csrf-cross-site-request-forgery">🦠 <strong>CSRF (Cross-Site Request Forgery)</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-csrf-cross-site-request-forgery" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>Definition:</strong><br/>
+A vulnerability where an attacker tricks a user’s <strong>browser</strong> (with a valid session/cookie) into making an unwanted request to your site <strong>without the user’s knowledge</strong>.</p>
+<p><strong>Example:</strong><br/>
+If you’re logged in and visit a malicious site, that site may submit a POST request using your cookies to perform actions on your behalf.</p>
+<p><strong>Why It Matters:</strong></p>
+<ul>
+<li>If you store JWTs in <strong>HttpOnly cookies</strong>, you must guard against CSRF.</li>
+</ul>
+<p><strong>Defense:</strong></p>
+<ul>
+<li>
+<p>Use <code>SameSite=Strict</code> cookies</p>
+</li>
+<li>
+<p>Use anti-CSRF tokens</p>
+</li>
+<li>
+<p>Prefer <code>Authorization</code> header with tokens (doesn’t auto-send like cookies)</p>
+</li>
+</ul>
+<hr/>
+<h3 id="-session-overhead">🧠 <strong>Session Overhead</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-session-overhead" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>Definition:</strong><br/>
+The <strong>memory and server resource cost</strong> of maintaining a session for each logged-in user on the server.</p>
+<p><strong>Why It Matters:</strong></p>
+<ul>
+<li>
+<p>Traditional <strong>cookie-based auth</strong> stores session info on the server.</p>
+</li>
+<li>
+<p>With JWT, the session is <strong>stateless</strong> (no server memory), reducing overhead and scaling better.</p>
+</li>
+</ul>
+<hr/>
+<h2 id="-authentication-ecosystem-concepts">🔑 <strong>Authentication Ecosystem Concepts</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-authentication-ecosystem-concepts" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<hr/>
+<h3 id="-federated-login">🌐 <strong>Federated Login</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-federated-login" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>Definition:</strong><br/>
+Users log in to your application using <strong>another trusted identity provider</strong> (IdP), such as:</p>
+<ul>
+<li>
+<p>Google</p>
+</li>
+<li>
+<p>Facebook</p>
+</li>
+<li>
+<p>Microsoft</p>
+</li>
+<li>
+<p>GitHub</p>
+</li>
+</ul>
+<p>You delegate authentication to the third party and just receive user info (often as a JWT or OpenID Connect token).</p>
+<p><strong>Protocol Examples:</strong></p>
+<ul>
+<li>
+<p>OAuth2</p>
+</li>
+<li>
+<p>OpenID Connect</p>
+</li>
+</ul>
+<hr/>
+<h3 id="-sso-single-sign-on">🔁 <strong>SSO (Single Sign-On)</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-sso-single-sign-on" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>Definition:</strong><br/>
+A user logs in <strong>once</strong> and gains access to <strong>multiple systems or applications</strong> without logging in again.</p>
+<p><strong>Common in Enterprises</strong>:</p>
+<ul>
+<li>Logging into one dashboard gives you access to HR system, email, file storage, etc.</li>
+</ul>
+<p><strong>How It Works:</strong></p>
+<ul>
+<li>
+<p>A <strong>central identity provider (IdP)</strong> issues tokens</p>
+</li>
+<li>
+<p>Applications <strong>trust the token</strong> and skip login</p>
+</li>
+<li>
+<p>Often uses <strong>OAuth2</strong>, <strong>OpenID Connect</strong>, or <strong>SAML</strong></p>
+</li>
+</ul>
+<hr/>
+<h2 id="-summary-table">🔄 Summary Table<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-summary-table" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Term</th><th>Meaning</th></tr></thead><tbody><tr><td><strong>CSP</strong></td><td>Restricts sources of scripts/styles to prevent XSS</td></tr><tr><td><strong>XSS</strong></td><td>Injected JavaScript that steals data like JWT tokens</td></tr><tr><td><strong>JWT Payload</strong></td><td>JSON with user claims (readable but not secure on its own)</td></tr><tr><td><strong>JWT Signature</strong></td><td>Proves the token is untampered (signed by server)</td></tr><tr><td><strong>CSRF</strong></td><td>Unauthorized actions using authenticated user’s browser/session</td></tr><tr><td><strong>Session Overhead</strong></td><td>Cost of storing user sessions in memory on the server</td></tr><tr><td><strong>Federated Login</strong></td><td>Login using a third-party identity provider (e.g., Google)</td></tr><tr><td><strong>SSO</strong></td><td>One login grants access to multiple trusted systems</td></tr></tbody></table></div>
+<h1 id="aspnet-identity-vs-jwt-authentication">ASP.NET Identity vs JWT Authentication<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aspnet-identity-vs-jwt-authentication" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<hr/>
+<h3 id="-what-is-aspnet-identity">✅ <strong>What is ASP.NET Identity?</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-what-is-aspnet-identity" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>ASP.NET Identity</strong> is a full <strong>membership system</strong> that:</p>
+<ul>
+<li>
+<p>Manages users, roles, passwords, claims, tokens, and external logins.</p>
+</li>
+<li>
+<p>Stores user data in a <strong>database</strong> (usually using Entity Framework).</p>
+</li>
+<li>
+<p>Works well with <strong>cookie-based authentication</strong> by default.</p>
+</li>
+<li>
+<p>Handles login, logout, registration, password hashing, email confirmation, two-factor auth, etc.</p>
+</li>
+</ul>
+<p><strong>Default storage:</strong> SQL Server (via Entity Framework)</p>
+<hr/>
+<h3 id="-how-authentication-works-in-aspnet-identity-cookie-based">🔑 <strong>How Authentication Works in ASP.NET Identity (Cookie-Based)</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-how-authentication-works-in-aspnet-identity-cookie-based" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p><strong>Login request</strong>: The user submits a form with username/password.</p>
+</li>
+<li>
+<p><strong>Server validates</strong> the credentials using ASP.NET Identity.</p>
+</li>
+<li>
+<p>If valid, the server issues a <strong>cookie</strong> (with a session token).</p>
+</li>
+<li>
+<p>The browser stores this <strong>authentication cookie</strong>.</p>
+</li>
+<li>
+<p>For future requests, the browser <strong>automatically sends the cookie</strong>.</p>
+</li>
+<li>
+<p>The server validates the cookie (and reads the user session from memory or database).</p>
+</li>
+</ol>
+<p>✅ <strong>Stateful</strong><br/>
+❌ Doesn’t scale well for large APIs unless you add external session storage (like Redis).</p>
+<hr/>
+<h3 id="-what-is-jwt-authentication">🔐 What is JWT Authentication?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-what-is-jwt-authentication" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>JWT Authentication is:</p>
+<ul>
+<li>
+<p><strong>Stateless</strong>.</p>
+</li>
+<li>
+<p>Based on tokens — not sessions.</p>
+</li>
+<li>
+<p>Works well for APIs and SPAs/mobile apps.</p>
+</li>
+</ul>
+<h4 id="flow">Flow:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#flow" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ol>
+<li>
+<p><strong>User logs in</strong>, and if credentials are valid…</p>
+</li>
+<li>
+<p>Server <strong>creates a JWT</strong> containing user info (e.g., roles).</p>
+</li>
+<li>
+<p>Server <strong>signs the token</strong> and sends it to the client.</p>
+</li>
+<li>
+<p>Client stores it (e.g., in localStorage or cookies).</p>
+</li>
+<li>
+<p>On every request, the client sends the JWT in the <code>Authorization</code> header.</p>
+</li>
+<li>
+<p>Server <strong>verifies the JWT signature</strong> using a secret or key.</p>
+</li>
+<li>
+<p>If valid → allow access (no server-side session needed).</p>
+</li>
+</ol>
+<p>✅ <strong>Stateless</strong><br/>
+✅ Scales easily<br/>
+✅ Good for distributed APIs</p>
+<hr/>
+<h3 id="-comparison-table">📊 Comparison Table<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-comparison-table" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Feature</th><th>ASP.NET Identity (Cookie)</th><th>JWT Authentication (Token-Based)</th></tr></thead><tbody><tr><td><strong>Stateful/Stateless</strong></td><td>Stateful</td><td>Stateless</td></tr><tr><td><strong>Storage</strong></td><td>Cookie on client, session on server</td><td>Token on client only</td></tr><tr><td><strong>Default Transport</strong></td><td>Cookie (auto-sent by browser)</td><td>Authorization header (manual send)</td></tr><tr><td><strong>Built-in Support</strong></td><td>ASP.NET Identity (UI + EF Core)</td><td>ASP.NET Core + Manual JWT setup</td></tr><tr><td><strong>Scalability</strong></td><td>Limited (server stores session)</td><td>High (no session to manage)</td></tr><tr><td><strong>Security</strong></td><td>Cookie CSRF risk</td><td>XSS risk if stored in JS-accessible storage</td></tr><tr><td><strong>Use Case</strong></td><td>Web apps with UI (MVC, Razor)</td><td>APIs, SPAs, mobile apps</td></tr><tr><td><strong>External login support</strong></td><td>Built-in</td><td>Needs integration</td></tr><tr><td><strong>Token expiration</strong></td><td>Server-controlled session</td><td>Token has expiration embedded</td></tr></tbody></table></div>
+<hr/>
+<h3 id="-statelessness--what-does-it-mean">🚨 Statelessness — What Does It Mean?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-statelessness--what-does-it-mean" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><strong>Stateful Authentication</strong>: Server <strong>stores a session</strong> (usually in memory or a database) for each user. The client just stores a cookie with a session ID.</p>
+<ul>
+<li>
+<p>When user logs in, server keeps a record of that.</p>
+</li>
+<li>
+<p>Logout → delete session.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Stateless Authentication</strong> (JWT):</p>
+<ul>
+<li>
+<p>Server <strong>does not remember anything</strong>.</p>
+</li>
+<li>
+<p>JWT has all info about the user in itself (claims, roles, expiry).</p>
+</li>
+<li>
+<p>Logout = just delete token on client side (server has no “memory”).</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>⚠️ <strong>You can’t “force logout” someone server-side in pure JWT unless you blacklist tokens manually</strong> (or rotate secrets).</p>
+<hr/>
+<h3 id="-can-you-use-aspnet-identity-with-jwt">💡 Can You Use ASP.NET Identity with JWT?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-can-you-use-aspnet-identity-with-jwt" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Yes — ASP.NET Identity can be configured to:</p>
+<ul>
+<li>
+<p>Authenticate user credentials</p>
+</li>
+<li>
+<p>Then issue a <strong>JWT</strong> instead of using a cookie</p>
+</li>
+<li>
+<p>This way, you get:</p>
+<ul>
+<li>
+<p>ASP.NET Identity’s user management</p>
+</li>
+<li>
+<p>JWT’s <strong>stateless</strong> API authentication</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>This is often used in <strong>hybrid apps</strong>:</p>
+<ul>
+<li>
+<p>Use Identity for registration/login</p>
+</li>
+<li>
+<p>Use JWT for frontend and mobile API calls</p>
+</li>
+</ul>
+<h1 id="what-does-null-mean">What does <code>null!</code> mean?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#what-does-null-mean" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>It’s a <strong>null-forgiving operator</strong>.</p>
+<p>When you write:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">string</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">? </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">maybeNull</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> null</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">string</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> definitelyNotNull</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> null</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">!</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// ← This tells the compiler: “Trust me, it’s not null.”</span></span></code></pre></figure>
+<p>You’re telling the compiler:</p>
+<blockquote>
+<p><em>“I know this is technically null, but treat it as non-null and don’t warn me.”</em></p>
+</blockquote>
+<hr/>
+<h3 id="-why-is-this-needed">🧩 Why is this needed?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-why-is-this-needed" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>C# 8 introduced <strong>nullable reference types</strong>, where the compiler gives warnings if you assign or use <code>null</code> where it’s not safe.</p>
+<p>For example:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">string</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> name</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> null</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">; </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// Warning: assigning null to non-nullable reference</span></span></code></pre></figure>
+<p>To silence the warning, you can use <code>null!</code>:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">string</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> name</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> null</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">!</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">; </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// No warning</span></span></code></pre></figure>
+<p>But this is <strong>your responsibility</strong>: the compiler <strong>assumes you’re guaranteeing</strong> that it won’t cause a <code>NullReferenceException</code>.</p>
+<hr/>
+<h3 id="️-when-to-use-null">⚠️ When to use <code>null!</code>?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-when-to-use-null" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Use it <strong>sparingly and carefully</strong>, only when:</p>
+<ul>
+<li>
+<p>You know an object <strong>will be initialized later</strong>.</p>
+</li>
+<li>
+<p>You’re working with <strong>ORMs like EF Core</strong> where properties are set <strong>after construction</strong>.</p>
+</li>
+<li>
+<p>You’re dealing with <strong>dependency injection</strong> and the value is assigned <strong>automatically later</strong>.</p>
+</li>
+</ul>
+<h4 id="example">Example:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#example" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Account</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> string</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> PhoneNumber</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> { </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">get</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">; </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">set</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">; } </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> null</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">!</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">; </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// EF will populate it</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<hr/>
+<h3 id="-summary">✅ Summary<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-summary" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Expression</th><th>Meaning</th></tr></thead><tbody><tr><td><code>null!</code></td><td>”This is null, but treat it as if it’s non-null (trust me).”</td></tr><tr><td>Use case</td><td>Avoiding compiler warnings for nullable reference types</td></tr><tr><td>Risk</td><td>Can lead to runtime <code>NullReferenceException</code> if used incorrectly</td></tr></tbody></table></div>
+<hr/>
+<p>Let me know if you want help turning on/off nullable reference types or dealing with EF Core model warnings.</p>
+<h1 id="what-is-a-jwt-generator">What is a JWT Generator?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#what-is-a-jwt-generator" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>A <strong>JWT Generator</strong> is a class or service in your backend that:</p>
+<ol>
+<li>
+<p><strong>Generates</strong> a signed JWT (JSON Web Token) when a user logs in.</p>
+</li>
+<li>
+<p><strong>Encodes</strong> the user’s identity, roles, and other claims.</p>
+</li>
+<li>
+<p><strong>Signs</strong> the token with a secret or private key so it can be validated later.</p>
+</li>
+</ol>
+<hr/>
+<h2 id="-structure-of-a-jwt">🔧 Structure of a JWT<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-structure-of-a-jwt" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>A JWT has 3 parts:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="plaintext" data-theme="github-light github-dark"><code data-language="plaintext" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>xxxxx.yyyyy.zzzzz</span></span></code></pre></figure>
+<ol>
+<li>
+<p><strong>Header</strong> (Base64-encoded JSON):</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="json" data-theme="github-light github-dark"><code data-language="json" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;alg&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;HS256&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;typ&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;JWT&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+</li>
+<li>
+<p><strong>Payload</strong> (Base64-encoded JSON):<br/>
+Contains user data and claims (e.g., user ID, role, expiry).</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="json" data-theme="github-light github-dark"><code data-language="json" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;sub&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;userId123&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;phone&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;0930xxx&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;role&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;Admin&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;exp&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">1717502800</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+</li>
+<li>
+<p><strong>Signature</strong>:<br/>
+HMACSHA256(header + ”.” + payload, secret key)</p>
+</li>
+</ol>
+<hr/>
+<h2 id="-what-goes-into-the-payload">✅ What Goes into the Payload?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-what-goes-into-the-payload" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Include things you want to check <em>without querying the DB every time</em>:</p>
+<ul>
+<li>
+<p><code>sub</code> (Subject – usually user ID)</p>
+</li>
+<li>
+<p><code>phone</code> or username</p>
+</li>
+<li>
+<p><code>role</code> (e.g., “Admin”, “User”)</p>
+</li>
+<li>
+<p><code>exp</code> (expiration timestamp)</p>
+</li>
+<li>
+<p>Any custom claim, like <code>companyId</code>, <code>verified</code>, etc.</p>
+</li>
+</ul>
+<hr/>
+<h2 id="-signature">🔐 Signature<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-signature" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>The <strong>signature ensures</strong> that the token hasn’t been tampered with. If the signature doesn’t match (due to modification or incorrect secret), the token is invalid.</p>
+<hr/>
+<h2 id="-example-jwt-generator-in-aspnet-core">🧱 Example: JWT Generator in ASP.NET Core<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-example-jwt-generator-in-aspnet-core" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> interface</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> IJwtGenerator</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    string</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> GenerateToken</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">Account</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> account</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">);</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> JwtGenerator</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> : </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">IJwtGenerator</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    private</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> readonly</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> IConfiguration</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> _config</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    public</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> JwtGenerator</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">IConfiguration</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> config</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    {</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        _config </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> config;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    }</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> string</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> GenerateToken</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">Account</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> account</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    {</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">        var</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> claims</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> new</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">[]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        {</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">            new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Claim</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(JwtRegisteredClaimNames.Sub, account.Id.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">ToString</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()),</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">            new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Claim</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(JwtRegisteredClaimNames.PhoneNumber, account.PhoneNumber),</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">            new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Claim</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(ClaimTypes.Role, account.Role),</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        };</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">        var</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> key</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> SymmetricSecurityKey</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(Encoding.UTF8.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">GetBytes</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(_config[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;Jwt:Key&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">]</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">!</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">));</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">        var</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> creds</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> SigningCredentials</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(key, SecurityAlgorithms.HmacSha256);</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">        var</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> token</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> JwtSecurityToken</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">            issuer</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: _config[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;Jwt:Issuer&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">],</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">            audience</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: _config[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;Jwt:Audience&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">],</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">            claims</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: claims,</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">            expires</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: DateTime.UtcNow.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">AddHours</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">),</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">            signingCredentials</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: creds</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        );</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">        return</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> JwtSecurityTokenHandler</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">().</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">WriteToken</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(token);</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    }</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<hr/>
+<h2 id="-configuration-in-appsettingsjson">🛠 Configuration in <code>appsettings.json</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-configuration-in-appsettingsjson" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="json" data-theme="github-light github-dark"><code data-language="json" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;Jwt&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: {</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;Key&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;YourSuperSecureSecretKey123!&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;Issuer&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;YourAppName&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;Audience&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;YourFrontendApp&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<hr/>
+<h2 id="-token-validation">🧪 Token Validation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-token-validation" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>When the frontend sends this token on requests (via <code>Authorization: Bearer &lt;token></code> header), ASP.NET Core automatically validates:</p>
+<ul>
+<li>
+<p>Signature (using the same secret)</p>
+</li>
+<li>
+<p>Expiry (<code>exp</code>)</p>
+</li>
+<li>
+<p>Audience, Issuer</p>
+</li>
+<li>
+<p>Claims (like role)</p>
+</li>
+</ul>
+<p>This is done via <code>JwtBearer</code> middleware.</p>
+<hr/>
+<h2 id="-roles-in-the-token">🔐 Roles in the Token?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-roles-in-the-token" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Yes, you can (and should) include user roles. The backend will <strong>automatically enforce</strong> <code>[Authorize(Roles = &quot;Admin&quot;)]</code> using that claim.</p>
+<p>But:</p>
+<ul>
+<li>
+<p>Don’t rely <strong>only</strong> on frontend logic — always <strong>protect endpoints</strong> on the backend too.</p>
+</li>
+<li>
+<p>Frontend can use roles to <strong>hide UI elements</strong>, but not for enforcing access.</p>
+</li>
+</ul>
+<hr/>
+<h2 id="-should-you-encrypt-the-token">🤔 Should You Encrypt the Token?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-should-you-encrypt-the-token" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>No, standard practice is:</p>
+<ul>
+<li>
+<p>Don’t encrypt JWTs — they’re just base64-encoded.</p>
+</li>
+<li>
+<p><strong>Don’t put sensitive data</strong> inside.</p>
+</li>
+<li>
+<p>Sign them to prevent tampering.</p>
+</li>
+<li>
+<p>Secure the token in frontend (e.g., HttpOnly cookies or <code>localStorage</code> with care).</p>
+</li>
+</ul>
+<hr/>
+<h2 id="-summary-of-responsibilities">✅ Summary of Responsibilities<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-summary-of-responsibilities" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Responsibility</th><th>Backend (JWT Generator)</th><th>Frontend</th></tr></thead><tbody><tr><td>Token generation</td><td>✅</td><td>❌</td></tr><tr><td>Storing token</td><td>❌</td><td>✅ (localStorage / cookie)</td></tr><tr><td>Sending token</td><td>❌</td><td>✅ (Authorization header)</td></tr><tr><td>Token validation</td><td>✅ (<code>JwtBearer</code>)</td><td>❌</td></tr><tr><td>Role enforcement</td><td>✅ (<code>[Authorize]</code>)</td><td>✅ (UI-level only)</td></tr></tbody></table></div>
+<hr/>
+<h1 id="how-multiple-roles-in-jwt-claims-work">How multiple roles in JWT claims work<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#how-multiple-roles-in-jwt-claims-work" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>The JWT claims are basically a list of key-value pairs.</p>
+</li>
+<li>
+<p>For roles, the key is usually <code>&quot;role&quot;</code> or <code>ClaimTypes.Role</code>.</p>
+</li>
+<li>
+<p>You add <strong>multiple claims with the same key</strong> — one for each role.</p>
+</li>
+</ul>
+<p><strong>Example:</strong></p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="json" data-theme="github-light github-dark"><code data-language="json" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;sub&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;1234567890&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;phone_number&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;123456789&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;role&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;Admin&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;role&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;Editor&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;role&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;User&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;exp&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">1711600000</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<ul>
+<li>
+<p>When the token is created, it contains multiple <code>&quot;role&quot;</code> entries.</p>
+</li>
+<li>
+<p>On the backend, ASP.NET Core <code>ClaimsPrincipal</code> reads all of them, so <code>[Authorize(Roles=&quot;Admin,Editor&quot;)]</code> works by checking if <strong>any</strong> of the roles match.</p>
+</li>
+</ul>
+<hr/>
+<h3 id="how-frontend-handles-multiple-roles-in-the-jwt">How frontend handles multiple roles in the JWT<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#how-frontend-handles-multiple-roles-in-the-jwt" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>The frontend receives the JWT (usually after login).</p>
+</li>
+<li>
+<p>It <strong>decodes</strong> the JWT payload (using a library like <code>jwt-decode</code>).</p>
+</li>
+<li>
+<p>It extracts the roles as an <strong>array of strings</strong>.</p>
+</li>
+</ol>
+<p>Example in React using <code>jwt-decode</code>:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="js" data-theme="github-light github-dark"><code data-language="js" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> jwtDecode </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> 'jwt-decode'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> token</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> localStorage.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">getItem</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'token'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">);</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> decoded</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> jwtDecode</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(token);</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> roles</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> decoded.role; </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// roles is usually an array if multiple roles exist</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(roles); </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// [&quot;Admin&quot;, &quot;Editor&quot;, &quot;User&quot;]</span></span></code></pre></figure>
+<ol start="4">
+<li>
+<p>The frontend can then use these roles to:</p>
+<ul>
+<li>
+<p>Conditionally render UI components or routes.</p>
+</li>
+<li>
+<p>Show/hide buttons, pages, or features.</p>
+</li>
+</ul>
+</li>
+</ol>
+<hr/>
+<h3 id="important-security-note-for-frontend-roles">Important security note for frontend roles<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#important-security-note-for-frontend-roles" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>The frontend can <strong>only do UI-level checks</strong> based on roles.</p>
+</li>
+<li>
+<p><strong>Never trust frontend role checks to secure data or APIs.</strong></p>
+</li>
+<li>
+<p>The backend must always verify the token and roles via <code>[Authorize]</code> attributes or middleware.</p>
+</li>
+</ul>
+<hr/>
+<h3 id="summary">Summary<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#summary" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Step</th><th>How it works</th></tr></thead><tbody><tr><td>JWT creation</td><td>Multiple <code>&quot;role&quot;</code> claims added to token</td></tr><tr><td>Backend authorization</td><td>Validates token and checks if user has required roles</td></tr><tr><td>Frontend decoding</td><td>Extracts <code>role</code> claim(s) as array of strings</td></tr><tr><td>Frontend UI control</td><td>Shows or hides content based on roles</td></tr></tbody></table></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-content" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul class="toc-content overflow" id="list-1"><li class="depth-0"><a href="#authentication-methods-for-aspnet-core-web-api" data-for="authentication-methods-for-aspnet-core-web-api">AUTHENTICATION METHODS FOR ASP.NET CORE WEB API</a></li><li class="depth-2"><a href="#1-jwt-json-web-token-authentication" data-for="1-jwt-json-web-token-authentication">1. JWT (JSON Web Token) Authentication</a></li><li class="depth-2"><a href="#2-cookie-based-authentication" data-for="2-cookie-based-authentication">2. Cookie-Based Authentication</a></li><li class="depth-2"><a href="#3-oauth2--openid-connect-oidc" data-for="3-oauth2--openid-connect-oidc">3. OAuth2 + OpenID Connect (OIDC)</a></li><li class="depth-2"><a href="#4-api-key-authentication" data-for="4-api-key-authentication">4. API Key Authentication</a></li><li class="depth-2"><a href="#5-basic-authentication" data-for="5-basic-authentication">5. Basic Authentication</a></li><li class="depth-2"><a href="#6-aspnet-core-identity" data-for="6-aspnet-core-identity">6. ASP.NET Core Identity</a></li><li class="depth-1"><a href="#summary-table" data-for="summary-table">Summary Table</a></li><li class="depth-0"><a href="#web-security-and-jwt-terms" data-for="web-security-and-jwt-terms">Web Security and JWT Terms</a></li><li class="depth-2"><a href="#-csp-content-security-policy" data-for="-csp-content-security-policy">🧨 CSP (Content Security Policy)</a></li><li class="depth-2"><a href="#-xss-cross-site-scripting" data-for="-xss-cross-site-scripting">💥 XSS (Cross-Site Scripting)</a></li><li class="depth-2"><a href="#-payload-in-jwt" data-for="-payload-in-jwt">📦 Payload (in JWT)</a></li><li class="depth-2"><a href="#️-signature-in-jwt" data-for="️-signature-in-jwt">✍️ Signature (in JWT)</a></li><li class="depth-2"><a href="#-csrf-cross-site-request-forgery" data-for="-csrf-cross-site-request-forgery">🦠 CSRF (Cross-Site Request Forgery)</a></li><li class="depth-2"><a href="#-session-overhead" data-for="-session-overhead">🧠 Session Overhead</a></li><li class="depth-1"><a href="#-authentication-ecosystem-concepts" data-for="-authentication-ecosystem-concepts">🔑 Authentication Ecosystem Concepts</a></li><li class="depth-2"><a href="#-federated-login" data-for="-federated-login">🌐 Federated Login</a></li><li class="depth-2"><a href="#-sso-single-sign-on" data-for="-sso-single-sign-on">🔁 SSO (Single Sign-On)</a></li><li class="depth-1"><a href="#-summary-table" data-for="-summary-table">🔄 Summary Table</a></li><li class="depth-0"><a href="#aspnet-identity-vs-jwt-authentication" data-for="aspnet-identity-vs-jwt-authentication">ASP.NET Identity vs JWT Authentication</a></li><li class="depth-2"><a href="#-what-is-aspnet-identity" data-for="-what-is-aspnet-identity">✅ What is ASP.NET Identity?</a></li><li class="depth-2"><a href="#-how-authentication-works-in-aspnet-identity-cookie-based" data-for="-how-authentication-works-in-aspnet-identity-cookie-based">🔑 How Authentication Works in ASP.NET Identity (Cookie-Based)</a></li><li class="depth-2"><a href="#-what-is-jwt-authentication" data-for="-what-is-jwt-authentication">🔐 What is JWT Authentication?</a></li><li class="depth-2"><a href="#-comparison-table" data-for="-comparison-table">📊 Comparison Table</a></li><li class="depth-2"><a href="#-statelessness--what-does-it-mean" data-for="-statelessness--what-does-it-mean">🚨 Statelessness — What Does It Mean?</a></li><li class="depth-2"><a href="#-can-you-use-aspnet-identity-with-jwt" data-for="-can-you-use-aspnet-identity-with-jwt">💡 Can You Use ASP.NET Identity with JWT?</a></li><li class="depth-0"><a href="#what-does-null-mean" data-for="what-does-null-mean">What does null! mean?</a></li><li class="depth-2"><a href="#-why-is-this-needed" data-for="-why-is-this-needed">🧩 Why is this needed?</a></li><li class="depth-2"><a href="#️-when-to-use-null" data-for="️-when-to-use-null">⚠️ When to use null!?</a></li><li class="depth-2"><a href="#-summary" data-for="-summary">✅ Summary</a></li><li class="depth-0"><a href="#what-is-a-jwt-generator" data-for="what-is-a-jwt-generator">What is a JWT Generator?</a></li><li class="depth-1"><a href="#-structure-of-a-jwt" data-for="-structure-of-a-jwt">🔧 Structure of a JWT</a></li><li class="depth-1"><a href="#-what-goes-into-the-payload" data-for="-what-goes-into-the-payload">✅ What Goes into the Payload?</a></li><li class="depth-1"><a href="#-signature" data-for="-signature">🔐 Signature</a></li><li class="depth-1"><a href="#-example-jwt-generator-in-aspnet-core" data-for="-example-jwt-generator-in-aspnet-core">🧱 Example: JWT Generator in ASP.NET Core</a></li><li class="depth-1"><a href="#-configuration-in-appsettingsjson" data-for="-configuration-in-appsettingsjson">🛠 Configuration in appsettings.json</a></li><li class="depth-1"><a href="#-token-validation" data-for="-token-validation">🧪 Token Validation</a></li><li class="depth-1"><a href="#-roles-in-the-token" data-for="-roles-in-the-token">🔐 Roles in the Token?</a></li><li class="depth-1"><a href="#-should-you-encrypt-the-token" data-for="-should-you-encrypt-the-token">🤔 Should You Encrypt the Token?</a></li><li class="depth-1"><a href="#-summary-of-responsibilities" data-for="-summary-of-responsibilities">✅ Summary of Responsibilities</a></li><li class="depth-0"><a href="#how-multiple-roles-in-jwt-claims-work" data-for="how-multiple-roles-in-jwt-claims-work">How multiple roles in JWT claims work</a></li><li class="depth-2"><a href="#how-frontend-handles-multiple-roles-in-the-jwt" data-for="how-frontend-handles-multiple-roles-in-the-jwt">How frontend handles multiple roles in the JWT</a></li><li class="depth-2"><a href="#important-security-note-for-frontend-roles" data-for="important-security-note-for-frontend-roles">Important security note for frontend roles</a></li><li class="depth-2"><a href="#summary" data-for="summary">Summary</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2025</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../postscript.js" type="module"></script></html>

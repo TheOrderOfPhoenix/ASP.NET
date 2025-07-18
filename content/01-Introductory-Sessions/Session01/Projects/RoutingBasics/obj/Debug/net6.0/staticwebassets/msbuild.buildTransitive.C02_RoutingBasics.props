@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\C02_RoutingBasics.props" />
-</Project>

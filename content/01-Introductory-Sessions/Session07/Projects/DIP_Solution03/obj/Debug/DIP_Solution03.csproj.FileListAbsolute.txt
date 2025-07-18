@@ -1,7 +1,0 @@
-E:\Ali\Programming\ASP.net\Projects\H\Session07\Session07\Session07\DIP_Solution03\bin\Debug\DIP_Solution03.exe.config
-E:\Ali\Programming\ASP.net\Projects\H\Session07\Session07\Session07\DIP_Solution03\bin\Debug\DIP_Solution03.exe
-E:\Ali\Programming\ASP.net\Projects\H\Session07\Session07\Session07\DIP_Solution03\bin\Debug\DIP_Solution03.pdb
-E:\Ali\Programming\ASP.net\Projects\H\Session07\Session07\Session07\DIP_Solution03\obj\Debug\DIP_Solution03.csproj.AssemblyReference.cache
-E:\Ali\Programming\ASP.net\Projects\H\Session07\Session07\Session07\DIP_Solution03\obj\Debug\DIP_Solution03.csproj.CoreCompileInputs.cache
-E:\Ali\Programming\ASP.net\Projects\H\Session07\Session07\Session07\DIP_Solution03\obj\Debug\DIP_Solution03.exe
-E:\Ali\Programming\ASP.net\Projects\H\Session07\Session07\Session07\DIP_Solution03\obj\Debug\DIP_Solution03.pdb
