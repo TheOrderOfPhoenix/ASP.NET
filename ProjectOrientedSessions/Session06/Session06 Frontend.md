@@ -1,9 +1,11 @@
 
-# Branching
+# 🛠️ Task Checklist
+
+## 🚧Branching
 - [ ]  Create the feature/navbar branch based on develop
 
-# Adding a Navbar
-## 🔹 What Is a Navbar?
+## Adding a Navbar
+### 🔹 What Is a Navbar?
 - A **navigation bar (navbar)** is a UI element typically placed at the **top** or **side** of a web app.
 
 - [ ] Use a `<nav>` with `flex`, `justify-between`, `items-center`.
@@ -11,54 +13,41 @@
 
 use this as a reference: [link](https://github.com/MehrdadShirvani/AlibabaClone-Frontend/tree/develop/alibabaclone-frontend/src/shared/components)
 
+📂 Suggested Folder for navbar component: `src/shared/components/Navbar`
+📂 Suggested Folder for images: `public/images/`
 
-link to project:
-📂 Suggested Folder for navbar component: src/shared/components/Navbar
-📂 Suggested Folder for images: public/images/
-
-# Merge
+## 🚧Merge
 - [ ] Create a PR and merge the current branch with develop
-# Branching
+## 🚧Branching
 - [ ]  Create the feature/routing branch based on develop
 
-# Modifying Project From Single Component to Routed Pages
+## Converting Search Functionality From Single Component to Routed Pages
 
-
-Originally, your transportation search logic and UI may have all been inside one component — which quickly becomes messy and hard to manage as your app grows.
+Originally, transportation search logic and UI may have all been inside one component — which quickly becomes messy and hard to manage as your app grows.
 
 Now we’ve **split the logic into two proper pages**:
 
 ### ✅ `SearchPage.jsx`
-
-
 - Responsible only for showing the **search form**.
 - Clean and minimal.
 - Uses the reusable `TransportationSearchForm` component.
- - use this as a reference: [link](https://github.com/MehrdadShirvani/AlibabaClone-Frontend/tree/develop/alibabaclone-frontend/src/features/transportation/pages)    
+- Use this as a reference: [link](https://github.com/MehrdadShirvani/AlibabaClone-Frontend/tree/develop/alibabaclone-frontend/src/features/transportation/pages)    
 
 ### ✅ `SearchResultsPage.jsx`
-
 - Responsible for **fetching and showing results**.
 - Reads route parameters and query strings.
 - Calls the backend using `agent`.
 - Shows a loading state, handles empty results, and renders cards.
-- use this as a reference: [link](https://github.com/MehrdadShirvani/AlibabaClone-Frontend/tree/develop/alibabaclone-frontend/src/features/transportation/pages)
-    
+- Use this as a reference: [link](https://github.com/MehrdadShirvani/AlibabaClone-Frontend/tree/develop/alibabaclone-frontend/src/features/transportation/pages)
+
 
 This separation improves:
-
 - Routing and navigation
 - Code readability and maintainability
 - Reusability of components like the search form and result cards
-
-
 ---
 
-
-
-
-## **Create Pages into a Pages Folder**
-
+### **Create Pages into a Pages Folder**
 
 📂 Suggested Folder for navbar component
 Inside your `features/transportation` folder:
@@ -71,10 +60,7 @@ components/
 ├── TransportationCard.jsx
 ```
 
-### 2. **Create `SearchPage`**
-
-Use:
-
+- [ ] Create `SearchPage`
 ```jsx
 import TransportationSearchForm from "@/features/transportation/transportationSearchForm";
 
@@ -88,11 +74,9 @@ const SearchPage = () => {
 
 export default SearchPage;
 ```
+> Keep the form clean and layout minimal.
 
-Keep the form clean and layout minimal.
-
-### 3. **Create `SearchResultsPage`**
-
+- [ ] Create `SearchResultsPage`
 - Use `useParams()` for URL parameters (`vehicleId`, `fromCityId`, `toCityId`)
 - Use `useLocation()` and `URLSearchParams` to read query strings (`departing`, `arriving`)
 - Fetch data from backend using a shared `agent`
@@ -170,110 +154,15 @@ const SearchResultsPage = () => {
 export default SearchResultsPage;
 ```
 
-#### 🔍 SearchResultsPage – Understanding Parameters and Arguments
-
-This page is responsible for:
-
-1. **Reading route parameters and query strings from the URL**
-2. **Sending those values as a form to the backend**
-3. **Showing the result (or loading/error message)**
-    
+#### 🔍 `SearchResultsPage` – Understanding Parameters and Arguments
+- [ ] Check out [[Session06 Additional Info]]
 
 ---
+### Modifying `TransportationSearchForm`:
+> Use this as a reference: [link](https://github.com/MehrdadShirvani/AlibabaClone-Frontend/tree/develop/alibabaclone-frontend/src/features/transportation)
 
-##### ✅ 1. **Route Parameters**
-
-When you define this route in `App.jsx`:
-
-```jsx
-<Route path="/:vehicleId/:fromCityId/:toCityId" element={<SearchResultsPage />} />
-```
-
-It means the URL will look like:
-```
-/1/21/45
-```
-Those values are extracted using:
-```js
-const { vehicleId, fromCityId, toCityId } = useParams();
-```
-
-🔹 `useParams()` comes from React Router and gives you access to the dynamic parts of the URL.
-
----
-
-#####  ✅ 2. **Query String Parameters**
-
-Suppose your full URL is:
-
-```
-/1/21/45?departing=2025-06-01&arriving=2025-06-10
-```
-
-These extra values after the `?` are **query string parameters**. They're accessed using:
-
-```js
-const query = useQuery(); // Custom helper
-const departing = query.get("departing");
-const arriving = query.get("arriving");
-```
-
-The helper `useQuery()` is:
-
-```js
-function useQuery() {
-  return new URLSearchParams(useLocation().search);
-}
-```
-
-This uses React Router's `useLocation()` to access the full URL, and then parses the query string.
-
----
-
-#####  ✅ 3. **Parsing and Converting Values**
-
-React Router gives you everything as strings. So:
-
-```js
-const vehicleTypeId = vehicleId ? parseInt(vehicleId, 10) : 1;
-const fromId = fromCityId ? parseInt(fromCityId, 10) : undefined;
-const toId = toCityId ? parseInt(toCityId, 10) : undefined;
-```
-
-This ensures you have **numbers**, not strings, when building your form object.
-
----
-
-#####  ✅ 4. **Building the Search Form and Fetching Data**
-
-Now all data is combined into one `form` object:
-
-```js
-const form = {
-  vehicleTypeId,
-  fromCityId: fromId,
-  toCityId: toId,
-  startDate: departing || null,
-  endDate: arriving || null,
-};
-```
-
-Then it sends that to the backend:
-
-```js
-agent.TransportationSearch.search(form)
-  .then(setResults)
-  .catch(err => console.error(err))
-  .finally(() => setLoading(false));
-```
-
----
-### 4. **Modify `TransportationSearchForm`:**
-use this as a reference: [link](https://github.com/MehrdadShirvani/AlibabaClone-Frontend/tree/develop/alibabaclone-frontend/src/features/transportation)
-
-#### 1. **Removed Search Result Fetching from Inside the Component**
-
-#### 2. **Updated `handleSearch` to Navigate with Parameters**
+- [ ] Remove Search Result fetching from inside the component
+- [ ] Update `handleSearch` to Navigate with Parameters
 
 ```tsx
 const handleSearch = () => {
@@ -299,35 +188,24 @@ const handleSearch = () => {
 ```
 
 **Changes made:**
-
 - It **checks form validity** first.
-    
 - Then it builds a **URL using `URLSearchParams`** for `departing` and `arriving` dates.
-    
 - Then it calls `navigate(...)` to go to a **route like**:
-    
     ```
     /1/2/3?departing=2025-06-15T00%3A00%3A00.000Z&arriving=2025-06-18T00%3A00%3A00.000Z
     ```
-    
 
 > That route (`/vehicleTypeId/fromCityId/toCityId`) will be handled by your `SearchResultPage` via `react-router`.
 
 ---
 
-#### 3. **Used `useNavigate` from `react-router-dom`**
-
+- [ ] Used `useNavigate` from `react-router-dom`
 ```tsx
 import { useNavigate } from "react-router-dom";
 ```
-    
-#### 4. **Removed Result Display Section**
+- [ ] Removed Result Display Section
 
-
-
-
-
-# Add Routing 
+## Add Routing 
 - [ ] Change `App.tsx` as the following:
 ```tsx
 import Navbar from "@/shared/components/navbar";
@@ -359,38 +237,32 @@ function App() {
 export default App;
 ```
 
-
 ### Explanation of `App.jsx`
 
 #### 🔁 `Router` & `Routes`:
-
 - Wraps the entire app in `<Router>` so that React Router can manage navigation.  
 - `<Routes>` contains all the individual page routes.
-
 ---
 #### 📌 Routes:
-
 - `/`: Loads `SearchPage`. This is your home/search form.  
 - `/:vehicleId/:fromCityId/:toCityId`: Loads `SearchResultsPage`. This URL carries parameters to display results based on user input.
 
 ---
 
 #### 🎯 Navbar Placement:
-
 - Placed **outside** `<Routes>`, so it shows on **all pages**.  
-- The surrounding `<div className="pt-16">` adds space at the top so that page content isn’t hidden behind the navbar (assuming the navbar is fixed).    
 
 ---
 
-## ✅ Checklist for Setting Up Routing
+## Setting Up Routing
 
-### 1. **Install React Router** (If you haven't already)
+- [ ] **Install React Router** (If you haven't already)
 
 ```bash
 npm install react-router-dom
 ```
     
-### 2. **Wrap Your App in Router**
+- [ ] **Wrap Your App in Router**
 
 ```jsx
 <Router>
@@ -401,12 +273,21 @@ npm install react-router-dom
 </Router>
 ```
 
-### 3. **Define Routes**
+- [ ] **Define Routes**
 
 ```jsx
 <Route path="/" element={<SearchPage />} />
 <Route path="/:vehicleId/:fromCityId/:toCityId" element={<SearchResultsPage />} />
 ```
-
-# Merge
+## 🚧Merge
 - [ ] Create a PR and merge the current branch with develop
+
+# 🧠 Hints & Notes
+# 🙌 Acknowledgements
+
+- ChatGPT for snippet refinement and explanations
+# 🔍 References
+
+
+
+
