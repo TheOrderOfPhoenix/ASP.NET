@@ -10,61 +10,61 @@
     <link>https://quartz.jzhao.xyz/01-Introductory-Sessions/Roadmap/Roadmap</link>
     <guid>https://quartz.jzhao.xyz/01-Introductory-Sessions/Roadmap/Roadmap</guid>
     <description><![CDATA[ To teach the roadmap for Controllers, Routing, and Return Types in ASP.NET Core MVC, structuring your lessons effectively with examples will reinforce each concept and help students grasp how everything connects. ]]></description>
-    <pubDate>Fri, 18 Jul 2025 11:32:09 GMT</pubDate>
+    <pubDate>Fri, 18 Jul 2025 11:49:12 GMT</pubDate>
   </item><item>
     <title>Session00 Notes</title>
     <link>https://quartz.jzhao.xyz/01-Introductory-Sessions/Session00/Session00-Notes</link>
     <guid>https://quartz.jzhao.xyz/01-Introductory-Sessions/Session00/Session00-Notes</guid>
     <description><![CDATA[ Session 0: Controllers, Routing, and Return Types 📝 Overview In this session, we’ll cover the following concepts: MVC pattern in ASP.NET Core Controllers and their structure Default and attribute-based routing Handling various HTTP requests (GET, POST, DELETE) Return types from controllers Building... ]]></description>
-    <pubDate>Fri, 18 Jul 2025 11:32:09 GMT</pubDate>
+    <pubDate>Fri, 18 Jul 2025 11:49:12 GMT</pubDate>
   </item><item>
     <title>Session01 Notes</title>
     <link>https://quartz.jzhao.xyz/01-Introductory-Sessions/Session01/Session01-Notes</link>
     <guid>https://quartz.jzhao.xyz/01-Introductory-Sessions/Session01/Session01-Notes</guid>
     <description><![CDATA[ Session 1: Working with Models and MVC Basics in ASP.NET Core 📝 Overview In this session, we’ll cover the following concepts: MVC project structure and configuration Controllers and routing (including static segments and default page setting) Introduction to Models in ASP.NET Core C# OOP essentials... ]]></description>
-    <pubDate>Fri, 18 Jul 2025 11:32:09 GMT</pubDate>
+    <pubDate>Fri, 18 Jul 2025 11:49:12 GMT</pubDate>
   </item><item>
     <title>Practice</title>
     <link>https://quartz.jzhao.xyz/01-Introductory-Sessions/Session02/Practices/Practice</link>
     <guid>https://quartz.jzhao.xyz/01-Introductory-Sessions/Session02/Practices/Practice</guid>
     <description><![CDATA[ Mock a website and create multiple pages with custom routings. ]]></description>
-    <pubDate>Fri, 18 Jul 2025 11:32:09 GMT</pubDate>
+    <pubDate>Fri, 18 Jul 2025 11:49:12 GMT</pubDate>
   </item><item>
     <title>Session02 Notes</title>
     <link>https://quartz.jzhao.xyz/01-Introductory-Sessions/Session02/Session02-Notes</link>
     <guid>https://quartz.jzhao.xyz/01-Introductory-Sessions/Session02/Session02-Notes</guid>
     <description><![CDATA[ Session 2: Middleware, Routing, and Controllers in ASP.NET Core MVC 📝 Overview In this session, we’ll cover the following concepts: Middleware and the ASP.NET Core request pipeline Routing structure: default, attribute-based, constraints, SEO-friendly Creating and structuring controllers Handling H... ]]></description>
-    <pubDate>Fri, 18 Jul 2025 11:32:09 GMT</pubDate>
+    <pubDate>Fri, 18 Jul 2025 11:49:12 GMT</pubDate>
   </item><item>
     <title>Practice</title>
     <link>https://quartz.jzhao.xyz/01-Introductory-Sessions/Session03/Practices/Practice</link>
     <guid>https://quartz.jzhao.xyz/01-Introductory-Sessions/Session03/Practices/Practice</guid>
     <description><![CDATA[ Mock a website and create multiple pages with custom routings. ]]></description>
-    <pubDate>Fri, 18 Jul 2025 11:32:09 GMT</pubDate>
+    <pubDate>Fri, 18 Jul 2025 11:49:12 GMT</pubDate>
   </item><item>
     <title>Session03 Notes</title>
     <link>https://quartz.jzhao.xyz/01-Introductory-Sessions/Session03/Session03-Notes</link>
     <guid>https://quartz.jzhao.xyz/01-Introductory-Sessions/Session03/Session03-Notes</guid>
     <description><![CDATA[ Session 3: Views, Razor Syntax, Bootstrap, and Helpers 📝 Overview In this session, we covered the following concepts: Creating and Organizing Views in MVC Razor Syntax for dynamic content rendering Bootstrap integration for responsive UI Using Tag Helpers and HTML Helpers 📚 Topics Covered ✅ Creati... ]]></description>
-    <pubDate>Fri, 18 Jul 2025 11:32:09 GMT</pubDate>
+    <pubDate>Fri, 18 Jul 2025 11:49:12 GMT</pubDate>
   </item><item>
     <title>Session04 Notes</title>
     <link>https://quartz.jzhao.xyz/01-Introductory-Sessions/Session04/Session04-Notes</link>
     <guid>https://quartz.jzhao.xyz/01-Introductory-Sessions/Session04/Session04-Notes</guid>
     <description><![CDATA[ Session 4: Views, Razor Syntax, Bootstrap, and Helpers 📝 Overview In this session, we covered the following concepts: Creating and Organizing Views in MVC Razor Syntax for dynamic content rendering Bootstrap integration for responsive UI Using Tag Helpers and HTML Helpers View Components ViewImport... ]]></description>
-    <pubDate>Fri, 18 Jul 2025 11:32:09 GMT</pubDate>
+    <pubDate>Fri, 18 Jul 2025 11:49:12 GMT</pubDate>
   </item><item>
     <title>Session05 Notes</title>
     <link>https://quartz.jzhao.xyz/01-Introductory-Sessions/Session05/Session05-Notes</link>
     <guid>https://quartz.jzhao.xyz/01-Introductory-Sessions/Session05/Session05-Notes</guid>
     <description><![CDATA[ Session 5: Interfaces and Object-Oriented Relationships 📝 Overview In this session, we explored: The concept and syntax of Interfaces in C# Implementation of interfaces in real scenarios Comparison of Abstract Classes vs Interfaces Key OOP relationships: Inheritance, Composition, Aggregation, Assoc... ]]></description>
-    <pubDate>Fri, 18 Jul 2025 11:32:09 GMT</pubDate>
+    <pubDate>Fri, 18 Jul 2025 11:49:12 GMT</pubDate>
   </item><item>
     <title>Session06 Notes</title>
     <link>https://quartz.jzhao.xyz/01-Introductory-Sessions/Session06/Session06-Notes</link>
     <guid>https://quartz.jzhao.xyz/01-Introductory-Sessions/Session06/Session06-Notes</guid>
     <description><![CDATA[ Session 6: SOLID Principles and Dependency Injection (DI) 📝 Overview In this session, we will learn two foundational concepts for writing clean, maintainable, and scalable software: SOLID Principles: Five key design principles that help create better object-oriented designs. ]]></description>
-    <pubDate>Fri, 18 Jul 2025 11:32:09 GMT</pubDate>
+    <pubDate>Fri, 18 Jul 2025 11:49:12 GMT</pubDate>
   </item>
     </channel>
   </rss>
