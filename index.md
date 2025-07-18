@@ -80,6 +80,7 @@ A **Clean Architecture-based** backend designed to be **modular, testable, and s
 - **Tech Stack**: React, TypeScript, Zustand, Axios, Tailwind CSS
 - **Focus**: A simple but modern UI to consume the API and simulate real-world use cases
 
+The frontend is built with **React + TypeScript** and designed with a strong emphasis on **clarity, modularity, and maintainability**. State is managed predictably using **Zustand**, organized into well-defined slices to ensure separation of concerns and ease of composition. All API communications are centralized through a single **Axios instance**, streamlining request handling and global error interception. The UI follows a **modular component architecture** using **TailwindCSS**, promoting reusability and visual consistency across the application. Navigation is structured with **React Router DOM**, utilizing nested and dynamic routes for scalability and clean navigation flow, while maintaining a **unidirectional data flow** to keep interactions between components, state, and services predictable and traceable.
 
 ## **👥 Projects by Members**
 
