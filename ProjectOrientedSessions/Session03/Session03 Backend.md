@@ -1,13 +1,26 @@
 
-# 1. Implementing Repository Pattern
-## Branching
+# 🛠️ Task Checklist
+
+## Repository Pattern Preparation
+- [ ] Watch [video 1 (Brief Introduction](https://www.youtube.com/watch?v=Wiy54682d1w&ab_channel=PatrickGod) & [video 2 (More Detailed Introduction)](https://youtu.be/rtXpYpZdOzM)
+### Purpose:
+Meditates between the domain and data mapping layers, acting like an **in-memory collection** of domain objects
+### Benefits
+- Minimizes duplicate query logic 
+- Decouples your application from persistence frameworks
+- Promotes testability
+> Repository should not have methods like Update and Save
+## Unit of Work Preparation
+Keeps track of changes and coordinates the writings and savings
+### Implementation:
+- [ ] Watch [video](https://youtu.be/rtXpYpZdOzM?t=703)
+
+## 🚧Branching (Implementing Repository Pattern)
 - [ ] Create the feature/repositories branch based on develop
 
-## Create `IRepository` in Domain 
+## Creating `IRepository` in Domain 
 - [ ] Create the interface and add the following code
-
 📂 Suggested Folder: `Domain/Framework/Interfaces/Respositories`
-
 ```c#
 public interface IRepository<T_Entity, U_PrimaryKey> where T_Entity : class
 {
@@ -19,14 +32,11 @@ public interface IRepository<T_Entity, U_PrimaryKey> where T_Entity : class
     void Remove(T_Entity entity);
 }
 ```
-
-## Create a class implementing `IRepository`
+## Creating a class implementing `IRepository`
 - [ ] create a class named `BaseRepository` or `Repository` (choose one) in Infrastructure and implement `IRepository`
 
 📂 Suggested Folder: `Infrastructure/Framework/Base`
-
 - [ ] provide method definitions for the methods 
-
 ```c#
 public class BaseRepository<K_DbContext, T_Entity, U_PrimaryKey> : IRepository<T_Entity, U_PrimaryKey>
                                                                       where T_Entity : class
@@ -71,11 +81,13 @@ public class BaseRepository<K_DbContext, T_Entity, U_PrimaryKey> : IRepository<T
 }
 ```
 
-## Create one interface for each entity(except the join tables for now), and name it `I[Entity]Repository` 
+## Creating an interface for each entity
+> (not for the join tables)
+
 - [ ] For each entity, create an interface that inherits `IRepository`
 - [ ] (Optional): Add method definitions as you deem needed for that entity (not recommended right now. We will come back to this part later)
 
-📂 Suggested Folder: Domain/Framework/Base/Interfaces/{Related Folder}`
+📂 Suggested Folder: Domain/Framework/Base/Interfaces/[Related Folder]`
 for example:
 ```c#
 public interface IAccountRepository : IRepository<Account, long>
@@ -85,11 +97,10 @@ public interface IAccountRepository : IRepository<Account, long>
 ```
 
 ### Reference Project:
-https://github.com/MehrdadShirvani/AlibabaClone-Backend/tree/develop/AlibabaClone.Domain/Framework/Interfaces/Repositories
-## Create one class for each entity, implementing the `I[Entity]Repository`
+[Reference](https://github.com/MehrdadShirvani/AlibabaClone-Backend/tree/develop/AlibabaClone.Domain/Framework/Interfaces/Repositories)
+## Implementing each `I[Entity]Repository`
 
-📂 Suggested Folder: Infrastructure/Services/{Related Folder}
-
+📂 Suggested Folder: Infrastructure/Services/[Related Folder]
 - [ ] For each entity, create an class named `[Entity]Repository` that implements `I[Entity]Repository` and inherits `BaseRepository` 
 
 for example:
@@ -105,7 +116,8 @@ public class AccountRepository :
 }
 ```
 ### Reference Project:
-https://github.com/MehrdadShirvani/AlibabaClone-Backend/tree/develop/AlibabaClone.Infrastructure/Services
+[Reference](https://github.com/MehrdadShirvani/AlibabaClone-Backend/tree/develop/AlibabaClone.Infrastructure/Services)
+
 ## Registering Services
 - [ ] Modify `Program.cs` in Presentation, and register for each `I[Entity]Repository` the related `[Entity]Repository`
 
@@ -116,31 +128,17 @@ builder.Services.AddScoped<IAccountRepository, AccountRepository>();
 builder.Services.AddScoped<IGenderRepository, GenderRepository>();
 builder.Services.AddScoped<IPersonRepository, PersonRepository>();
 builder.Services.AddScoped<IRoleRepository, RoleRepository>();
+//...
 
-builder.Services.AddScoped<ICompanyRepository, CompanyRepository>();
-
-builder.Services.AddScoped<ICityRepository, CityRepository>();
-builder.Services.AddScoped<ILocationRepository, LocationRepository>();
-builder.Services.AddScoped<ILocationTypeRepository, LocationTypeRepository>();
-
-builder.Services.AddScoped<ITransactionRepository, TransactionRepository>();
-
-builder.Services.AddScoped<ITicketRepository, TicketRepository>();
-builder.Services.AddScoped<ITicketStatusRepository, TicketStatusRepository>();
-builder.Services.AddScoped<ITransportationRepository, TransportationRepository>();
-
-builder.Services.AddScoped<ISeatRepository, SeatRepository>();
-builder.Services.AddScoped<IVehicleRepository, VehicleRepository>();
-builder.Services.AddScoped<IVehicleTypeRepository, VehicleTypeRepository>();
 //some code
 ```
-## Merge
+## 🚧Merge
 - [ ] Create a PR and merge the current branch with develop
 
 
-# 2. Implementing Unit of Work Pattern
+---
 
-## Branching
+## 🚧Branching
 - [ ] Create the feature/UnitOfWork branch based on develop
 
 
@@ -151,7 +149,7 @@ public interface IUnitOfWork : IDisposable
 }
 ```
 
-## Create `IUnitOfWork` in Domain 
+## Creating `IUnitOfWork`
 - [ ] Create the interface that inherits `IDisposable` and add the following code
 
 📂 Suggested Folder: `Domain/Framework/Interfaces`
@@ -163,7 +161,7 @@ public interface IUnitOfWork : IDisposable
 }
 ```
 
-## Create a class implementing `IUnitOfWork`
+## Implementing `IUnitOfWork`
 - [ ] create a class named `UnitOfWork`  in Infrastructure and implement `IUnitOfWork`
 
 📂 Suggested Folder: `Infrastructure/Framework/Base`
@@ -202,5 +200,15 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 //some code
 ```
 
-## Merge
+## 🚧Merge
 - [ ] Create a PR and merge the current branch with develop
+
+
+# 🧠 Hints & Notes
+# 🙌 Acknowledgements
+
+- ChatGPT for snippet refinement and explanations
+# 🔍 References
+[[Session03 Additional Info]]
+
+
