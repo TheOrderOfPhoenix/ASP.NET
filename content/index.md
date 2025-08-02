@@ -1,3 +1,6 @@
+---
+title: Home
+---
 # **🐦‍🔥 Order of the Phoenix — Website Development**
 
 ## **📌 About the Project**
